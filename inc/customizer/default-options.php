@@ -4,7 +4,7 @@
  *
  * Uses sane defaults in case the user has not configured any theme options yet.
  *
- * @package GT Workout
+ * @package GT Health
  */
 
 /**
@@ -12,10 +12,10 @@
 *
 * @return mixed
 */
-function gt_workout_get_option( $option_name = '' ) {
+function gt_health_get_option( $option_name = '' ) {
 
 	// Get all Theme Options from Database.
-	$theme_options = gt_workout_theme_options();
+	$theme_options = gt_health_theme_options();
 
 	// Return single option.
 	if ( isset( $theme_options[ $option_name ] ) ) {
@@ -31,13 +31,13 @@ function gt_workout_get_option( $option_name = '' ) {
  *
  * @return array
  */
-function gt_workout_theme_options() {
+function gt_health_theme_options() {
 
 	// Merge theme options array from database with default options array.
-	$theme_options = wp_parse_args( get_option( 'gt_workout_theme_options', array() ), gt_workout_default_options() );
+	$theme_options = wp_parse_args( get_option( 'gt_health_theme_options', array() ), gt_health_default_options() );
 
 	// Return theme options.
-	return apply_filters( 'gt_workout_theme_options', $theme_options );
+	return apply_filters( 'gt_health_theme_options', $theme_options );
 }
 
 
@@ -46,7 +46,7 @@ function gt_workout_theme_options() {
  *
  * @return array
  */
-function gt_workout_default_options() {
+function gt_health_default_options() {
 
 	$default_options = array(
 		'site_title'          => true,
@@ -69,5 +69,5 @@ function gt_workout_default_options() {
 		'footer_text'         => sprintf( '&copy; %1$s %2$s', date( 'Y' ), get_bloginfo( 'name' ) ),
 	);
 
-	return apply_filters( 'gt_workout_default_options', $default_options );
+	return apply_filters( 'gt_health_default_options', $default_options );
 }

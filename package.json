@@ -1,18 +1,18 @@
 {
-  "name": "gt-workout",
+  "name": "gt-health",
   "version": "1.0.0",
-  "description": "GT Workout WordPress Theme",
+  "description": "GT Health WordPress Theme",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ThemeZee@bitbucket.org/ThemeZee/gt-workout.git"
+    "url": "git+https://ThemeZee@bitbucket.org/ThemeZee/gt-health.git"
   },
   "author": "ThemeZee",
   "license": "GPL-3.0",
-  "homepage": "https://bitbucket.org/ThemeZee/gt-workout#readme",
+  "homepage": "https://bitbucket.org/ThemeZee/gt-health#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.2",
     "gulp": "^3.9.1",

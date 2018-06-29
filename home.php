@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @version 1.0
- * @package GT Workout
+ * @package GT Health
  */
 
 get_header();
@@ -19,7 +19,7 @@ if ( have_posts() ) :
 
 	endwhile;
 
-	gt_workout_pagination();
+	gt_health_pagination();
 
 else :
 

@@ -5,14 +5,14 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @version 1.0
- * @package GT Workout
+ * @package GT Health
  */
 
 get_header();
 
 if ( have_posts() ) :
 
-	gt_workout_search_header();
+	gt_health_search_header();
 
 	while ( have_posts() ) :
 		the_post();
@@ -21,7 +21,7 @@ if ( have_posts() ) :
 
 	endwhile;
 
-	gt_workout_pagination();
+	gt_health_pagination();
 
 else :
 

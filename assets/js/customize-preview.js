@@ -3,7 +3,7 @@
  *
  * Reloads changes on Theme Customizer Preview asynchronously for better usability
  *
- * @package GT Workout
+ * @package GT Health
  */
 
 ( function( $ ) {
@@ -23,7 +23,7 @@
 	} );
 
 	// Site Title checkbox.
-	wp.customize( 'gt_workout_theme_options[site_title]', function( value ) {
+	wp.customize( 'gt_health_theme_options[site_title]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-title' );
@@ -34,7 +34,7 @@
 	} );
 
 	// Site Description checkbox.
-	wp.customize( 'gt_workout_theme_options[site_description]', function( value ) {
+	wp.customize( 'gt_health_theme_options[site_description]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-description' );
@@ -45,7 +45,7 @@
 	} );
 
 	// Post Date checkbox.
-	wp.customize( 'gt_workout_theme_options[meta_date]', function( value ) {
+	wp.customize( 'gt_health_theme_options[meta_date]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'date-hidden' );
@@ -56,7 +56,7 @@
 	} );
 
 	// Post Author checkbox.
-	wp.customize( 'gt_workout_theme_options[meta_author]', function( value ) {
+	wp.customize( 'gt_health_theme_options[meta_author]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'author-hidden' );
@@ -67,7 +67,7 @@
 	} );
 
 	// Post Category checkbox.
-	wp.customize( 'gt_workout_theme_options[meta_category]', function( value ) {
+	wp.customize( 'gt_health_theme_options[meta_category]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'categories-hidden' );
@@ -78,7 +78,7 @@
 	} );
 
 	// Post Thumbnails checkbox.
-	wp.customize( 'gt_workout_theme_options[post_image_archives]', function( value ) {
+	wp.customize( 'gt_health_theme_options[post_image_archives]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'post-images-hidden' );
@@ -89,7 +89,7 @@
 	} );
 
 	// Single Post Thumbnail checkbox.
-	wp.customize( 'gt_workout_theme_options[post_image_single]', function( value ) {
+	wp.customize( 'gt_health_theme_options[post_image_single]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'post-image-hidden' );
@@ -102,14 +102,14 @@
 	} );
 
 	// Footer text.
-	wp.customize( 'gt_workout_theme_options[footer_text]', function( value ) {
+	wp.customize( 'gt_health_theme_options[footer_text]', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-info .footer-text' ).html( to );
 		} );
 	} );
 
 	/* Primary Link Color Option */
-	wp.customize( 'gt_workout_theme_options[link_color]', function( value ) {
+	wp.customize( 'gt_health_theme_options[link_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color;
 
@@ -126,7 +126,7 @@
 	} );
 
 	/* Secondary Link Color Option */
-	wp.customize( 'gt_workout_theme_options[link_hover_color]', function( value ) {
+	wp.customize( 'gt_health_theme_options[link_hover_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color;
 
@@ -143,7 +143,7 @@
 	} );
 
 	/* Header Color Option */
-	wp.customize( 'gt_workout_theme_options[header_color]', function( value ) {
+	wp.customize( 'gt_health_theme_options[header_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
@@ -165,7 +165,7 @@
 	} );
 
 	/* Navigation Submenu Color Option */
-	wp.customize( 'gt_workout_theme_options[submenu_color]', function( value ) {
+	wp.customize( 'gt_health_theme_options[submenu_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
@@ -187,21 +187,21 @@
 	} );
 
 	/* Title Color Option */
-	wp.customize( 'gt_workout_theme_options[title_color]', function( value ) {
+	wp.customize( 'gt_health_theme_options[title_color]', function( value ) {
 		value.bind( function( newval ) {
 			document.documentElement.style.setProperty( '--title-color', newval );
 		} );
 	} );
 
 	/* Title Hover Color Option */
-	wp.customize( 'gt_workout_theme_options[title_hover_color]', function( value ) {
+	wp.customize( 'gt_health_theme_options[title_hover_color]', function( value ) {
 		value.bind( function( newval ) {
 			document.documentElement.style.setProperty( '--title-hover-color', newval );
 		} );
 	} );
 
 	/* Footer Color Option */
-	wp.customize( 'gt_workout_theme_options[footer_color]', function( value ) {
+	wp.customize( 'gt_health_theme_options[footer_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
@@ -223,17 +223,17 @@
 	} );
 
 	/* Theme Fonts */
-	wp.customize( 'gt_workout_theme_options[text_font]', function( value ) {
+	wp.customize( 'gt_health_theme_options[text_font]', function( value ) {
 		value.bind( function( newval ) {
 
 			// Embed Font.
 			var fontFamilyUrl = newval.split( " " ).join( "+" );
 			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='gt-workout-custom-text-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#gt-workout-custom-text-font" ).length;
+			var googleFontSource = "<link id='gt-health-custom-text-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
+			var checkLink = $( "head" ).find( "#gt-health-custom-text-font" ).length;
 
 			if (checkLink > 0) {
-				$( "head" ).find( "#gt-workout-custom-text-font" ).remove();
+				$( "head" ).find( "#gt-health-custom-text-font" ).remove();
 			}
 			$( "head" ).append( googleFontSource );
 
@@ -246,17 +246,17 @@
 		} );
 	} );
 
-	wp.customize( 'gt_workout_theme_options[title_font]', function( value ) {
+	wp.customize( 'gt_health_theme_options[title_font]', function( value ) {
 		value.bind( function( newval ) {
 
 			// Embed Font.
 			var fontFamilyUrl = newval.split( " " ).join( "+" );
 			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='gt-workout-custom-title-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#gt-workout-custom-title-font" ).length;
+			var googleFontSource = "<link id='gt-health-custom-title-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
+			var checkLink = $( "head" ).find( "#gt-health-custom-title-font" ).length;
 
 			if (checkLink > 0) {
-				$( "head" ).find( "#gt-workout-custom-title-font" ).remove();
+				$( "head" ).find( "#gt-health-custom-title-font" ).remove();
 			}
 			$( "head" ).append( googleFontSource );
 
@@ -269,17 +269,17 @@
 		} );
 	} );
 
-	wp.customize( 'gt_workout_theme_options[navi_font]', function( value ) {
+	wp.customize( 'gt_health_theme_options[navi_font]', function( value ) {
 		value.bind( function( newval ) {
 
 			// Embed Font.
 			var fontFamilyUrl = newval.split( " " ).join( "+" );
 			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='gt-workout-custom-navi-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#gt-workout-custom-navi-font" ).length;
+			var googleFontSource = "<link id='gt-health-custom-navi-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
+			var checkLink = $( "head" ).find( "#gt-health-custom-navi-font" ).length;
 
 			if (checkLink > 0) {
-				$( "head" ).find( "#gt-workout-custom-navi-font" ).remove();
+				$( "head" ).find( "#gt-health-custom-navi-font" ).remove();
 			}
 			$( "head" ).append( googleFontSource );
 

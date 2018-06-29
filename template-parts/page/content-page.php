@@ -3,7 +3,7 @@
  * The template used for displaying page content in page.php
  *
  * @version 1.0
- * @package GT Workout
+ * @package GT Health
  */
 ?>
 

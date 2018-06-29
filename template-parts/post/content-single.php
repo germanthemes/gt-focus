@@ -3,7 +3,7 @@
  * The template for displaying single posts
  *
  * @version 1.0
- * @package GT Workout
+ * @package GT Health
  */
 ?>
 
@@ -13,7 +13,7 @@
 
 		<?php the_title( '<h1 class="post-title entry-title">', '</h1>' ); ?>
 
-		<?php gt_workout_entry_meta(); ?>
+		<?php gt_health_entry_meta(); ?>
 
 	</header><!-- .entry-header -->
 

@@ -5,7 +5,7 @@
  * Displays all of the <head> section and everything up till <div id="content">
  *
  * @version 1.0
- * @package GT Workout
+ * @package GT Health
  */
 
 ?><!DOCTYPE html>
@@ -22,9 +22,9 @@
 <body <?php body_class(); ?>>
 
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gt-workout' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gt-health' ); ?></a>
 
-		<?php do_action( 'gt_workout_before_header' ); ?>
+		<?php do_action( 'gt_health_before_header' ); ?>
 
 		<header id="masthead" class="site-header" role="banner">
 
@@ -38,9 +38,9 @@
 
 		</header><!-- #masthead -->
 
-		<?php do_action( 'gt_workout_after_header' ); ?>
+		<?php do_action( 'gt_health_after_header' ); ?>
 
-		<?php gt_workout_header_image(); ?>
+		<?php gt_health_header_image(); ?>
 
 		<div id="content" class="site-content">
 

@@ -1,12 +1,12 @@
 <?php
 /**
- * GT Workout functions and definitions
+ * GT Health functions and definitions
  *
- * @package GT Workout
+ * @package GT Health
  */
 
 /**
- * GT Workout only works in WordPress 5.0 or later.
+ * GT Health only works in WordPress 5.0 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '5.0-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -14,7 +14,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0-alpha', '<' ) ) {
 }
 
 
-if ( ! function_exists( 'gt_workout_setup' ) ) :
+if ( ! function_exists( 'gt_health_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -22,10 +22,10 @@ if ( ! function_exists( 'gt_workout_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function gt_workout_setup() {
+	function gt_health_setup() {
 
-		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/gt-workout
-		load_theme_textdomain( 'gt-workout', get_template_directory() . '/languages' );
+		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/gt-health
+		load_theme_textdomain( 'gt-health', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -40,11 +40,11 @@ if ( ! function_exists( 'gt_workout_setup' ) ) :
 		set_post_thumbnail_size( 720, 360, true );
 
 		// Add image size for header image on single posts and pages.
-		add_image_size( 'gt-workout-header-image', 2560, 640, true );
+		add_image_size( 'gt-health-header-image', 2560, 640, true );
 
 		// Register Navigation Menus.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Main Navigation', 'gt-workout' ),
+			'primary' => esc_html__( 'Main Navigation', 'gt-health' ),
 		) );
 
 		// Switch default core markup for galleries and captions to output valid HTML5.
@@ -54,7 +54,7 @@ if ( ! function_exists( 'gt_workout_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom logo feature.
-		add_theme_support( 'custom-logo', apply_filters( 'gt_workout_custom_logo_args', array(
+		add_theme_support( 'custom-logo', apply_filters( 'gt_health_custom_logo_args', array(
 			'height'      => 60,
 			'width'       => 300,
 			'flex-height' => true,
@@ -62,7 +62,7 @@ if ( ! function_exists( 'gt_workout_setup' ) ) :
 		) ) );
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header', apply_filters( 'gt_workout_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'gt_health_custom_header_args', array(
 			'header-text' => false,
 			'width'       => 2560,
 			'height'      => 640,
@@ -77,37 +77,37 @@ if ( ! function_exists( 'gt_workout_setup' ) ) :
 		// Add theme support for block color palette.
 		add_theme_support( 'editor-color-palette',
 			array(
-				'name'  => esc_html_x( 'Primary', 'block color', 'gt-workout' ),
+				'name'  => esc_html_x( 'Primary', 'block color', 'gt-health' ),
 				'color' => '#0c557a',
 			),
 			array(
-				'name'  => esc_html_x( 'Secondary', 'block color', 'gt-workout' ),
+				'name'  => esc_html_x( 'Secondary', 'block color', 'gt-health' ),
 				'color' => '#ff6600',
 			),
 			array(
-				'name'  => esc_html_x( 'Accent', 'block color', 'gt-workout' ),
+				'name'  => esc_html_x( 'Accent', 'block color', 'gt-health' ),
 				'color' => '#a156b4',
 			),
 			array(
-				'name'  => esc_html_x( 'White', 'block color', 'gt-workout' ),
+				'name'  => esc_html_x( 'White', 'block color', 'gt-health' ),
 				'color' => '#ffffff',
 			),
 			array(
-				'name'  => esc_html_x( 'Light Gray', 'block color', 'gt-workout' ),
+				'name'  => esc_html_x( 'Light Gray', 'block color', 'gt-health' ),
 				'color' => '#e5e5e5',
 			),
 			array(
-				'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-workout' ),
+				'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-health' ),
 				'color' => '#444444',
 			),
 			array(
-				'name'  => esc_html_x( 'Black', 'block color', 'gt-workout' ),
+				'name'  => esc_html_x( 'Black', 'block color', 'gt-health' ),
 				'color' => '#151515',
 			)
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'gt_workout_setup' );
+add_action( 'after_setup_theme', 'gt_health_setup' );
 
 
 /**
@@ -116,47 +116,47 @@ add_action( 'after_setup_theme', 'gt_workout_setup' );
  *
  * @global int $content_width
  */
-function gt_workout_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gt_workout_content_width', 1040 );
+function gt_health_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'gt_health_content_width', 1040 );
 }
-add_action( 'after_setup_theme', 'gt_workout_content_width', 0 );
+add_action( 'after_setup_theme', 'gt_health_content_width', 0 );
 
 
 /**
  * Enqueue scripts and styles.
  */
-function gt_workout_scripts() {
+function gt_health_scripts() {
 
 	// Get Theme Version.
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	// Register and Enqueue Stylesheet.
-	wp_enqueue_style( 'gt-workout-stylesheet', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'gt-health-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.js.
 	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script( 'gt-workout-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
-		$gt_workout_l10n = array(
-			'expand'   => esc_html__( 'Expand child menu', 'gt-workout' ),
-			'collapse' => esc_html__( 'Collapse child menu', 'gt-workout' ),
-			'icon'     => gt_workout_get_svg( 'expand' ),
+		wp_enqueue_script( 'gt-health-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
+		$gt_health_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'gt-health' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'gt-health' ),
+			'icon'     => gt_health_get_svg( 'expand' ),
 		);
-		wp_localize_script( 'gt-workout-navigation', 'gtWorkoutScreenReaderText', $gt_workout_l10n );
+		wp_localize_script( 'gt-health-navigation', 'gtHealthScreenReaderText', $gt_health_l10n );
 	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
 	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.4' );
 }
-add_action( 'wp_enqueue_scripts', 'gt_workout_scripts' );
+add_action( 'wp_enqueue_scripts', 'gt_health_scripts' );
 
 
 /**
  * Enqueue block styles for Gutenberg Editor.
  */
-function gt_workout_block_editor_styles() {
-	wp_enqueue_style( 'gt-workout-block-editor-styles', get_theme_file_uri( '/assets/css/editor.css' ), array(), '20180529', 'all' );
+function gt_health_block_editor_styles() {
+	wp_enqueue_style( 'gt-health-block-editor-styles', get_theme_file_uri( '/assets/css/editor.css' ), array(), '20180529', 'all' );
 }
-add_action( 'enqueue_block_editor_assets', 'gt_workout_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'gt_health_block_editor_styles' );
 
 
 /**

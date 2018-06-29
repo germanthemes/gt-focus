@@ -4,13 +4,13 @@
  *
  * Generates Custom Fonts CSS code and loads Google Fonts from Google Font API
  *
- * @package GT Workout
+ * @package GT Health
  */
 
 /**
 * Custom Fonts Class
 */
-class GT_Workout_Custom_Fonts {
+class GT_Health_Custom_Fonts {
 
 	/**
 	 * Actions Setup
@@ -35,10 +35,10 @@ class GT_Workout_Custom_Fonts {
 	static function custom_fonts_css() {
 
 		// Get Theme Options from Database.
-		$theme_options = gt_workout_theme_options();
+		$theme_options = gt_health_theme_options();
 
 		// Get Default Fonts from settings.
-		$default_options = gt_workout_default_options();
+		$default_options = gt_health_default_options();
 
 		// Font Variables.
 		$font_variables = '';
@@ -71,7 +71,7 @@ class GT_Workout_Custom_Fonts {
 		$custom_css = preg_replace( '/\t/', '', $custom_css );
 
 		// Enqueue Custom CSS.
-		wp_add_inline_style( 'gt-workout-stylesheet', $custom_css );
+		wp_add_inline_style( 'gt-health-stylesheet', $custom_css );
 	}
 
 	/**
@@ -98,11 +98,11 @@ class GT_Workout_Custom_Fonts {
 		$fonts = self::get_selected_fonts();
 
 		if ( in_array( 'Arimo', $fonts, true ) ) {
-			wp_enqueue_style( 'gt-workout-arimo-font', get_theme_file_uri( '/assets/css/arimo.css' ), array(), '11.0' );
+			wp_enqueue_style( 'gt-health-arimo-font', get_theme_file_uri( '/assets/css/arimo.css' ), array(), '11.0' );
 		}
 
 		if ( in_array( 'Nunito', $fonts, true ) ) {
-			wp_enqueue_style( 'gt-workout-nunito-font', get_theme_file_uri( '/assets/css/nunito.css' ), array(), '9.0' );
+			wp_enqueue_style( 'gt-health-nunito-font', get_theme_file_uri( '/assets/css/nunito.css' ), array(), '9.0' );
 		}
 	}
 
@@ -114,7 +114,7 @@ class GT_Workout_Custom_Fonts {
 	static function get_selected_fonts() {
 
 		// Get theme options from database.
-		$theme_options = gt_workout_theme_options();
+		$theme_options = gt_health_theme_options();
 
 		// Get selected fonts.
 		$selected_fonts = array(
@@ -165,7 +165,7 @@ class GT_Workout_Custom_Fonts {
 		);
 
 		// Get Default Fonts from settings.
-		$default_options = gt_workout_default_options();
+		$default_options = gt_health_default_options();
 
 		// Add default fonts to local fonts.
 		if ( isset( $default_options['text_font'] ) and ! array_key_exists( $default_options['text_font'], $fonts ) ) :
@@ -189,4 +189,4 @@ class GT_Workout_Custom_Fonts {
 }
 
 // Run Class.
-GT_Workout_Custom_Fonts::setup();
+GT_Health_Custom_Fonts::setup();
