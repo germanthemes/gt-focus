@@ -1,5 +1,6 @@
 .site-header {
 	@include background(--header-background-color);
+	border-bottom: 1px solid #ccc;
 }
 
 .header-main {
