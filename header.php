@@ -26,6 +26,8 @@
 
 		<?php do_action( 'gt_health_before_header' ); ?>
 
+		<?php gt_health_header_image(); ?>
+
 		<header id="masthead" class="site-header" role="banner">
 
 			<div class="header-main container">
@@ -39,8 +41,6 @@
 		</header><!-- #masthead -->
 
 		<?php do_action( 'gt_health_after_header' ); ?>
-
-		<?php gt_health_header_image(); ?>
 
 		<div id="content" class="site-content">
 

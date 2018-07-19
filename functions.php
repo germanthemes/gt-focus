@@ -39,9 +39,6 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 		// Set default Post Thumbnail size.
 		set_post_thumbnail_size( 720, 360, true );
 
-		// Add image size for header image on single posts and pages.
-		add_image_size( 'gt-health-header-image', 2560, 640, true );
-
 		// Register Navigation Menus.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Main Navigation', 'gt-health' ),
@@ -65,7 +62,8 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 		add_theme_support( 'custom-header', apply_filters( 'gt_health_custom_header_args', array(
 			'header-text' => false,
 			'width'       => 2560,
-			'height'      => 640,
+			'height'      => 480,
+			'flex-height' => true,
 		) ) );
 
 		// Add Theme Support for Selective Refresh in Customizer.

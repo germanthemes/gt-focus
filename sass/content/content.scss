@@ -58,6 +58,7 @@
 	grid-template-columns: 1fr minmax(0, var(--contentWidth) ) 1fr;
 	grid-column-gap: 1.75rem;
 	@include background(--title-background-color);
+	box-shadow: inset 0 0 5px 0 #242424;
 }
 
 .page-header-container .page-header {
@@ -65,14 +66,14 @@
 	grid-column: 2 / -2;
 }
 
-.entry-title,
-.entry-title a:link,
-.entry-title a:visited {
+.page-header-container .page-header .entry-title,
+.page-header-container .page-header .entry-title a:link,
+.page-header-container .page-header .entry-title a:visited {
 	color: #fff;
 }
 
-.entry-title a:hover,
-.entry-title a:active {
+.page-header-container .page-header .entry-title a:hover,
+.page-header-container .page-header .entry-title a:active {
 	color: rgba(255, 255, 255, 0.5);
 }
 
@@ -95,9 +96,6 @@
 /* Featured Images */
 .wp-post-image {
 	vertical-align: top;
-}
-
-.post-image-archives .wp-post-image {
 	margin-bottom: 1rem;
 }
 

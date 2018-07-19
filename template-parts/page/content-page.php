@@ -10,14 +10,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="page-header-container entry-header-container">
-
 		<header class="page-header entry-header">
 
 			<?php the_title( '<h1 class="page-title entry-title">', '</h1>' ); ?>
 
 		</header><!-- .entry-header -->
-
 	</div>
+
+	<?php the_post_thumbnail(); ?>
 
 	<div class="entry-content">
 

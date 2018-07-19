@@ -37,11 +37,11 @@ if ( ! function_exists( 'gt_health_site_description' ) ) :
 		$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
 
 		if ( $description || is_customize_preview() ) :
-		?>
+			?>
 
 			<p class="site-description"><?php echo $description; ?></p>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -53,31 +53,8 @@ if ( ! function_exists( 'gt_health_header_image' ) ) :
 	 */
 	function gt_health_header_image() {
 
-		// Display featured image as header image on single posts.
-		if ( is_single() && has_post_thumbnail() && ( true === gt_health_get_option( 'post_image_single' ) || is_customize_preview() ) ) :
-		?>
-
-			<div id="headimg" class="header-image featured-header-image">
-
-				<?php the_post_thumbnail( 'gt-health-header-image' ); ?>
-
-			</div>
-
-		<?php
-		// Display featured image as header image on static pages.
-		elseif ( is_page() && has_post_thumbnail() ) :
-		?>
-
-			<div id="headimg" class="header-image featured-header-image">
-
-				<?php the_post_thumbnail( 'gt-health-header-image' ); ?>
-
-			</div>
-
-		<?php
-		// Display header image.
-		elseif ( has_header_image() ) :
-		?>
+		if ( has_header_image() ) :
+			?>
 
 			<div id="headimg" class="header-image default-header-image">
 
@@ -85,7 +62,7 @@ if ( ! function_exists( 'gt_health_header_image' ) ) :
 
 			</div>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -98,12 +75,14 @@ if ( ! function_exists( 'gt_health_archive_header' ) ) :
 	function gt_health_archive_header() {
 		?>
 
-		<header class="archive-header entry-header">
+		<div class="archive-header-container page-header-container entry-header-container">
+			<header class="archive-header page-header entry-header">
 
-			<?php the_archive_title( '<h1 class="archive-title entry-title">', '</h1>' ); ?>
-			<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
+				<?php the_archive_title( '<h1 class="archive-title page-title entry-title">', '</h1>' ); ?>
+				<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 
-		</header><!-- .archive-header -->
+			</header><!-- .archive-header -->
+		</div>
 
 		<?php
 	}
@@ -137,7 +116,7 @@ if ( ! function_exists( 'gt_health_post_image_archives' ) ) :
 
 		// Display Post Thumbnail if activated.
 		if ( true === gt_health_get_option( 'post_image_archives' ) && has_post_thumbnail() ) :
-		?>
+			?>
 
 			<div class="post-image post-image-archives">
 				<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
@@ -145,7 +124,27 @@ if ( ! function_exists( 'gt_health_post_image_archives' ) ) :
 				</a>
 			</div>
 
-		<?php
+			<?php
+		endif;
+	}
+endif;
+
+
+if ( ! function_exists( 'gt_health_post_image_single' ) ) :
+	/**
+	 * Displays the featured image on single posts
+	 */
+	function gt_health_post_image_single() {
+
+		// Display Post Thumbnail if activated.
+		if ( true === gt_health_get_option( 'post_image_single' ) ) :
+			?>
+
+			<div class="post-image post-image-single">
+				<?php the_post_thumbnail(); ?>
+			</div>
+
+			<?php
 		endif;
 	}
 endif;
