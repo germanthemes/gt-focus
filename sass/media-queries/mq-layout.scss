@@ -12,11 +12,24 @@
     .site-content {
     	grid-column-gap: 1.5rem;
     }
+
+    .page-header-container {
+    	margin-bottom: 1.5rem;
+        grid-column-gap: 2rem;
+    }
 }
 
 @media only screen and (min-width: 50em) {
     .entry-header {
         margin: 2rem 0 1.5rem;
+    }
+
+    .page-header-container {
+    	margin-bottom: 2rem;
+    }
+
+    .page-header-container .page-header {
+    	margin: 2rem 0;
     }
 
     .pagination {
@@ -39,6 +52,14 @@
 @media only screen and (min-width: 70em) {
     .entry-header {
         margin: 2.5rem 0 2rem;
+    }
+
+    .page-header-container {
+        margin-bottom: 2.5rem;
+    }
+
+    .page-header-container .page-header {
+        margin: 2.5rem 0;
     }
 
     .pagination {

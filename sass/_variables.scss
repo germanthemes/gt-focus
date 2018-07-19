@@ -25,6 +25,7 @@ $themeColors: (
 	--submenu-hover-text-color : rgba(255, 255, 255, 0.5),
 	--title-color              : #242424,
 	--title-hover-color        : #006699,
+	--title-background-color   : #006699,
 	--footer-color             : #fff,
 	--footer-text-color        : #242424,
 	--footer-hover-text-color  : rgba(0, 0, 0, 0.5),
@@ -73,6 +74,7 @@ $textTransform: (
 	--submenu-hover-text-color: map-get($themeColors, --submenu-hover-text-color);
 	--title-color: map-get($themeColors, --title-color);
 	--title-hover-color: map-get($themeColors, --title-hover-color);
+	--title-background-color: map-get($themeColors, --title-background-color);
 	--footer-color: map-get($themeColors, --footer-color);
 	--footer-text-color: map-get($themeColors, --footer-text-color);
 	--footer-hover-text-color: map-get($themeColors, --footer-hover-text-color);

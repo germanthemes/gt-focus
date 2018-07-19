@@ -46,6 +46,36 @@
 	@include color(--title-hover-color);
 }
 
+/* Page Header */
+.page-header-container {
+	margin-left: calc( -100vw / 2 + 100% / 2 );
+	margin-right: calc( -100vw / 2 + 100% / 2 );
+	margin-top: -1px;
+	margin-bottom: 1rem;
+	max-width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr minmax(0, $contentWidth) 1fr;
+	grid-template-columns: 1fr minmax(0, var(--contentWidth) ) 1fr;
+	grid-column-gap: 1.75rem;
+	@include background(--title-background-color);
+}
+
+.page-header-container .page-header {
+	margin: 1.5rem 0;
+	grid-column: 2 / -2;
+}
+
+.entry-title,
+.entry-title a:link,
+.entry-title a:visited {
+	color: #fff;
+}
+
+.entry-title a:hover,
+.entry-title a:active {
+	color: rgba(255, 255, 255, 0.5);
+}
+
 /* Entry Content */
 .entry-content {
 	@include font-size(17);

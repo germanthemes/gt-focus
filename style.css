@@ -64,6 +64,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--submenu-hover-text-color: rgba(255, 255, 255, 0.5);
 	--title-color: #242424;
 	--title-hover-color: #006699;
+	--title-background-color: #006699;
 	--footer-color: #fff;
 	--footer-text-color: #242424;
 	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
@@ -1112,6 +1113,37 @@ textarea {
 	color: var(--title-hover-color);
 }
 
+/* Page Header */
+.page-header-container {
+	margin-left: calc( -100vw / 2 + 100% / 2);
+	margin-right: calc( -100vw / 2 + 100% / 2);
+	margin-top: -1px;
+	margin-bottom: 1rem;
+	max-width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr minmax(0, 720px) 1fr;
+	grid-template-columns: 1fr minmax(0, var(--contentWidth)) 1fr;
+	grid-column-gap: 1.75rem;
+	background: #006699;
+	background: var(--title-background-color);
+}
+
+.page-header-container .page-header {
+	margin: 1.5rem 0;
+	grid-column: 2 / -2;
+}
+
+.entry-title,
+.entry-title a:link,
+.entry-title a:visited {
+	color: #fff;
+}
+
+.entry-title a:hover,
+.entry-title a:active {
+	color: rgba(255, 255, 255, 0.5);
+}
+
 /* Entry Content */
 .entry-content {
 	font-size: 17px;
@@ -1578,11 +1610,24 @@ object {
 	.site-content {
 		grid-column-gap: 1.5rem;
 	}
+
+	.page-header-container {
+		margin-bottom: 1.5rem;
+		grid-column-gap: 2rem;
+	}
 }
 
 @media only screen and (min-width: 50em) {
 	.entry-header {
 		margin: 2rem 0 1.5rem;
+	}
+
+	.page-header-container {
+		margin-bottom: 2rem;
+	}
+
+	.page-header-container .page-header {
+		margin: 2rem 0;
 	}
 
 	.pagination {
@@ -1605,6 +1650,14 @@ object {
 @media only screen and (min-width: 70em) {
 	.entry-header {
 		margin: 2.5rem 0 2rem;
+	}
+
+	.page-header-container {
+		margin-bottom: 2.5rem;
+	}
+
+	.page-header-container .page-header {
+		margin: 2.5rem 0;
 	}
 
 	.pagination {
