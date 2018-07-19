@@ -35,11 +35,25 @@
 	}
 
 	.main-navigation ul li {
-		padding: 0 0.5rem;
+		padding: 1rem 0.5rem;
 	}
 
 	.main-navigation ul a {
+		display: inline-block;
+		padding: 0.4rem 1rem;
 		border: none;
+		border-radius: 0.5rem;
+	}
+
+	.main-navigation ul a:hover,
+	.main-navigation ul a:active {
+		@include background(--navi-hover-bg-color);
+	}
+
+	.main-navigation ul li.current-menu-item > a {
+		@include color(--navi-active-text-color);
+		@include background(--navi-active-bg-color);
+		text-decoration: none;
 	}
 
 	/* Dropdown Menus */
@@ -48,10 +62,15 @@
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		margin: 0;
-		padding: 1rem;
+		margin: 0 0 0 0.5rem;
+		padding: 0.5rem;
 		background: #fff;
-		border: 1px solid #ccc;
+		box-shadow: 0 4px 10px #aaa;
+		border-radius: 0.5rem;
+	}
+
+	.main-navigation ul ul li {
+		padding: 0.5rem;
 	}
 
 	.main-navigation ul ul li:hover > ul,
@@ -72,9 +91,8 @@
 
 	.main-navigation ul ul ul {
 		left: -999em;
-		margin-top: 0;
+		margin: 0;
 		top: 0;
-		padding: 0;
 	}
 
 	/* Dropdown Icons */
@@ -104,11 +122,5 @@
 		-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
 		-ms-transform: rotate(-90deg); /* IE 9 */
 		transform: rotate(-90deg);
-		@include fill(--submenu-text-color);
-	}
-
-	.main-navigation ul ul .menu-item-has-children > a:hover > .icon,
-	.main-navigation ul ul .page_item_has_children > a:hover > .icon {
-		@include fill(--submenu-hover-text-color);
 	}
 }
