@@ -12,6 +12,8 @@ get_header();
 
 if ( have_posts() ) :
 
+	gt_health_blog_header();
+
 	while ( have_posts() ) :
 		the_post();
 

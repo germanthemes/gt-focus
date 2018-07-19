@@ -68,6 +68,33 @@ if ( ! function_exists( 'gt_health_header_image' ) ) :
 endif;
 
 
+if ( ! function_exists( 'gt_health_blog_header' ) ) :
+	/**
+	 * Displays the blog title on posts pages.
+	 */
+	function gt_health_blog_header() {
+
+		// Return early if posts are displayed on front page.
+		if ( 'page' !== get_option( 'show_on_front' ) || get_option( 'page_for_posts' ) < 1 ) {
+			return;
+		}
+		?>
+
+		<div class="blog-header-container page-header-container entry-header-container">
+			<header class="blog-header page-header entry-header">
+
+				<h1 class="blog-title page-title entry-title">
+					<?php echo esc_html( get_the_title( get_option( 'page_for_posts' ) ) ); ?>
+				</h1>
+
+			</header><!-- .blog-header -->
+		</div>
+
+		<?php
+	}
+endif;
+
+
 if ( ! function_exists( 'gt_health_archive_header' ) ) :
 	/**
 	 * Displays the header title on archive pages.
@@ -263,10 +290,10 @@ function gt_health_footer_text() {
 	$footer_text = gt_health_get_option( 'footer_text' );
 
 	if ( '' !== $footer_text || is_customize_preview() ) :
-	?>
+		?>
 
 		<span class="footer-text"><?php echo wp_kses_post( $footer_text ); ?></span>
 
-	<?php
+		<?php
 	endif;
 }
