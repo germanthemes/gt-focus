@@ -97,12 +97,12 @@ class GT_Health_Custom_Fonts {
 		// Get selected fonts.
 		$fonts = self::get_selected_fonts();
 
-		if ( in_array( 'Arimo', $fonts, true ) ) {
-			wp_enqueue_style( 'gt-health-arimo-font', get_theme_file_uri( '/assets/css/arimo.css' ), array(), '11.0' );
+		if ( in_array( 'Roboto', $fonts, true ) ) {
+			wp_enqueue_style( 'gt-health-roboto-font', get_theme_file_uri( '/assets/css/roboto.css' ), array(), '14.0' );
 		}
 
-		if ( in_array( 'Nunito', $fonts, true ) ) {
-			wp_enqueue_style( 'gt-health-nunito-font', get_theme_file_uri( '/assets/css/nunito.css' ), array(), '9.0' );
+		if ( in_array( 'Lato', $fonts, true ) ) {
+			wp_enqueue_style( 'gt-health-lato-font', get_theme_file_uri( '/assets/css/lato.css' ), array(), '18.0' );
 		}
 	}
 
@@ -135,7 +135,7 @@ class GT_Health_Custom_Fonts {
 		$selected_fonts = self::get_selected_fonts();
 
 		// Remove default fonts.
-		$selected_fonts = array_diff( $selected_fonts, array( 'Arimo', 'Nunito' ) );
+		$selected_fonts = array_diff( $selected_fonts, array( 'Roboto', 'Lato' ) );
 
 		add_theme_support( 'gt-typography', array(
 			'selected_fonts' => $selected_fonts,

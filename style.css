@@ -67,11 +67,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--footer-text-color: #242424;
 	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
 	--footer-border-color: rgba(0, 0, 0, 0.1);
-	--text-font: Arimo, Arial, Helvetica;
-	--title-font: Nunito, Tahoma, Arial;
+	--text-font: Roboto, Arial, Helvetica;
+	--title-font: Lato, Tahoma, Arial;
 	--title-font-weight: bold;
 	--title-text-transform: none;
-	--navi-font: Nunito, Tahoma, Arial;
+	--navi-font: Roboto, Arial, Helvetica;
 	--navi-font-weight: normal;
 	--navi-text-transform: none;
 }
@@ -306,7 +306,7 @@ textarea {
 	color: #242424;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: Arimo, Arial, Helvetica;
+	font-family: Roboto, Arial, Helvetica;
 	font-family: var(--text-font);
 	line-height: 1.75;
 }
@@ -319,7 +319,7 @@ h5,
 h6 {
 	clear: both;
 	margin: 1em 0 0.75em;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: Lato, Tahoma, Arial;
 	font-family: var(--title-font);
 	line-height: 1.4;
 }
@@ -778,7 +778,7 @@ textarea {
 	text-decoration: none;
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: Lato, Tahoma, Arial;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -839,7 +839,7 @@ textarea {
 	list-style: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: Roboto, Arial, Helvetica;
 	font-family: var(--navi-font);
 	font-weight: normal;
 	font-weight: var(--navi-font-weight);
@@ -915,7 +915,7 @@ textarea {
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: Roboto, Arial, Helvetica;
 	font-family: var(--navi-font);
 	font-weight: normal;
 	font-weight: var(--navi-font-weight);
@@ -1055,7 +1055,7 @@ textarea {
 	word-wrap: break-word;
 	font-size: 28px;
 	font-size: 1.75rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: Lato, Tahoma, Arial;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -1238,7 +1238,7 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 .site-footer {
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: Roboto, Arial, Helvetica;
 	font-family: var(--navi-font);
 	color: rgba(0, 0, 0, 0.5);
 	color: var(--footer-hover-text-color);
@@ -1758,6 +1758,11 @@ object {
 		-ms-transform: rotate(-90deg);
 		/* IE 9 */
 		transform: rotate(-90deg);
+	}
+
+	.main-navigation ul li.current-menu-item > a > .icon {
+		fill: #fff;
+		fill: var(--navi-active-text-color);
 	}
 }
 

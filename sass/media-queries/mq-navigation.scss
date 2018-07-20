@@ -119,4 +119,8 @@
 		-ms-transform: rotate(-90deg); /* IE 9 */
 		transform: rotate(-90deg);
 	}
+
+	.main-navigation ul li.current-menu-item > a > .icon {
+		@include fill(--navi-active-text-color);
+	}
 }

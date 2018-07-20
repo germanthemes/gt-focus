@@ -31,12 +31,12 @@ $themeColors: (
 );
 
 // Theme Fonts
-$baseFont: Arimo, Arial, Helvetica;
-$titleFont: Nunito, Tahoma, Arial;
+$baseFont: Roboto, Arial, Helvetica;
+$titleFont: Lato, Tahoma, Arial;
 $themeFonts: (
 	--text-font  : $baseFont,
 	--title-font : $titleFont,
-	--navi-font  : $titleFont,
+	--navi-font  : $baseFont,
 );
 
 // Font Weight.
