@@ -24,39 +24,7 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 	// Get Default Colors from settings.
 	$default = gt_health_default_options();
 
-	// Add Link Color setting.
-	$wp_customize->add_setting( 'gt_health_theme_options[link_color]', array(
-		'default'           => $default['link_color'],
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_health_theme_options[link_color]', array(
-			'label'    => esc_html_x( 'Links & Buttons (primary)', 'Color Settings', 'gt-health' ),
-			'section'  => 'gt_health_section_colors',
-			'settings' => 'gt_health_theme_options[link_color]',
-			'priority' => 10,
-		)
-	) );
-
-	// Add Button Color setting.
-	$wp_customize->add_setting( 'gt_health_theme_options[link_hover_color]', array(
-		'default'           => $default['link_hover_color'],
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_health_theme_options[link_hover_color]', array(
-			'label'    => esc_html_x( 'Links & Buttons (secondary)', 'Color Settings', 'gt-health' ),
-			'section'  => 'gt_health_section_colors',
-			'settings' => 'gt_health_theme_options[link_hover_color]',
-			'priority' => 20,
-		)
-	) );
-
-	// Add Navigation Primary Color setting.
+	// Add Header Color setting.
 	$wp_customize->add_setting( 'gt_health_theme_options[header_color]', array(
 		'default'           => $default['header_color'],
 		'type'              => 'option',
@@ -68,23 +36,23 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Header', 'Color Settings', 'gt-health' ),
 			'section'  => 'gt_health_section_colors',
 			'settings' => 'gt_health_theme_options[header_color]',
-			'priority' => 30,
+			'priority' => 10,
 		)
 	) );
 
-	// Add Navigation Secondary Color setting.
-	$wp_customize->add_setting( 'gt_health_theme_options[submenu_color]', array(
-		'default'           => $default['submenu_color'],
+	// Add Navigation Color setting.
+	$wp_customize->add_setting( 'gt_health_theme_options[navi_color]', array(
+		'default'           => $default['navi_color'],
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_health_theme_options[submenu_color]', array(
-			'label'    => esc_html_x( 'Navigation Submenus', 'Color Settings', 'gt-health' ),
+		$wp_customize, 'gt_health_theme_options[navi_color]', array(
+			'label'    => esc_html_x( 'Navigation', 'Color Settings', 'gt-health' ),
 			'section'  => 'gt_health_section_colors',
-			'settings' => 'gt_health_theme_options[submenu_color]',
-			'priority' => 40,
+			'settings' => 'gt_health_theme_options[navi_color]',
+			'priority' => 20,
 		)
 	) );
 
@@ -97,26 +65,26 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_health_theme_options[title_color]', array(
-			'label'    => esc_html_x( 'Titles (primary)', 'Color Settings', 'gt-health' ),
+			'label'    => esc_html_x( 'Titles', 'Color Settings', 'gt-health' ),
 			'section'  => 'gt_health_section_colors',
 			'settings' => 'gt_health_theme_options[title_color]',
-			'priority' => 50,
+			'priority' => 30,
 		)
 	) );
 
-	// Add Secondary Title Color setting.
-	$wp_customize->add_setting( 'gt_health_theme_options[title_hover_color]', array(
-		'default'           => $default['title_hover_color'],
+	// Add Link Color setting.
+	$wp_customize->add_setting( 'gt_health_theme_options[link_color]', array(
+		'default'           => $default['link_color'],
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_health_theme_options[title_hover_color]', array(
-			'label'    => esc_html_x( 'Titles (secondary)', 'Color Settings', 'gt-health' ),
+		$wp_customize, 'gt_health_theme_options[link_color]', array(
+			'label'    => esc_html_x( 'Links & Buttons', 'Color Settings', 'gt-health' ),
 			'section'  => 'gt_health_section_colors',
-			'settings' => 'gt_health_theme_options[title_hover_color]',
-			'priority' => 60,
+			'settings' => 'gt_health_theme_options[link_color]',
+			'priority' => 40,
 		)
 	) );
 
@@ -132,7 +100,7 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Footer', 'Color Settings', 'gt-health' ),
 			'section'  => 'gt_health_section_colors',
 			'settings' => 'gt_health_theme_options[footer_color]',
-			'priority' => 70,
+			'priority' => 50,
 		)
 	) );
 }

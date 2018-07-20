@@ -47,6 +47,7 @@
 
 	.main-navigation ul a:hover,
 	.main-navigation ul a:active {
+		@include color(--header-text-color);
 		@include background(--navi-hover-bg-color);
 	}
 
@@ -64,8 +65,8 @@
 		z-index: 99999;
 		margin: 0 0 0 0.5rem;
 		padding: 0.5rem;
-		background: #fff;
-		box-shadow: 0 4px 10px #aaa;
+		@include background(--header-background-color);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 		border-radius: 0.5rem;
 	}
 
@@ -105,11 +106,6 @@
 		width: 13px;
 		height: 13px;
 		@include fill(--header-text-color);
-	}
-
-	.main-navigation ul .menu-item-has-children > a:hover > .icon,
-	.main-navigation ul .page_item_has_children > a:hover > .icon {
-		@include fill(--header-hover-text-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a > .icon,

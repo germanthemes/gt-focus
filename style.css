@@ -59,9 +59,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--navi-active-text-color: #fff;
 	--navi-active-bg-color: #006699;
 	--navi-hover-bg-color: rgba(0, 0, 0, 0.1);
-	--title-color: #242424;
-	--title-hover-color: #006699;
+	--title-text-color: #fff;
 	--title-background-color: #006699;
+	--post-title-color: #242424;
+	--post-title-hover-color: #006699;
 	--footer-color: #fff;
 	--footer-text-color: #242424;
 	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
@@ -1049,7 +1050,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #242424;
-	color: var(--title-color);
+	color: var(--post-title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 28px;
@@ -1066,14 +1067,14 @@ textarea {
 .entry-title a:link,
 .entry-title a:visited {
 	color: #242424;
-	color: var(--title-color);
+	color: var(--post-title-color);
 	text-decoration: none;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
 	color: #006699;
-	color: var(--title-hover-color);
+	color: var(--post-title-hover-color);
 }
 
 /* Page Header */
@@ -1089,7 +1090,7 @@ textarea {
 	grid-column-gap: 1.75rem;
 	background: #006699;
 	background: var(--title-background-color);
-	box-shadow: inset 0 0 5px 0 #242424;
+	box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .page-header-container .page-header {
@@ -1099,13 +1100,11 @@ textarea {
 
 .page-header-container .page-header .entry-title,
 .page-header-container .page-header .entry-title a:link,
-.page-header-container .page-header .entry-title a:visited {
-	color: #fff;
-}
-
+.page-header-container .page-header .entry-title a:visited,
 .page-header-container .page-header .entry-title a:hover,
 .page-header-container .page-header .entry-title a:active {
-	color: rgba(255, 255, 255, 0.5);
+	color: #fff;
+	color: var(--title-text-color);
 }
 
 /* Entry Content */
@@ -1680,6 +1679,8 @@ object {
 
 	.main-navigation ul a:hover,
 	.main-navigation ul a:active {
+		color: #242424;
+		color: var(--header-text-color);
 		background: rgba(0, 0, 0, 0.1);
 		background: var(--navi-hover-bg-color);
 	}
@@ -1701,7 +1702,8 @@ object {
 		margin: 0 0 0 0.5rem;
 		padding: 0.5rem;
 		background: #fff;
-		box-shadow: 0 4px 10px #aaa;
+		background: var(--header-background-color);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 		border-radius: 0.5rem;
 	}
 
@@ -1742,12 +1744,6 @@ object {
 		height: 13px;
 		fill: #242424;
 		fill: var(--header-text-color);
-	}
-
-	.main-navigation ul .menu-item-has-children > a:hover > .icon,
-	.main-navigation ul .page_item_has_children > a:hover > .icon {
-		fill: #006699;
-		fill: var(--header-hover-text-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a > .icon,

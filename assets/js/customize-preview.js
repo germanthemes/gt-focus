@@ -108,95 +108,74 @@
 		} );
 	} );
 
-	/* Primary Link Color Option */
-	wp.customize( 'gt_health_theme_options[link_color]', function( value ) {
-		value.bind( function( newval ) {
-			var text_color;
-
-			if( isColorLight( newval ) ) {
-				text_color = '#282828';
-			} else {
-				text_color = '#ffffff';
-			}
-
-			document.documentElement.style.setProperty( '--link-color', newval );
-			document.documentElement.style.setProperty( '--button-color', newval );
-			document.documentElement.style.setProperty( '--button-text-color', text_color );
-		} );
-	} );
-
-	/* Secondary Link Color Option */
-	wp.customize( 'gt_health_theme_options[link_hover_color]', function( value ) {
-		value.bind( function( newval ) {
-			var text_color;
-
-			if( isColorLight( newval ) ) {
-				text_color = '#282828';
-			} else {
-				text_color = '#ffffff';
-			}
-
-			document.documentElement.style.setProperty( '--link-hover-color', newval );
-			document.documentElement.style.setProperty( '--button-hover-color', newval );
-			document.documentElement.style.setProperty( '--button-hover-text-color', text_color );
-		} );
-	} );
-
 	/* Header Color Option */
 	wp.customize( 'gt_health_theme_options[header_color]', function( value ) {
 		value.bind( function( newval ) {
-			var text_color, text_hover_color, border_color;
+			var text_color, border_color;
 
-			if( isColorLight( newval ) ) {
-				text_color = '#282828';
-				text_hover_color = 'rgba(0, 0, 0, 0.5)';
-				border_color = 'rgba(0, 0, 0, 0.075)';
-			} else {
+			if( isColorDark( newval ) ) {
 				text_color = '#ffffff';
-				text_hover_color = 'rgba(255, 255, 255, 0.5)';
-				border_color = 'rgba(255, 255, 255, 0.05)';
+				border_color = 'rgba(255, 255, 255, 0.1)';
+			} else {
+				text_color = '#242424';
+				border_color = 'rgba(0, 0, 0, 0.1)';
 			}
 
 			document.documentElement.style.setProperty( '--header-background-color', newval );
 			document.documentElement.style.setProperty( '--header-text-color', text_color );
-			document.documentElement.style.setProperty( '--header-hover-text-color', text_hover_color );
 			document.documentElement.style.setProperty( '--header-border-color', border_color );
+			document.documentElement.style.setProperty( '--navi-hover-bg-color', border_color );
 		} );
 	} );
 
-	/* Navigation Submenu Color Option */
-	wp.customize( 'gt_health_theme_options[submenu_color]', function( value ) {
+	/* Navigation Color Option */
+	wp.customize( 'gt_health_theme_options[navi_color]', function( value ) {
 		value.bind( function( newval ) {
-			var text_color, text_hover_color, border_color;
+			var text_color;
 
 			if( isColorLight( newval ) ) {
-				text_color = '#282828';
-				text_hover_color = 'rgba(0, 0, 0, 0.5)';
-				border_color = 'rgba(0, 0, 0, 0.1)';
+				text_color = '#242424';
 			} else {
 				text_color = '#ffffff';
-				text_hover_color = 'rgba(255, 255, 255, 0.5)';
-				border_color = 'rgba(255, 255, 255, 0.075)';
 			}
 
-			document.documentElement.style.setProperty( '--submenu-color', newval );
-			document.documentElement.style.setProperty( '--submenu-text-color', text_color );
-			document.documentElement.style.setProperty( '--submenu-hover-text-color', text_hover_color );
-			document.documentElement.style.setProperty( '--submenu-border-color', border_color );
+			document.documentElement.style.setProperty( '--navi-active-bg-color', newval );
+			document.documentElement.style.setProperty( '--header-hover-text-color', newval );
+			document.documentElement.style.setProperty( '--navi-active-text-color', text_color );
 		} );
 	} );
 
 	/* Title Color Option */
 	wp.customize( 'gt_health_theme_options[title_color]', function( value ) {
 		value.bind( function( newval ) {
-			document.documentElement.style.setProperty( '--title-color', newval );
+			var text_color;
+
+			if( isColorLight( newval ) ) {
+				text_color = '#242424';
+			} else {
+				text_color = '#ffffff';
+			}
+
+			document.documentElement.style.setProperty( '--title-background-color', newval );
+			document.documentElement.style.setProperty( '--title-text-color', text_color );
 		} );
 	} );
 
-	/* Title Hover Color Option */
-	wp.customize( 'gt_health_theme_options[title_hover_color]', function( value ) {
+	/* Primary Link Color Option */
+	wp.customize( 'gt_health_theme_options[link_color]', function( value ) {
 		value.bind( function( newval ) {
-			document.documentElement.style.setProperty( '--title-hover-color', newval );
+			var text_color;
+
+			if( isColorLight( newval ) ) {
+				text_color = '#242424';
+			} else {
+				text_color = '#ffffff';
+			}
+
+			document.documentElement.style.setProperty( '--link-color', newval );
+			document.documentElement.style.setProperty( '--button-color', newval );
+			document.documentElement.style.setProperty( '--post-title-hover-color', newval );
+			document.documentElement.style.setProperty( '--button-text-color', text_color );
 		} );
 	} );
 
@@ -205,14 +184,14 @@
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
-			if( isColorLight( newval ) ) {
-				text_color = '#282828';
-				text_hover_color = 'rgba(0, 0, 0, 0.5)';
-				border_color = 'rgba(0, 0, 0, 0.05)';
-			} else {
+			if( isColorDark( newval ) ) {
 				text_color = '#ffffff';
 				text_hover_color = 'rgba(255, 255, 255, 0.5)';
-				border_color = 'rgba(255, 255, 255, 0.035)';
+				border_color = 'rgba(255, 255, 255, 0.1)';
+			} else {
+				text_color = '#242424';
+				text_hover_color = 'rgba(0, 0, 0, 0.5)';
+				border_color = 'rgba(0, 0, 0, 0.1)';
 			}
 
 			document.documentElement.style.setProperty( '--footer-color', newval );
