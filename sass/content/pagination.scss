@@ -8,12 +8,13 @@
 .pagination .page-numbers,
 .pagination .current {
 	display: inline-block;
-	margin: 0 1px 0 0;
-	padding: 0.35em 1em;
+	margin: 0 0.5rem 0 0;
+	padding: 0.4rem 1rem;
 	text-align: center;
 	text-decoration: none;
-	@include color(--button-text-color);
-	@include background(--button-color);
+	@include color(--button-hover-text-color);
+	@include background(--button-hover-color);
+	border-radius: 0.5rem;
 }
 
 .pagination .page-numbers.dots {
@@ -23,6 +24,6 @@
 .pagination .current,
 .pagination a:hover,
 .pagination a:active {
-	@include color(--button-hover-text-color);
-	@include background(--button-hover-color);
+	@include color(--button-text-color);
+	@include background(--button-color);
 }

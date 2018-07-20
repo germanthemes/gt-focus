@@ -55,7 +55,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--header-background-color: #fff;
 	--header-text-color: #242424;
 	--header-hover-text-color: #006699;
-	--header-border-color: rgba(0, 0, 0, 0.075);
+	--header-border-color: rgba(0, 0, 0, 0.1);
 	--navi-active-text-color: #fff;
 	--navi-active-bg-color: #006699;
 	--navi-hover-bg-color: rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--footer-color: #fff;
 	--footer-text-color: #242424;
 	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
-	--footer-border-color: rgba(0, 0, 0, 0.075);
+	--footer-border-color: rgba(0, 0, 0, 0.1);
 	--text-font: Arimo, Arial, Helvetica;
 	--title-font: Nunito, Tahoma, Arial;
 	--title-font-weight: bold;
@@ -731,7 +731,8 @@ textarea {
 .site-header {
 	background: #fff;
 	background: var(--header-background-color);
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid var(--header-border-color);
 }
 
 .header-main {
@@ -1133,13 +1134,14 @@ textarea {
 /* Read More Button */
 .more-link {
 	display: inline-block;
-	padding: 0.5em 1em;
+	padding: 0.4rem 1rem;
 	color: #fff;
 	color: var(--button-text-color);
 	background: #006699;
 	background: var(--button-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
+	border-radius: 0.5rem;
 }
 
 .more-link:link,
@@ -1207,14 +1209,15 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 .pagination .page-numbers,
 .pagination .current {
 	display: inline-block;
-	margin: 0 1px 0 0;
-	padding: 0.35em 1em;
+	margin: 0 0.5rem 0 0;
+	padding: 0.4rem 1rem;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
-	color: var(--button-text-color);
-	background: #006699;
-	background: var(--button-color);
+	color: var(--button-hover-text-color);
+	background: #242424;
+	background: var(--button-hover-color);
+	border-radius: 0.5rem;
 }
 
 .pagination .page-numbers.dots {
@@ -1225,9 +1228,9 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 .pagination a:hover,
 .pagination a:active {
 	color: #fff;
-	color: var(--button-hover-text-color);
-	background: #242424;
-	background: var(--button-hover-color);
+	color: var(--button-text-color);
+	background: #006699;
+	background: var(--button-color);
 }
 
 /*--------------------------------------------------------------
@@ -1242,6 +1245,8 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 	color: var(--footer-hover-text-color);
 	background: #fff;
 	background: var(--footer-color);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid var(--footer-border-color);
 }
 
 .site-footer a:link,
@@ -1596,12 +1601,6 @@ object {
 
 	.pagination {
 		margin: 2rem 0;
-	}
-}
-
-@media only screen and (min-width: 55em) {
-	.site-footer .site-info {
-		text-align: left;
 	}
 }
 
