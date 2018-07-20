@@ -78,11 +78,6 @@ function gt_health_hide_elements() {
 		$elements[] = '.site-description';
 	}
 
-	// Hide Featured Header Image on single posts?
-	if ( false === $theme_options['post_image_single'] ) {
-		$elements[] = '.single-post .featured-header-image';
-	}
-
 	// Allow plugins to add own elements.
 	$elements = apply_filters( 'gt_health_hide_elements', $elements );
 

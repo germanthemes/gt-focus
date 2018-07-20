@@ -93,10 +93,8 @@
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'post-image-hidden' );
-				hideElement( '.single-post .featured-header-image' );
 			} else {
 				$( 'body' ).removeClass( 'post-image-hidden' );
-				showElement( '.single-post .featured-header-image' );
 			}
 		} );
 	} );
