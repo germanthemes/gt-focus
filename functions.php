@@ -76,15 +76,11 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 		add_theme_support( 'editor-color-palette',
 			array(
 				'name'  => esc_html_x( 'Primary', 'block color', 'gt-health' ),
-				'color' => '#0c557a',
+				'color' => '#006699',
 			),
 			array(
 				'name'  => esc_html_x( 'Secondary', 'block color', 'gt-health' ),
-				'color' => '#ff6600',
-			),
-			array(
-				'name'  => esc_html_x( 'Accent', 'block color', 'gt-health' ),
-				'color' => '#a156b4',
+				'color' => '#242424',
 			),
 			array(
 				'name'  => esc_html_x( 'White', 'block color', 'gt-health' ),
@@ -97,10 +93,6 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 			array(
 				'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-health' ),
 				'color' => '#444444',
-			),
-			array(
-				'name'  => esc_html_x( 'Black', 'block color', 'gt-health' ),
-				'color' => '#151515',
 			)
 		);
 	}

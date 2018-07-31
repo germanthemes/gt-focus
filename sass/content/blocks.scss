@@ -29,11 +29,11 @@
 
 /* Block Background Colors */
 .has-primary-background-color {
-	background-color: #0c557a;
+	background-color: #006699;
 }
 
 .has-secondary-background-color {
-	background-color: #ff6600;
+	background-color: #242424;
 }
 
 .has-accent-background-color {
@@ -54,4 +54,9 @@
 
 .has-black-background-color {
 	background-color: #151515;
+}
+
+/* Cover Image Block */
+.wp-block-cover-image.alignwide {
+    width: auto;
 }
