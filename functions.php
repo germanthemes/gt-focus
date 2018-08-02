@@ -73,7 +73,7 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 		add_theme_support( 'align-wide' );
 
 		// Add theme support for block color palette.
-		add_theme_support( 'editor-color-palette',
+		add_theme_support( 'editor-color-palette', array(
 			array(
 				'name'  => esc_html_x( 'Primary', 'block color', 'gt-health' ),
 				'color' => '#006699',
@@ -93,8 +93,8 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 			array(
 				'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-health' ),
 				'color' => '#444444',
-			)
-		);
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'gt_health_setup' );
