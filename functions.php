@@ -82,17 +82,17 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 			array(
 				'name'  => esc_html_x( 'Secondary', 'block color', 'gt-health' ),
 				'slug'  => 'secondary',
-				'color' => '#242424',
+				'color' => '#ee9922',
 			),
 			array(
 				'name'  => esc_html_x( 'Accent', 'block color', 'gt-health' ),
 				'slug'  => 'accent',
-				'color' => '#998000',
+				'color' => '#11bb55',
 			),
 			array(
 				'name'  => esc_html_x( 'Complementary', 'block color', 'gt-health' ),
 				'slug'  => 'complementary',
-				'color' => '#993300',
+				'color' => '#bb4411',
 			),
 			array(
 				'name'  => esc_html_x( 'White', 'block color', 'gt-health' ),
@@ -107,14 +107,20 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 			array(
 				'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-health' ),
 				'slug'  => 'dark-gray',
-				'color' => '#444444',
+				'color' => '#555555',
 			),
 			array(
 				'name'  => esc_html_x( 'Black', 'block color', 'gt-health' ),
 				'slug'  => 'black',
-				'color' => '#151515',
+				'color' => '#242424',
 			),
 		) );
+
+		// Disable theme support for custom colors.
+		add_theme_support( 'disable-custom-colors' );
+
+		// Disable theme support for custom font sizes.
+		add_theme_support( 'disable-custom-font-sizes' );
 
 		// Add theme support for font sizes.
 		add_theme_support( 'editor-font-sizes', array(
