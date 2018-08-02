@@ -95,6 +95,34 @@ if ( ! function_exists( 'gt_health_setup' ) ) :
 				'color' => '#444444',
 			),
 		) );
+
+		// Add theme support for font sizes.
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+				'name'      => esc_html_x( 'Small', 'block font size', 'gt-health' ),
+				'shortName' => esc_html_x( 'S', 'block font size', 'gt-health' ),
+				'size'      => 16,
+				'slug'      => 'small',
+			),
+			array(
+				'name'      => esc_html_x( 'Medium', 'block font size', 'gt-health' ),
+				'shortName' => esc_html_x( 'M', 'block font size', 'gt-health' ),
+				'size'      => 24,
+				'slug'      => 'medium',
+			),
+			array(
+				'name'      => esc_html_x( 'Large', 'block font size', 'gt-health' ),
+				'shortName' => esc_html_x( 'L', 'block font size', 'gt-health' ),
+				'size'      => 32,
+				'slug'      => 'large',
+			),
+			array(
+				'name'      => esc_html_x( 'Extra Large', 'block font size', 'gt-health' ),
+				'shortName' => esc_html_x( 'XL', 'block font size', 'gt-health' ),
+				'size'      => 48,
+				'slug'      => 'extra-large',
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'gt_health_setup' );
