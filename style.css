@@ -1415,7 +1415,11 @@ object {
 }
 
 .has-accent-color {
-	color: #a156b4;
+	color: #998000;
+}
+
+.has-complementary-color {
+	color: #993300;
 }
 
 .has-white-color {
@@ -1444,7 +1448,11 @@ object {
 }
 
 .has-accent-background-color {
-	background-color: #a156b4;
+	background-color: #998000;
+}
+
+.has-complementary-background-color {
+	background-color: #993300;
 }
 
 .has-white-background-color {
