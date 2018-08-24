@@ -70,18 +70,19 @@
 }
 
 .has-medium-font-size {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .has-large-font-size {
-	font-size: 36px;
+	font-size: 24px;
 }
 
 .has-extra-large-font-size {
-	font-size: 48px;
+	font-size: 36px;
 }
 
 /* Cover Image Block */
-.wp-block-cover-image.alignwide {
+.wp-block-cover-image.alignwide,
+.wp-block-cover-image.alignfull {
     width: auto;
 }

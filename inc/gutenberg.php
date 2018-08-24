@@ -77,19 +77,19 @@ if ( ! function_exists( 'gt_health_gutenberg_support' ) ) :
 			array(
 				'name'      => esc_html_x( 'Medium', 'block font size', 'gt-health' ),
 				'shortName' => esc_html_x( 'M', 'block font size', 'gt-health' ),
-				'size'      => 24,
+				'size'      => 20,
 				'slug'      => 'medium',
 			),
 			array(
 				'name'      => esc_html_x( 'Large', 'block font size', 'gt-health' ),
 				'shortName' => esc_html_x( 'L', 'block font size', 'gt-health' ),
-				'size'      => 32,
+				'size'      => 24,
 				'slug'      => 'large',
 			),
 			array(
 				'name'      => esc_html_x( 'Extra Large', 'block font size', 'gt-health' ),
 				'shortName' => esc_html_x( 'XL', 'block font size', 'gt-health' ),
-				'size'      => 48,
+				'size'      => 36,
 				'slug'      => 'extra-large',
 			),
 		) );
