@@ -61,7 +61,7 @@ if ( ! function_exists( 'gt_health_gutenberg_support' ) ) :
 		) );
 
 		// Disable theme support for custom colors.
-		add_theme_support( 'disable-custom-colors' );
+		#add_theme_support( 'disable-custom-colors' );
 
 		// Disable theme support for custom font sizes.
 		add_theme_support( 'disable-custom-font-sizes' );

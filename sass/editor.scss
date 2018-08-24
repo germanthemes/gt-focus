@@ -3,78 +3,43 @@
  *
  * @package GT Health
  */
-:root {
-	--containerWidth: 1260px;
-	--contentWidth: 720px;
-	--link-color: #006699;
-	--link-hover-color: #242424;
-	--button-color: #006699;
-	--button-text-color: #fff;
-	--button-hover-color: #242424;
-	--button-hover-text-color: #fff;
-	--header-background-color: #fff;
-	--header-text-color: #242424;
-	--header-hover-text-color: #006699;
-	--header-border-color: rgba(0, 0, 0, 0.1);
-	--navi-active-text-color: #fff;
-	--navi-active-bg-color: #006699;
-	--navi-hover-bg-color: rgba(0, 0, 0, 0.1);
-	--title-text-color: #fff;
-	--title-background-color: #006699;
-	--post-title-color: #242424;
-	--post-title-hover-color: #006699;
-	--footer-color: #fff;
-	--footer-text-color: #242424;
-	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
-	--footer-border-color: rgba(0, 0, 0, 0.1);
-	--text-font: Roboto, Arial, Helvetica;
-	--title-font: Lato, Tahoma, Arial;
-	--title-font-weight: bold;
-	--title-text-transform: none;
-	--navi-font: Roboto, Arial, Helvetica;
-	--navi-font-weight: normal;
-	--navi-text-transform: none;
-}
+
+ @import '_mixins';
+ @import '_variables';
 
 /* Editor Styles */
 body.gutenberg-editor-page {
-	color: #242424;
+    color: $textColor;
 }
 
 body.gutenberg-editor-page .edit-post-visual-editor,
 body.gutenberg-editor-page .edit-post-visual-editor p {
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: Roboto, Arial, Helvetica;
-	font-family: var(--text-font);
-	line-height: 1.75;
+    @include font-size(18);
+	@include font-family(--text-font);
+    line-height: 1.75;
 }
 
 body.gutenberg-editor-page .editor-post-title__block .editor-post-title__input {
-	font-size: 40px;
-	font-size: 2.5rem;
-	font-family: Lato, Tahoma, Arial;
-	font-family: var(--title-font);
-	font-weight: bold;
-	font-weight: var(--title-font-weight);
-	text-transform: none;
-	text-transform: var(--title-text-transform);
-	line-height: 1.4;
+    @include font-size(40);
+    @include font-family(--title-font);
+    @include font-weight(--title-font-weight);
+    @include text-transform(--title-text-transform);
+    line-height: 1.4;
 }
 
 /* Editor Width */
 body.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block,
 body.gutenberg-editor-page .editor-default-block-appender,
 body.gutenberg-editor-page .editor-block-list__block {
-	max-width: 750px;
+    max-width: 750px;
 }
 
 body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
-	max-width: 1240px;
+    max-width: 1240px;
 }
 
 body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
-	max-width: none;
+    max-width: none;
 }
 
 /* Headings
@@ -119,7 +84,6 @@ body.gutenberg-editor-page .edit-post-visual-editor h6.editor-rich-text__tinymce
 	font-size: 1.125rem;
 }
 */
-
 /* Block Colors */
 .has-primary-color {
 	color: #006699;

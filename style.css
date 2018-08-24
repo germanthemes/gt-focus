@@ -1109,8 +1109,8 @@ textarea {
 
 /* Entry Content */
 .entry-content {
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .entry-content > p:first-child {
@@ -1518,15 +1518,6 @@ object {
 }
 
 @media only screen and (min-width: 40em) {
-	body,
-	button,
-	input,
-	select,
-	textarea {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
-
 	.site-title {
 		font-size: 32px;
 		font-size: 2rem;
@@ -1540,11 +1531,6 @@ object {
 	.entry-title {
 		font-size: 36px;
 		font-size: 2.25rem;
-	}
-
-	.entry-content {
-		font-size: 18px;
-		font-size: 1.125rem;
 	}
 
 	.entry-meta,
@@ -1579,11 +1565,6 @@ object {
 	.pagination {
 		font-size: 17px;
 		font-size: 1.0625rem;
-	}
-
-	.entry-content {
-		font-size: 19px;
-		font-size: 1.1875rem;
 	}
 }
 
