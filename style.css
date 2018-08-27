@@ -1405,7 +1405,49 @@ object {
 # - Blocks
 --------------------------------------------------------------*/
 
-/* Block Colors */
+/* Cover Image Block */
+.wp-block-cover-image.alignwide,
+.wp-block-cover-image.alignfull {
+	width: auto;
+}
+
+/* GT Buttons */
+.is-style-gt-button a {
+	display: inline-block;
+	padding: 0.4rem 1rem;
+	color: #fff;
+	color: var(--button-text-color);
+	background: #006699;
+	background: var(--button-color);
+	font-size: 15px;
+	font-size: 0.9375rem;
+	border-radius: 0.5rem;
+}
+
+.is-style-gt-button a:link,
+.is-style-gt-button a:visited {
+	color: #fff;
+	color: var(--button-text-color);
+	text-decoration: none;
+}
+
+.is-style-gt-button a:hover,
+.is-style-gt-button a:active {
+	color: #fff;
+	color: var(--button-hover-text-color);
+	background: #242424;
+	background: var(--button-hover-color);
+	text-decoration: none;
+}
+
+/* GT Headings */
+h2.is-style-gt-heading-large {
+	font-size: 40px;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+}
+
+/* Block Text Colors */
 .has-primary-color {
 	color: #006699;
 }
@@ -1486,12 +1528,6 @@ object {
 
 .has-extra-large-font-size {
 	font-size: 36px;
-}
-
-/* Cover Image Block */
-.wp-block-cover-image.alignwide,
-.wp-block-cover-image.alignfull {
-	width: auto;
 }
 
 /*--------------------------------------------------------------

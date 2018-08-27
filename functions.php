@@ -114,15 +114,6 @@ add_action( 'wp_enqueue_scripts', 'gt_health_scripts' );
 
 
 /**
- * Enqueue block styles for Gutenberg Editor.
- */
-function gt_health_block_editor_styles() {
-	wp_enqueue_style( 'gt-health-block-editor-styles', get_theme_file_uri( '/assets/css/editor.css' ), array(), '20180529', 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'gt_health_block_editor_styles' );
-
-
-/**
  * Include Files
  */
 

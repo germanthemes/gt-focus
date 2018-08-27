@@ -96,3 +96,13 @@ if ( ! function_exists( 'gt_health_gutenberg_support' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'gt_health_gutenberg_support' );
+
+
+/**
+ * Enqueue block styles and scripts for Gutenberg Editor.
+ */
+function gt_health_block_editor_assets() {
+	wp_enqueue_script( 'gt-health-block-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-editor' ), '20180529' );
+	wp_enqueue_style( 'gt-health-block-editor', get_theme_file_uri( '/assets/css/editor.css' ), array(), '20180529', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'gt_health_block_editor_assets' );
