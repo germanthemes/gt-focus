@@ -13,6 +13,9 @@
  */
 function gt_health_gutenberg_support() {
 
+	// Get theme options from database.
+	$theme_options = gt_health_theme_options();
+
 	// Add theme support for wide and full images.
 	add_theme_support( 'align-wide' );
 
@@ -21,22 +24,22 @@ function gt_health_gutenberg_support() {
 		array(
 			'name'  => esc_html_x( 'Primary', 'block color', 'gt-health' ),
 			'slug'  => 'primary',
-			'color' => '#006699',
+			'color' => esc_html( $theme_options['block_primary_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Secondary', 'block color', 'gt-health' ),
 			'slug'  => 'secondary',
-			'color' => '#0791B6',
+			'color' => esc_html( $theme_options['block_secondary_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Accent', 'block color', 'gt-health' ),
 			'slug'  => 'accent',
-			'color' => '#F4E08A',
+			'color' => esc_html( $theme_options['block_accent_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Complementary', 'block color', 'gt-health' ),
 			'slug'  => 'complementary',
-			'color' => '#E7393A',
+			'color' => esc_html( $theme_options['block_complementary_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'White', 'block color', 'gt-health' ),

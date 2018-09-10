@@ -15,6 +15,7 @@ require( get_template_directory() . '/inc/customizer/controls/headline-control.p
 // Load Customizer Sections.
 require( get_template_directory() . '/inc/customizer/sections/website-settings.php' );
 require( get_template_directory() . '/inc/customizer/sections/post-settings.php' );
+require( get_template_directory() . '/inc/customizer/sections/block-color-settings.php' );
 require( get_template_directory() . '/inc/customizer/sections/color-settings.php' );
 require( get_template_directory() . '/inc/customizer/sections/typography-settings.php' );
 require( get_template_directory() . '/inc/customizer/sections/footer-settings.php' );
@@ -41,7 +42,7 @@ add_action( 'customize_register', 'gt_health_customize_register_options' );
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function gt_health_customize_preview_js() {
-	wp_enqueue_script( 'gt-health-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20180723', true );
+	wp_enqueue_script( 'gt-health-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20180910', true );
 }
 add_action( 'customize_preview_init', 'gt_health_customize_preview_js' );
 
