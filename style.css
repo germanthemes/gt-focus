@@ -67,6 +67,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--footer-text-color: #242424;
 	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
 	--footer-border-color: rgba(0, 0, 0, 0.1);
+	--block-primary-color: #006699;
+	--block-secondary-color: #ee9922;
+	--block-accent-color: #11bb55;
+	--block-complementary-color: #bb4411;
 	--text-font: Roboto, Arial, Helvetica;
 	--title-font: Lato, Tahoma, Arial;
 	--title-font-weight: bold;
@@ -545,8 +549,8 @@ input[type="submit"] {
 	border: none;
 	color: #fff;
 	color: var(--button-text-color);
-	background: #006699;
-	background: var(--button-color);
+	background-color: #006699;
+	background-color: var(--button-color);
 	text-decoration: none;
 	font-weight: normal;
 	font-size: 15px;
@@ -567,8 +571,8 @@ input[type="reset"]:active,
 input[type="submit"]:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background: #242424;
-	background: var(--button-hover-color);
+	background-color: #242424;
+	background-color: var(--button-hover-color);
 }
 
 input[type="text"],
@@ -631,14 +635,14 @@ textarea {
 	bottom: 0;
 	padding: 0.6em 0.8em;
 	border: none;
-	background: #006699;
-	background: var(--button-color);
+	background-color: #006699;
+	background-color: var(--button-color);
 }
 
 .search-form .search-submit:hover,
 .search-form .search-submit:active {
-	background: #242424;
-	background: var(--button-hover-color);
+	background-color: #242424;
+	background-color: var(--button-hover-color);
 }
 
 .search-form .search-submit .icon-search {
@@ -730,8 +734,8 @@ textarea {
 # - Header
 --------------------------------------------------------------*/
 .site-header {
-	background: #fff;
-	background: var(--header-background-color);
+	background-color: #fff;
+	background-color: var(--header-background-color);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	border-bottom: 1px solid var(--header-border-color);
 }
@@ -1088,8 +1092,8 @@ textarea {
 	grid-template-columns: 1fr minmax(0, 720px) 1fr;
 	grid-template-columns: 1fr minmax(0, var(--contentWidth)) 1fr;
 	grid-column-gap: 1.75rem;
-	background: #006699;
-	background: var(--title-background-color);
+	background-color: #006699;
+	background-color: var(--title-background-color);
 	box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -1136,8 +1140,8 @@ textarea {
 	padding: 0.4rem 1rem;
 	color: #fff;
 	color: var(--button-text-color);
-	background: #006699;
-	background: var(--button-color);
+	background-color: #006699;
+	background-color: var(--button-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 	border-radius: 0.5rem;
@@ -1154,8 +1158,8 @@ textarea {
 .more-link:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background: #242424;
-	background: var(--button-hover-color);
+	background-color: #242424;
+	background-color: var(--button-hover-color);
 	text-decoration: none;
 }
 
@@ -1214,8 +1218,8 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 	text-decoration: none;
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background: #242424;
-	background: var(--button-hover-color);
+	background-color: #242424;
+	background-color: var(--button-hover-color);
 	border-radius: 0.5rem;
 }
 
@@ -1228,8 +1232,8 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 .pagination a:active {
 	color: #fff;
 	color: var(--button-text-color);
-	background: #006699;
-	background: var(--button-color);
+	background-color: #006699;
+	background-color: var(--button-color);
 }
 
 /*--------------------------------------------------------------
@@ -1242,8 +1246,8 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 	font-family: var(--navi-font);
 	color: rgba(0, 0, 0, 0.5);
 	color: var(--footer-hover-text-color);
-	background: #fff;
-	background: var(--footer-color);
+	background-color: #fff;
+	background-color: var(--footer-color);
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	border-top: 1px solid var(--footer-border-color);
 }
@@ -1417,8 +1421,8 @@ object {
 	padding: 0.4rem 1rem;
 	color: #fff;
 	color: var(--button-text-color);
-	background: #006699;
-	background: var(--button-color);
+	background-color: #006699;
+	background-color: var(--button-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 	border-radius: 0.5rem;
@@ -1435,8 +1439,8 @@ object {
 .is-style-gt-button a:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background: #242424;
-	background: var(--button-hover-color);
+	background-color: #242424;
+	background-color: var(--button-hover-color);
 	text-decoration: none;
 }
 
@@ -1450,18 +1454,22 @@ h2.is-style-gt-heading-large {
 /* Block Text Colors */
 .has-primary-color {
 	color: #006699;
+	color: var(--block-primary-color);
 }
 
 .has-secondary-color {
 	color: #ee9922;
+	color: var(--block-secondary-color);
 }
 
 .has-accent-color {
 	color: #11bb55;
+	color: var(--block-accent-color);
 }
 
 .has-complementary-color {
 	color: #bb4411;
+	color: var(--block-complementary-color);
 }
 
 .has-white-color {
@@ -1483,18 +1491,22 @@ h2.is-style-gt-heading-large {
 /* Block Background Colors */
 .has-primary-background-color {
 	background-color: #006699;
+	background-color: var(--block-primary-color);
 }
 
 .has-secondary-background-color {
 	background-color: #ee9922;
+	background-color: var(--block-secondary-color);
 }
 
 .has-accent-background-color {
 	background-color: #11bb55;
+	background-color: var(--block-accent-color);
 }
 
 .has-complementary-background-color {
 	background-color: #bb4411;
+	background-color: var(--block-complementary-color);
 }
 
 .has-white-background-color {
@@ -1729,15 +1741,15 @@ h2.is-style-gt-heading-large {
 	.main-navigation ul a:active {
 		color: #242424;
 		color: var(--header-text-color);
-		background: rgba(0, 0, 0, 0.1);
-		background: var(--navi-hover-bg-color);
+		background-color: rgba(0, 0, 0, 0.1);
+		background-color: var(--navi-hover-bg-color);
 	}
 
 	.main-navigation ul li.current-menu-item > a {
 		color: #fff;
 		color: var(--navi-active-text-color);
-		background: #006699;
-		background: var(--navi-active-bg-color);
+		background-color: #006699;
+		background-color: var(--navi-active-bg-color);
 		text-decoration: none;
 	}
 
@@ -1749,8 +1761,8 @@ h2.is-style-gt-heading-large {
 		z-index: 99999;
 		margin: 0 0 0 0.5rem;
 		padding: 0.5rem;
-		background: #fff;
-		background: var(--header-background-color);
+		background-color: #fff;
+		background-color: var(--header-background-color);
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 		border-radius: 0.5rem;
 	}
