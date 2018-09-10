@@ -1,14 +1,12 @@
 <?php
 /**
- * Color Settings
- *
- * Register Color Settings
+ * Block Color Settings
  *
  * @package GT Health
  */
 
 /**
- * Adds all Color settings to the Customizer
+ * Adds Block Color settings to the Customizer
  *
  * @param object $wp_customize / Customizer Object.
  */

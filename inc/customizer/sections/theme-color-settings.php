@@ -1,22 +1,20 @@
 <?php
 /**
- * Color Settings
- *
- * Register Color Settings
+ * Theme Color Settings
  *
  * @package GT Health
  */
 
 /**
- * Adds all Color settings to the Customizer
+ * Adds Theme Color settings to the Customizer
  *
  * @param object $wp_customize / Customizer Object.
  */
-function gt_health_customize_register_color_settings( $wp_customize ) {
+function gt_health_customize_register_theme_color_settings( $wp_customize ) {
 
 	// Add Section for Theme Colors.
-	$wp_customize->add_section( 'gt_health_section_colors', array(
-		'title'    => esc_html_x( 'Colors', 'Color Settings', 'gt-health' ),
+	$wp_customize->add_section( 'gt_health_section_theme_colors', array(
+		'title'    => esc_html_x( 'Theme Colors', 'theme colors', 'gt-health' ),
 		'priority' => 30,
 		'panel'    => 'gt_health_options_panel',
 	) );
@@ -33,8 +31,8 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_health_theme_options[header_color]', array(
-			'label'    => esc_html_x( 'Header', 'Color Settings', 'gt-health' ),
-			'section'  => 'gt_health_section_colors',
+			'label'    => esc_html_x( 'Header', 'theme colors', 'gt-health' ),
+			'section'  => 'gt_health_section_theme_colors',
 			'settings' => 'gt_health_theme_options[header_color]',
 			'priority' => 10,
 		)
@@ -49,8 +47,8 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_health_theme_options[navi_color]', array(
-			'label'    => esc_html_x( 'Navigation', 'Color Settings', 'gt-health' ),
-			'section'  => 'gt_health_section_colors',
+			'label'    => esc_html_x( 'Navigation', 'theme colors', 'gt-health' ),
+			'section'  => 'gt_health_section_theme_colors',
 			'settings' => 'gt_health_theme_options[navi_color]',
 			'priority' => 20,
 		)
@@ -65,8 +63,8 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_health_theme_options[title_color]', array(
-			'label'    => esc_html_x( 'Titles', 'Color Settings', 'gt-health' ),
-			'section'  => 'gt_health_section_colors',
+			'label'    => esc_html_x( 'Titles', 'theme colors', 'gt-health' ),
+			'section'  => 'gt_health_section_theme_colors',
 			'settings' => 'gt_health_theme_options[title_color]',
 			'priority' => 30,
 		)
@@ -81,8 +79,8 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_health_theme_options[link_color]', array(
-			'label'    => esc_html_x( 'Links & Buttons', 'Color Settings', 'gt-health' ),
-			'section'  => 'gt_health_section_colors',
+			'label'    => esc_html_x( 'Links & Buttons', 'theme colors', 'gt-health' ),
+			'section'  => 'gt_health_section_theme_colors',
 			'settings' => 'gt_health_theme_options[link_color]',
 			'priority' => 40,
 		)
@@ -97,11 +95,11 @@ function gt_health_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_health_theme_options[footer_color]', array(
-			'label'    => esc_html_x( 'Footer', 'Color Settings', 'gt-health' ),
-			'section'  => 'gt_health_section_colors',
+			'label'    => esc_html_x( 'Footer', 'theme colors', 'gt-health' ),
+			'section'  => 'gt_health_section_theme_colors',
 			'settings' => 'gt_health_theme_options[footer_color]',
 			'priority' => 50,
 		)
 	) );
 }
-add_action( 'customize_register', 'gt_health_customize_register_color_settings' );
+add_action( 'customize_register', 'gt_health_customize_register_theme_color_settings' );
