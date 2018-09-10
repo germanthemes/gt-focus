@@ -28,9 +28,9 @@
 	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
 	--footer-border-color: rgba(0, 0, 0, 0.1);
 	--block-primary-color: #006699;
-	--block-secondary-color: #0791B6;
-	--block-accent-color: #F4E08A;
-	--block-complementary-color: #E7393A;
+	--block-secondary-color: #0791b6;
+	--block-accent-color: #f4e08a;
+	--block-complementary-color: #e7393a;
 	--text-font: Roboto, Arial, Helvetica;
 	--title-font: Lato, Tahoma, Arial;
 	--title-font-weight: bold;
@@ -167,17 +167,17 @@ h2.is-style-gt-heading-large {
 }
 
 .has-secondary-color {
-	color: #0791B6;
+	color: #0791b6;
 	color: var(--block-secondary-color);
 }
 
 .has-accent-color {
-	color: #F4E08A;
+	color: #f4e08a;
 	color: var(--block-accent-color);
 }
 
 .has-complementary-color {
-	color: #E7393A;
+	color: #e7393a;
 	color: var(--block-complementary-color);
 }
 
@@ -204,17 +204,17 @@ h2.is-style-gt-heading-large {
 }
 
 .has-secondary-background-color {
-	background-color: #0791B6;
+	background-color: #0791b6;
 	background-color: var(--block-secondary-color);
 }
 
 .has-accent-background-color {
-	background-color: #F4E08A;
+	background-color: #f4e08a;
 	background-color: var(--block-accent-color);
 }
 
 .has-complementary-background-color {
-	background-color: #E7393A;
+	background-color: #e7393a;
 	background-color: var(--block-complementary-color);
 }
 
