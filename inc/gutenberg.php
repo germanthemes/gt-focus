@@ -26,17 +26,17 @@ function gt_health_gutenberg_support() {
 		array(
 			'name'  => esc_html_x( 'Secondary', 'block color', 'gt-health' ),
 			'slug'  => 'secondary',
-			'color' => '#ee9922',
+			'color' => '#0791B6',
 		),
 		array(
 			'name'  => esc_html_x( 'Accent', 'block color', 'gt-health' ),
 			'slug'  => 'accent',
-			'color' => '#11bb55',
+			'color' => '#F4E08A',
 		),
 		array(
 			'name'  => esc_html_x( 'Complementary', 'block color', 'gt-health' ),
 			'slug'  => 'complementary',
-			'color' => '#bb4411',
+			'color' => '#E7393A',
 		),
 		array(
 			'name'  => esc_html_x( 'White', 'block color', 'gt-health' ),
