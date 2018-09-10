@@ -14,62 +14,60 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0-alpha', '<' ) ) {
 }
 
 
-if ( ! function_exists( 'gt_health_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
-	function gt_health_setup() {
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function gt_health_setup() {
 
-		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/gt-health
-		load_theme_textdomain( 'gt-health', get_template_directory() . '/languages' );
+	// Make theme available for translation.
+	load_theme_textdomain( 'gt-health', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
 
-		// Let WordPress manage the document title.
-		add_theme_support( 'title-tag' );
+	// Let WordPress manage the document title.
+	add_theme_support( 'title-tag' );
 
-		// Enable support for Post Thumbnails on posts and pages.
-		add_theme_support( 'post-thumbnails' );
+	// Enable support for Post Thumbnails on posts and pages.
+	add_theme_support( 'post-thumbnails' );
 
-		// Set default Post Thumbnail size.
-		set_post_thumbnail_size( 720, 360, true );
+	// Set default Post Thumbnail size.
+	set_post_thumbnail_size( 720, 360, true );
 
-		// Register Navigation Menus.
-		register_nav_menus( array(
-			'primary' => esc_html__( 'Main Navigation', 'gt-health' ),
-		) );
+	// Register Navigation Menus.
+	register_nav_menus( array(
+		'primary' => esc_html__( 'Main Navigation', 'gt-health' ),
+	) );
 
-		// Switch default core markup for galleries and captions to output valid HTML5.
-		add_theme_support( 'html5', array(
-			'gallery',
-			'caption',
-		) );
+	// Switch default core markup for galleries and captions to output valid HTML5.
+	add_theme_support( 'html5', array(
+		'gallery',
+		'caption',
+	) );
 
-		// Set up the WordPress core custom logo feature.
-		add_theme_support( 'custom-logo', apply_filters( 'gt_health_custom_logo_args', array(
-			'height'      => 60,
-			'width'       => 300,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) ) );
+	// Set up the WordPress core custom logo feature.
+	add_theme_support( 'custom-logo', apply_filters( 'gt_health_custom_logo_args', array(
+		'height'      => 60,
+		'width'       => 300,
+		'flex-height' => true,
+		'flex-width'  => true,
+	) ) );
 
-		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header', apply_filters( 'gt_health_custom_header_args', array(
-			'header-text' => false,
-			'width'       => 2560,
-			'height'      => 480,
-			'flex-height' => true,
-		) ) );
+	// Set up the WordPress core custom header feature.
+	add_theme_support( 'custom-header', apply_filters( 'gt_health_custom_header_args', array(
+		'header-text' => false,
+		'width'       => 2560,
+		'height'      => 480,
+		'flex-height' => true,
+	) ) );
 
-		// Add Theme Support for Selective Refresh in Customizer.
-		add_theme_support( 'customize-selective-refresh-widgets' );
-	}
-endif;
+	// Add Theme Support for Selective Refresh in Customizer.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+}
 add_action( 'after_setup_theme', 'gt_health_setup' );
 
 
