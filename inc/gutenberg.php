@@ -121,15 +121,17 @@ function gt_health_register_post_meta() {
 	) );
 	
 	register_post_meta( 'page', 'gt_page_background_color', array(
-		'type'         => 'string',
-		'single'       => true,
-		'show_in_rest' => true,
+		'type'              => 'string',
+		'single'            => true,
+		'show_in_rest'      => true,
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	
 	register_post_meta( 'page', 'gt_page_text_color', array(
-		'type'         => 'string',
-		'single'       => true,
-		'show_in_rest' => true,
+		'type'              => 'string',
+		'single'            => true,
+		'show_in_rest'      => true,
+		'sanitize_callback' => 'sanitize_hex_color',
     ) );
 }
 add_action( 'init', 'gt_health_register_post_meta' );
