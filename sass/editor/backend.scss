@@ -46,6 +46,10 @@ body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-block-list__block {
 	max-width: 1260px;
 }
 
+body.gt-page-title-hidden.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block {
+	border: 1px dashed #aaa;
+}
+
 /* Headings
 body.gutenberg-editor-page .edit-post-visual-editor h1.editor-rich-text__tinymce.mce-content-body,
 body.gutenberg-editor-page .edit-post-visual-editor h2.editor-rich-text__tinymce.mce-content-body,
