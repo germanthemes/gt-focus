@@ -79,7 +79,7 @@ function gt_health_hide_elements() {
 	}
 
 	// Hide Page Title?
-	if( is_page() && 'yes' === get_post_meta( get_the_ID(), 'gt_hide_page_title', true ) ) {
+	if( is_page() && get_post_meta( get_the_ID(), 'gt_hide_page_title', true ) ) {
 		$elements[] = '.type-page .page-header-container';
 	}
 
