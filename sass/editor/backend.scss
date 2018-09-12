@@ -33,6 +33,19 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
     max-width: none;
 }
 
+/* Page Layouts */
+body.gt-wide-page-layout.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block,
+body.gt-wide-page-layout.gutenberg-editor-page .editor-default-block-appender,
+body.gt-wide-page-layout.gutenberg-editor-page .editor-block-list__block {
+	max-width: 990px;
+}
+
+body.gt-fullwidth-page-layout.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block,
+body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-default-block-appender,
+body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-block-list__block {
+	max-width: 1260px;
+}
+
 /* Headings
 body.gutenberg-editor-page .edit-post-visual-editor h1.editor-rich-text__tinymce.mce-content-body,
 body.gutenberg-editor-page .edit-post-visual-editor h2.editor-rich-text__tinymce.mce-content-body,
