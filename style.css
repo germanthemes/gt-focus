@@ -1117,10 +1117,6 @@ textarea {
 	font-size: 1.125rem;
 }
 
-.entry-content > p:first-child {
-	margin-top: 0;
-}
-
 .entry-content > .alignwide,
 .entry-content > .alignfull {
 	margin-left: calc( -100vw / 2 + 100% / 2);
@@ -1234,6 +1230,28 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 	color: var(--button-text-color);
 	background-color: #006699;
 	background-color: var(--button-color);
+}
+
+/*--------------------------------------------------------------
+# - Page Templates
+--------------------------------------------------------------*/
+
+/* Wide Page Layout */
+body.wide-page-layout .site-content {
+	grid-template-columns: 1fr minmax(0, calc( 990px - 3rem)) 1fr;
+}
+
+body.wide-page-layout .site-content .page-header-container {
+	grid-template-columns: 1fr minmax(0, calc( 990px - 3rem)) 1fr;
+}
+
+/* Fullwidth Page Layout */
+body.fullwidth-page-layout .site-content {
+	grid-template-columns: 1fr minmax(0, calc( 1260px - 3rem)) 1fr;
+}
+
+body.fullwidth-page-layout .site-content .page-header-container {
+	grid-template-columns: 1fr minmax(0, calc( 1260px - 3rem)) 1fr;
 }
 
 /*--------------------------------------------------------------

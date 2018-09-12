@@ -79,10 +79,6 @@
 	@include font-size(18);
 }
 
-.entry-content > p:first-child {
-	margin-top: 0;
-}
-
 .entry-content > .alignwide,
 .entry-content > .alignfull {
 	margin-left: calc( -100vw / 2 + 100% / 2 );

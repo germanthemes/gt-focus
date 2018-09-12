@@ -119,6 +119,13 @@ function gt_health_register_post_meta() {
 		'single'       => true,
 		'show_in_rest' => true,
 	) );
+
+	register_post_meta( 'page', 'gt_page_layout', array(
+		'type'              => 'string',
+		'single'            => true,
+		'show_in_rest'      => true,
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
 	
 	register_post_meta( 'page', 'gt_page_background_color', array(
 		'type'              => 'string',

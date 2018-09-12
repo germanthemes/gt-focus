@@ -1,0 +1,17 @@
+/* Wide Page Layout */
+body.wide-page-layout .site-content {
+	grid-template-columns: 1fr minmax(0, calc( 990px - 3rem ) ) 1fr;
+}
+
+body.wide-page-layout .site-content .page-header-container {
+	grid-template-columns: 1fr minmax(0, calc( 990px - 3rem ) ) 1fr;
+}
+
+/* Fullwidth Page Layout */
+body.fullwidth-page-layout .site-content {
+	grid-template-columns: 1fr minmax(0, calc( 1260px - 3rem ) ) 1fr;
+}
+
+body.fullwidth-page-layout .site-content .page-header-container {
+	grid-template-columns: 1fr minmax(0, calc( 1260px - 3rem ) ) 1fr;
+}
