@@ -25,6 +25,20 @@ body.gutenberg-editor-page .editor-block-list__block {
     max-width: 750px;
 }
 
+/* Page Layouts */
+body.gt-wide-page-layout .edit-post-visual-editor .editor-post-title__block,
+body.gt-wide-page-layout .editor-default-block-appender,
+body.gt-wide-page-layout .editor-block-list__block {
+	max-width: 990px;
+}
+
+body.gt-fullwidth-page-layout .edit-post-visual-editor .editor-post-title__block,
+body.gt-fullwidth-page-layout .editor-default-block-appender,
+body.gt-fullwidth-page-layout .editor-block-list__block {
+	max-width: 1260px;
+}
+
+/* Wide and Fullwidth Blocks */
 body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
     max-width: 1240px;
 }
@@ -33,19 +47,7 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
     max-width: none;
 }
 
-/* Page Layouts */
-body.gt-wide-page-layout.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block,
-body.gt-wide-page-layout.gutenberg-editor-page .editor-default-block-appender,
-body.gt-wide-page-layout.gutenberg-editor-page .editor-block-list__block {
-	max-width: 990px;
-}
-
-body.gt-fullwidth-page-layout.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block,
-body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-default-block-appender,
-body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-block-list__block {
-	max-width: 1260px;
-}
-
+/* Hidden Page Title */
 body.gt-page-title-hidden.gutenberg-editor-page .edit-post-visual-editor .editor-post-title {
 	background-color: #fff;
 	background-image: linear-gradient( 45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd ), 
