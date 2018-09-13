@@ -22,7 +22,7 @@ body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-block-list__block {
 
 /* Wide and Fullwidth Blocks */
 body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
-    max-width: calc( 1260px - 3rem + 30px );
+	max-width: calc( 1020px + 30px );
 }
 
 body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {

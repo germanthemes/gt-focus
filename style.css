@@ -1117,7 +1117,6 @@ textarea {
 	font-size: 1.125rem;
 }
 
-.entry-content > .alignwide,
 .entry-content > .alignfull {
 	margin-left: calc( -100vw / 2 + 100% / 2);
 	margin-right: calc( -100vw / 2 + 100% / 2);
@@ -1705,6 +1704,22 @@ h2.is-style-gt-heading-large {
 	}
 }
 
+@media only screen and (min-width: 930px) {
+	.entry-content > .alignwide {
+		margin-left: -75px;
+		margin-right: -75px;
+		max-width: 870px;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	.entry-content > .alignwide {
+		margin-left: -150px;
+		margin-right: -150px;
+		max-width: 1020px;
+	}
+}
+
 /*--------------------------------------------------------------
 ## - Media Queries for Navigation
 --------------------------------------------------------------*/
@@ -1898,12 +1913,5 @@ h2.is-style-gt-heading-large {
 
 	.gallery-columns-9 {
 		grid-template-columns: repeat(9, 1fr);
-	}
-}
-
-@media only screen and (min-width: calc( 1260px - 3rem)) {
-	.entry-content > .alignwide {
-		margin-left: calc( ( -1260px + 3rem + 720px ) / 2);
-		margin-right: calc( ( -1260px + 3rem + 720px ) / 2);
 	}
 }

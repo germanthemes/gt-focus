@@ -51,10 +51,3 @@
 		grid-template-columns: repeat(9, 1fr);
 	}
 }
-
-@media only screen and ( min-width: calc( #{$themeWidth} - 3rem ) ) {
-	.entry-content > .alignwide {
-		margin-left: calc( ( -#{$themeWidth} + 3rem + 720px ) / 2 );
-		margin-right: calc( ( -#{$themeWidth} + 3rem + 720px ) / 2 );
-	}
-}
