@@ -96,6 +96,10 @@ function gt_health_gutenberg_support() {
 			'slug'      => 'extra-large',
 		),
 	) );
+
+	// Add Editor Styles.
+	add_editor_style( 'assets/css/editor-style.css' );
+	add_theme_support( 'editor-styles' );
 }
 add_action( 'after_setup_theme', 'gt_health_gutenberg_support' );
 

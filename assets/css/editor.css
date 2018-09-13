@@ -40,20 +40,7 @@
 	--navi-text-transform: none;
 }
 
-/* Editor Styles */
-body.gutenberg-editor-page {
-	color: #242424;
-}
-
-body.gutenberg-editor-page .edit-post-visual-editor,
-body.gutenberg-editor-page .edit-post-visual-editor p {
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: Roboto, Arial, Helvetica;
-	font-family: var(--text-font);
-	line-height: 1.75;
-}
-
+/* Post and Page Title */
 body.gutenberg-editor-page .editor-post-title__block .editor-post-title__input {
 	font-size: 40px;
 	font-size: 2.5rem;
@@ -66,29 +53,22 @@ body.gutenberg-editor-page .editor-post-title__block .editor-post-title__input {
 	line-height: 1.4;
 }
 
-/* Editor Width */
-body.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block,
-body.gutenberg-editor-page .editor-default-block-appender,
-body.gutenberg-editor-page .editor-block-list__block {
-	max-width: 750px;
-}
-
 /* Page Layouts */
-body.gt-wide-page-layout .edit-post-visual-editor .editor-post-title__block,
-body.gt-wide-page-layout .editor-default-block-appender,
-body.gt-wide-page-layout .editor-block-list__block {
-	max-width: 990px;
+body.gt-wide-page-layout.gutenberg-editor-page .editor-post-title__block,
+body.gt-wide-page-layout.gutenberg-editor-page .editor-default-block-appender,
+body.gt-wide-page-layout.gutenberg-editor-page .editor-block-list__block {
+	max-width: calc( 990px - 3rem + 30px);
 }
 
-body.gt-fullwidth-page-layout .edit-post-visual-editor .editor-post-title__block,
-body.gt-fullwidth-page-layout .editor-default-block-appender,
-body.gt-fullwidth-page-layout .editor-block-list__block {
-	max-width: 1260px;
+body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-post-title__block,
+body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-default-block-appender,
+body.gt-fullwidth-page-layout.gutenberg-editor-page .editor-block-list__block {
+	max-width: calc( 1260px - 3rem + 30px);
 }
 
 /* Wide and Fullwidth Blocks */
 body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
-	max-width: 1240px;
+	max-width: calc( 1260px - 3rem + 30px);
 }
 
 body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {

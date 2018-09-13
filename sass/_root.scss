@@ -1,0 +1,36 @@
+:root {
+	--containerWidth: $themeWidth;
+	--contentWidth: $contentWidth;
+	--link-color: map-get($themeColors, --link-color);
+	--link-hover-color: map-get($themeColors, --link-hover-color);
+	--button-color: map-get($themeColors, --button-color);
+	--button-text-color: map-get($themeColors, --button-text-color);
+	--button-hover-color: map-get($themeColors, --button-hover-color);
+	--button-hover-text-color: map-get($themeColors, --button-hover-text-color);
+	--header-background-color: map-get($themeColors, --header-background-color);
+	--header-text-color: map-get($themeColors, --header-text-color);
+	--header-hover-text-color: map-get($themeColors, --header-hover-text-color);
+	--header-border-color: map-get($themeColors, --header-border-color);
+	--navi-active-text-color: map-get($themeColors, --navi-active-text-color);
+	--navi-active-bg-color: map-get($themeColors, --navi-active-bg-color);
+	--navi-hover-bg-color: map-get($themeColors, --navi-hover-bg-color);
+	--title-text-color: map-get($themeColors, --title-text-color);
+	--title-background-color: map-get($themeColors, --title-background-color);
+	--post-title-color: map-get($themeColors, --post-title-color);
+	--post-title-hover-color: map-get($themeColors, --post-title-hover-color);
+	--footer-color: map-get($themeColors, --footer-color);
+	--footer-text-color: map-get($themeColors, --footer-text-color);
+	--footer-hover-text-color: map-get($themeColors, --footer-hover-text-color);
+	--footer-border-color: map-get($themeColors, --footer-border-color);
+	--block-primary-color: map-get($themeColors, --block-primary-color);
+	--block-secondary-color: map-get($themeColors, --block-secondary-color);
+	--block-accent-color: map-get($themeColors, --block-accent-color);
+	--block-complementary-color: map-get($themeColors, --block-complementary-color);
+	--text-font: map-get($themeFonts, --text-font);
+	--title-font: map-get($themeFonts, --title-font);
+	--title-font-weight: map-get($fontWeight, --title-font-weight);
+	--title-text-transform: map-get($textTransform, --title-text-transform);
+	--navi-font: map-get($themeFonts, --navi-font);
+	--navi-font-weight: map-get($fontWeight, --navi-font-weight);
+	--navi-text-transform: map-get($textTransform, --navi-text-transform);
+}
