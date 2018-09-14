@@ -1572,7 +1572,7 @@ h2.is-style-gt-heading-large {
 /*--------------------------------------------------------------
 ## - Media Queries for Typography
 --------------------------------------------------------------*/
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 480px) {
 	.site-title {
 		font-size: 28px;
 		font-size: 1.75rem;
@@ -1589,7 +1589,7 @@ h2.is-style-gt-heading-large {
 	}
 }
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 640px) {
 	.site-title {
 		font-size: 32px;
 		font-size: 2rem;
@@ -1621,7 +1621,7 @@ h2.is-style-gt-heading-large {
 	}
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 960px) {
 	.site-title {
 		font-size: 36px;
 		font-size: 2.25rem;
@@ -1643,7 +1643,7 @@ h2.is-style-gt-heading-large {
 /*--------------------------------------------------------------
 ## - Media Queries for Layout
 --------------------------------------------------------------*/
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 480px) {
 	.site-header,
 	.site-footer,
 	.site-content {
@@ -1663,7 +1663,7 @@ h2.is-style-gt-heading-large {
 	}
 }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 800px) {
 	.post-header {
 		margin: 2rem 0 1.5rem;
 	}
@@ -1683,13 +1683,13 @@ h2.is-style-gt-heading-large {
 	}
 }
 
-@media only screen and (min-width: 65em) {
+@media only screen and (min-width: 1040px) {
 	.header-image-added .header-main {
 		grid-column-gap: 1rem;
 	}
 }
 
-@media only screen and (min-width: 70em) {
+@media only screen and (min-width: 1120px) {
 	.post-header {
 		margin: 2.5rem 0 2rem;
 	}
@@ -1724,14 +1724,14 @@ h2.is-style-gt-heading-large {
 /*--------------------------------------------------------------
 ## - Media Queries for Navigation
 --------------------------------------------------------------*/
-@media only screen and (min-width: 25em) {
+@media only screen and (min-width: 400px) {
 	.menu-toggle .menu-toggle-text {
 		display: inline-block;
 		margin-left: 0.2em;
 	}
 }
 
-@media only screen and (min-width: 55em) {
+@media only screen and (min-width: 880px) {
 	.menu-toggle,
 	.dropdown-toggle {
 		display: none;
@@ -1831,7 +1831,7 @@ h2.is-style-gt-heading-large {
 	.main-navigation .menu-item-has-children > a > .icon,
 	.main-navigation .page_item_has_children > a > .icon {
 		position: relative;
-		display: inline;
+		display: inline-block;
 		left: 0.5rem;
 		top: 0.1rem;
 		width: 13px;
@@ -1863,7 +1863,7 @@ h2.is-style-gt-heading-large {
 /*--------------------------------------------------------------
 ## - Media Queries for Media
 --------------------------------------------------------------*/
-@media only screen and (min-width: 20em) {
+@media only screen and (min-width: 320px) {
 	.alignleft {
 		float: left;
 		margin-right: 1.5rem;
@@ -1875,7 +1875,7 @@ h2.is-style-gt-heading-large {
 	}
 }
 
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 480px) {
 	/* Gallery */
 	.gallery-columns-3,
 	.gallery-columns-5,
@@ -1891,7 +1891,7 @@ h2.is-style-gt-heading-large {
 	}
 }
 
-@media only screen and (min-width: 45em) {
+@media only screen and (min-width: 720px) {
 	/* Gallery */
 	.gallery-columns-5 {
 		grid-template-columns: repeat(5, 1fr);
@@ -1906,7 +1906,7 @@ h2.is-style-gt-heading-large {
 	}
 }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 800px) {
 	/* Gallery */
 	.gallery-columns-8 {
 		grid-template-columns: repeat(8, 1fr);
