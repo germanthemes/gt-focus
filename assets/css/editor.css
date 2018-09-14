@@ -81,49 +81,6 @@ body.gt-page-title-hidden.gutenberg-editor-page .edit-post-visual-editor .editor
 	background-position: 0 0, 10px 10px;
 }
 
-/* Headings
-body.gutenberg-editor-page .edit-post-visual-editor h1.editor-rich-text__tinymce.mce-content-body,
-body.gutenberg-editor-page .edit-post-visual-editor h2.editor-rich-text__tinymce.mce-content-body,
-body.gutenberg-editor-page .edit-post-visual-editor h3.editor-rich-text__tinymce.mce-content-body,
-body.gutenberg-editor-page .edit-post-visual-editor h4.editor-rich-text__tinymce.mce-content-body,
-body.gutenberg-editor-page .edit-post-visual-editor h5.editor-rich-text__tinymce.mce-content-body,
-body.gutenberg-editor-page .edit-post-visual-editor h6.editor-rich-text__tinymce.mce-content-body {
-	clear: both;
-	margin: 1em 0 0.75em;
-	line-height: 1.4;
-}
-
-body.gutenberg-editor-page .edit-post-visual-editor h1.editor-rich-text__tinymce.mce-content-body {
-	font-size: 32px;
-	font-size: 2rem;
-}
-
-body.gutenberg-editor-page .edit-post-visual-editor h2.editor-rich-text__tinymce.mce-content-body {
-	font-size: 26px;
-	font-size: 1.625rem;
-}
-
-body.gutenberg-editor-page .edit-post-visual-editor h3.editor-rich-text__tinymce.mce-content-body {
-	font-size: 22px;
-	font-size: 1.375rem;
-}
-
-body.gutenberg-editor-page .edit-post-visual-editor h4.editor-rich-text__tinymce.mce-content-body {
-	font-size: 20px;
-	font-size: 1.25rem;
-}
-
-body.gutenberg-editor-page .edit-post-visual-editor h5.editor-rich-text__tinymce.mce-content-body {
-	font-size: 19px;
-	font-size: 1.1875rem;
-}
-
-body.gutenberg-editor-page .edit-post-visual-editor h6.editor-rich-text__tinymce.mce-content-body {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-*/
-
 /* GT Buttons */
 .is-style-gt-button a {
 	display: inline-block;
