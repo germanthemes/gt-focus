@@ -1,17 +1,18 @@
 /* Wide Page Layout */
-body.wide-page-layout .site-content {
-	grid-template-columns: 1fr minmax(0, calc( 990px - 3rem ) ) 1fr;
-}
-
-body.wide-page-layout .site-content .page-header-container {
-	grid-template-columns: 1fr minmax(0, calc( 990px - 3rem ) ) 1fr;
+body.wide-page-layout .site-content .site-main,
+body.wide-page-layout .page-header-container .page-header {
+	max-width: 990px;
 }
 
 /* Fullwidth Page Layout */
-body.fullwidth-page-layout .site-content {
-	grid-template-columns: 1fr minmax(0, calc( 1260px - 3rem ) ) 1fr;
+body.fullwidth-page-layout .site-content .site-main,
+body.fullwidth-page-layout .page-header-container .page-header {
+	max-width: $themeWidth;
 }
 
-body.fullwidth-page-layout .site-content .page-header-container {
-	grid-template-columns: 1fr minmax(0, calc( 1260px - 3rem ) ) 1fr;
+/* Disable Wide Blocks on Page Layouts */
+body.wide-page-layout .entry-content > .alignwide,
+body.fullwidth-page-layout .entry-content > .alignwide {
+	margin: 0;
+	max-width: 100%;
 }

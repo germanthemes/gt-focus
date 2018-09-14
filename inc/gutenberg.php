@@ -118,7 +118,7 @@ add_action( 'enqueue_block_editor_assets', 'gt_health_block_editor_assets' );
  * Register Post Meta
  */
 function gt_health_register_post_meta() {
-    register_post_meta( 'page', 'gt_hide_page_title', array(
+	register_post_meta( 'page', 'gt_hide_page_title', array(
 		'type'         => 'boolean',
 		'single'       => true,
 		'show_in_rest' => true,
@@ -130,20 +130,20 @@ function gt_health_register_post_meta() {
 		'show_in_rest'      => true,
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
-	
+
 	register_post_meta( 'page', 'gt_page_background_color', array(
 		'type'              => 'string',
 		'single'            => true,
 		'show_in_rest'      => true,
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
-	
+
 	register_post_meta( 'page', 'gt_page_text_color', array(
 		'type'              => 'string',
 		'single'            => true,
 		'show_in_rest'      => true,
 		'sanitize_callback' => 'sanitize_hex_color',
-    ) );
+	) );
 }
 add_action( 'init', 'gt_health_register_post_meta' );
 
@@ -160,20 +160,20 @@ function gt_health_gutenberg_add_admin_body_class( $classes ) {
 	}
 
 	// Wide Page Layout?
-	if( get_post_type( $post->ID ) && 'wide' === get_post_meta( $post->ID, 'gt_page_layout', true ) ) {
+	if ( get_post_type( $post->ID ) && 'wide' === get_post_meta( $post->ID, 'gt_page_layout', true ) ) {
 		$classes .= ' gt-wide-page-layout ';
 	}
 
 	// Fullwidth Page Layout?
-	if( get_post_type( $post->ID ) && 'fullwidth' === get_post_meta( $post->ID, 'gt_page_layout', true ) ) {
+	if ( get_post_type( $post->ID ) && 'fullwidth' === get_post_meta( $post->ID, 'gt_page_layout', true ) ) {
 		$classes .= ' gt-fullwidth-page-layout ';
 	}
 
 	// Page Title hidden?
-	if( get_post_type( $post->ID ) && get_post_meta( $post->ID, 'gt_hide_page_title', true ) ) {
+	if ( get_post_type( $post->ID ) && get_post_meta( $post->ID, 'gt_hide_page_title', true ) ) {
 		$classes .= ' gt-page-title-hidden ';
 	}
-	
+
 	return $classes;
 }
 add_filter( 'admin_body_class', 'gt_health_gutenberg_add_admin_body_class' );
