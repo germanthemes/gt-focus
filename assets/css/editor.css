@@ -4,8 +4,6 @@
  * @package GT Health
  */
 :root {
-	--containerWidth: 1260px;
-	--contentWidth: 720px;
 	--link-color: #006699;
 	--link-hover-color: #242424;
 	--button-color: #006699;

@@ -30,7 +30,7 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<div class="header-main container">
+			<div class="header-main">
 
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 

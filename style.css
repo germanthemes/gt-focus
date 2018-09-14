@@ -44,8 +44,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--containerWidth: 1260px;
-	--contentWidth: 720px;
 	--link-color: #006699;
 	--link-hover-color: #242424;
 	--button-color: #006699;
@@ -721,13 +719,27 @@ textarea {
 	overflow: hidden;
 }
 
-.container {
-	margin-left: auto;
-	margin-right: auto;
+.site-header,
+.site-footer,
+.site-content {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
+}
+
+.header-main,
+.footer-main,
+.site-main {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header-main,
+.footer-main {
 	max-width: 1260px;
-	max-width: var(--containerWidth);
+}
+
+.site-main {
+	max-width: 720px;
 }
 
 /*--------------------------------------------------------------
@@ -1029,15 +1041,7 @@ textarea {
 .site-content {
 	display: flex;
 	flex-direction: column;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
 	background: #fff;
-}
-
-.site-main {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 720px;
 }
 
 .type-post,
@@ -1283,7 +1287,7 @@ body.fullwidth-page-layout .entry-content > .alignwide {
 	text-decoration: underline;
 }
 
-.site-footer .site-info {
+.site-footer .footer-main {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	text-align: center;
@@ -1640,7 +1644,8 @@ h2.is-style-gt-heading-large {
 ## - Media Queries for Layout
 --------------------------------------------------------------*/
 @media only screen and (min-width: 30em) {
-	.container,
+	.site-header,
+	.site-footer,
 	.site-content {
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
