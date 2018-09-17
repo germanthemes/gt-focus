@@ -1,7 +1,7 @@
 /* Wide Page Layout */
 body.wide-page-layout .site-content .site-main,
 body.wide-page-layout .page-header-container .page-header {
-	max-width: 990px;
+	max-width: $wideWidth;
 }
 
 /* Fullwidth Page Layout */

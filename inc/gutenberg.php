@@ -154,6 +154,11 @@ add_action( 'init', 'gt_health_register_post_meta' );
 function gt_health_gutenberg_add_admin_body_class( $classes ) {
 	global $post;
 
+	// Return early if Gutenberg is not installed.
+	if ( ! function_exists( 'is_gutenberg_page' ) ) {
+		return $classes;
+	}
+
 	// Return early if we are not in the Gutenberg Editor.
 	if ( ! is_gutenberg_page() ) {
 		return $classes;

@@ -47,12 +47,12 @@ function gt_health_body_classes( $classes ) {
 	}
 
 	// Wide Page Layout?
-	if( is_page() && 'wide' === get_post_meta( get_the_ID(), 'gt_page_layout', true ) ) {
+	if ( is_page() && 'wide' === get_post_meta( get_the_ID(), 'gt_page_layout', true ) ) {
 		$classes[] = 'wide-page-layout';
 	}
 
 	// Fullwidth Page Layout?
-	if( is_page() && 'fullwidth' === get_post_meta( get_the_ID(), 'gt_page_layout', true ) ) {
+	if ( is_page() && 'fullwidth' === get_post_meta( get_the_ID(), 'gt_page_layout', true ) ) {
 		$classes[] = 'fullwidth-page-layout';
 	}
 
@@ -89,7 +89,7 @@ function gt_health_hide_elements() {
 	}
 
 	// Hide Page Title?
-	if( is_page() && get_post_meta( get_the_ID(), 'gt_hide_page_title', true ) ) {
+	if ( is_page() && get_post_meta( get_the_ID(), 'gt_hide_page_title', true ) ) {
 		$elements[] = '.type-page .page-header-container';
 	}
 
