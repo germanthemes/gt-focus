@@ -4,7 +4,7 @@
  * @package GT Health
  */
 .wp-block {
-	width: 750px;
+	width: calc( 720px + 30px);
 }
 
 body {

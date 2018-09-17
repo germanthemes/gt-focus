@@ -1683,6 +1683,14 @@ h2.is-style-gt-heading-large {
 	}
 }
 
+@media only screen and (min-width: 960px) {
+	.entry-content > .alignwide {
+		margin-left: -120px;
+		margin-right: -120px;
+		max-width: 960px;
+	}
+}
+
 @media only screen and (min-width: 1040px) {
 	.header-image-added .header-main {
 		grid-column-gap: 1rem;
@@ -1702,22 +1710,6 @@ h2.is-style-gt-heading-large {
 
 	.pagination {
 		margin: 2.5rem 0;
-	}
-}
-
-@media only screen and (min-width: 930px) {
-	.entry-content > .alignwide {
-		margin-left: -75px;
-		margin-right: -75px;
-		max-width: 870px;
-	}
-}
-
-@media only screen and (min-width: 1080px) {
-	.entry-content > .alignwide {
-		margin-left: -135px;
-		margin-right: -135px;
-		max-width: 960px;
 	}
 }
 
