@@ -12,7 +12,7 @@
 }
 
 body {
-	color: $textColor;
+	color: inherit;
 	@include font-family(--text-font);
 	@include font-size(18);
     line-height: 1.75;
