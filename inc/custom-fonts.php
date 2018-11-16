@@ -25,10 +25,6 @@ class GT_Health_Custom_Fonts {
 		// Add Custom Fonts CSS code to editor.
 		add_action( 'enqueue_block_editor_assets', array( __CLASS__, 'add_custom_fonts_in_editor' ), 12 );
 
-		// Load default fonts.
-		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'load_default_fonts' ), 1 );
-		add_action( 'enqueue_block_editor_assets', array( __CLASS__, 'load_default_fonts' ), 1 );
-
 		// Add theme support for GT Typography plugin.
 		add_action( 'after_setup_theme', array( __CLASS__, 'add_typography_theme_support' ) );
 	}
@@ -105,32 +101,13 @@ class GT_Health_Custom_Fonts {
 		$system_fonts = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; ';
 
 		// Return Font Family string.
-		return 'SystemFontStack' === $font ? $system_fonts : '"' . esc_attr( $font ) . '", Arial, Helvetica, sans-serif; ';
+		return 'SystemFontStack' === $font ? $system_fonts : '"' . esc_attr( $font ) . '", ' . $system_fonts;
 	}
 
 	/**
-	 * Enqueue default fonts.
+	 * Register support for GT Typography plugin.
 	 */
-	static function load_default_fonts() {
-
-		// Get selected fonts.
-		$fonts = self::get_selected_fonts();
-
-		if ( in_array( 'Roboto', $fonts, true ) ) {
-			wp_enqueue_style( 'gt-health-roboto-font', get_theme_file_uri( '/assets/css/roboto.css' ), array(), '14.0' );
-		}
-
-		if ( in_array( 'Lato', $fonts, true ) ) {
-			wp_enqueue_style( 'gt-health-lato-font', get_theme_file_uri( '/assets/css/lato.css' ), array(), '18.0' );
-		}
-	}
-
-	/**
-	 * Get selected fonts in Customizer.
-	 *
-	 * @return array List of selected fonts.
-	 */
-	static function get_selected_fonts() {
+	static function add_typography_theme_support() {
 
 		// Get theme options from database.
 		$theme_options = gt_health_theme_options();
@@ -142,31 +119,17 @@ class GT_Health_Custom_Fonts {
 			$theme_options['navi_font'],
 		);
 
-		return $selected_fonts;
-	}
-
-	/**
-	 * Register support for GT Typography plugin.
-	 */
-	static function add_typography_theme_support() {
-
-		// Get selected fonts.
-		$selected_fonts = self::get_selected_fonts();
-
-		// Remove default fonts.
-		$selected_fonts = array_diff( $selected_fonts, array( 'Roboto', 'Lato' ) );
-
 		add_theme_support( 'gt-typography', array(
 			'selected_fonts' => $selected_fonts,
 		) );
 	}
 
 	/**
-	 * Get fonts
+	 * Get available fonts
 	 *
 	 * @return array List of fonts.
 	 */
-	static function get_fonts() {
+	static function get_available_fonts() {
 
 		$fonts = array(
 			'Arial'                       => 'Arial',
@@ -183,21 +146,7 @@ class GT_Health_Custom_Fonts {
 			'Verdana'                     => 'Verdana',
 		);
 
-		// Get Default Fonts from settings.
-		$default_options = gt_health_default_options();
-
-		// Add default fonts to local fonts.
-		if ( isset( $default_options['text_font'] ) and ! array_key_exists( $default_options['text_font'], $fonts ) ) :
-			$fonts[ trim( $default_options['text_font'] ) ] = esc_attr( trim( $default_options['text_font'] ) );
-		endif;
-		if ( isset( $default_options['title_font'] ) and ! array_key_exists( $default_options['title_font'], $fonts ) ) :
-			$fonts[ trim( $default_options['title_font'] ) ] = esc_attr( trim( $default_options['title_font'] ) );
-		endif;
-		if ( isset( $default_options['navi_font'] ) and ! array_key_exists( $default_options['navi_font'], $fonts ) ) :
-			$fonts[ trim( $default_options['navi_font'] ) ] = esc_attr( trim( $default_options['navi_font'] ) );
-		endif;
-
-		// Allow other plugins to add fonts.
+		// Allow plugins to add fonts.
 		$fonts = apply_filters( 'gt_typography_fonts', $fonts );
 
 		// Sort fonts alphabetically.

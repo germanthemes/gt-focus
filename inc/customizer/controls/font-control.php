@@ -54,7 +54,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 			);
 
 			// Set Fonts.
-			$this->fonts = GT_Health_Custom_Fonts::get_fonts();
+			$this->fonts = GT_Health_Custom_Fonts::get_available_fonts();
 
 			parent::__construct( $manager, $id, $args );
 		}

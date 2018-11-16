@@ -57,9 +57,9 @@ function gt_health_default_options() {
 		'navi_color'       => '#006699',
 		'title_color'      => '#006699',
 		'footer_color'     => '#ffffff',
-		'text_font'        => 'Roboto',
-		'title_font'       => 'Lato',
-		'navi_font'        => 'Roboto',
+		'text_font'        => 'SystemFontStack',
+		'title_font'       => 'SystemFontStack',
+		'navi_font'        => 'SystemFontStack',
 		'footer_text'      => sprintf( '&copy; %1$s %2$s', date( 'Y' ), get_bloginfo( 'name' ) ),
 	);
 

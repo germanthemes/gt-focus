@@ -67,11 +67,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--footer-text-color: #242424;
 	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
 	--footer-border-color: rgba(0, 0, 0, 0.1);
-	--text-font: Roboto, Arial, Helvetica;
-	--title-font: Lato, Tahoma, Arial;
+	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font-weight: bold;
 	--title-text-transform: none;
-	--navi-font: Roboto, Arial, Helvetica;
+	--navi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--navi-font-weight: normal;
 	--navi-text-transform: none;
 }
@@ -306,7 +306,7 @@ textarea {
 	color: #242424;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: Roboto, Arial, Helvetica;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--text-font);
 	line-height: 1.75;
 }
@@ -320,7 +320,7 @@ h6 {
 	clear: both;
 	margin: 1.25em 0 1em;
 	padding: 0;
-	font-family: Lato, Tahoma, Arial;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--title-font);
 	line-height: 1.4;
 }
@@ -794,7 +794,7 @@ textarea {
 	text-decoration: none;
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: Lato, Tahoma, Arial;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -855,7 +855,7 @@ textarea {
 	list-style: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: Roboto, Arial, Helvetica;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--navi-font);
 	font-weight: normal;
 	font-weight: var(--navi-font-weight);
@@ -931,7 +931,7 @@ textarea {
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: Roboto, Arial, Helvetica;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--navi-font);
 	font-weight: normal;
 	font-weight: var(--navi-font-weight);
@@ -1061,7 +1061,7 @@ textarea {
 	word-wrap: break-word;
 	font-size: 28px;
 	font-size: 1.75rem;
-	font-family: Lato, Tahoma, Arial;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -1253,7 +1253,7 @@ body.fullwidth-page-layout .entry-content > .alignwide {
 .site-footer {
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-family: Roboto, Arial, Helvetica;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--navi-font);
 	color: rgba(0, 0, 0, 0.5);
 	color: var(--footer-hover-text-color);
