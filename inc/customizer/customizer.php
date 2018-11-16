@@ -32,6 +32,10 @@ function gt_health_customize_register_options( $wp_customize ) {
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'gt-health' ),
 	) );
+
+	// Change default background section.
+	$wp_customize->get_control( 'background_color' )->section = 'background_image';
+	$wp_customize->get_section( 'background_image' )->title   = esc_html__( 'Background', 'gt-health' );
 }
 add_action( 'customize_register', 'gt_health_customize_register_options' );
 

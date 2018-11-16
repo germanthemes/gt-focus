@@ -426,7 +426,7 @@ html {
 }
 
 body {
-	background: #ccc; /* Fallback for when there is no custom background color defined. */
+	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote {
@@ -1041,7 +1041,6 @@ textarea {
 .site-content {
 	display: flex;
 	flex-direction: column;
-	background: #fff;
 }
 
 .type-post,
