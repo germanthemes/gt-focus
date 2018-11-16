@@ -269,21 +269,3 @@ if ( ! function_exists( 'gt_health_pagination' ) ) :
 		) );
 	}
 endif;
-
-
-/**
- * Displays credit link on footer line
- */
-function gt_health_footer_text() {
-
-	// Get Footer Text.
-	$footer_text = gt_health_get_option( 'footer_text' );
-
-	if ( '' !== $footer_text || is_customize_preview() ) :
-		?>
-
-		<span class="footer-text"><?php echo wp_kses_post( $footer_text ); ?></span>
-
-		<?php
-	endif;
-}

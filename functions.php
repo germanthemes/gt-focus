@@ -157,6 +157,17 @@ function gt_health_widgets_init() {
 		'before_title'  => '<h4 class = "widget-title">',
 		'after_title'   => '</h4>',
 	) );
+
+	// Register Footer Copyright widget area.
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Copyright', 'gt-health' ),
+		'id'            => 'footer-copyright',
+		'description'   => esc_html_x( 'Appears in the bottom footer line.', 'widget area description', 'gt-health' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class = "widget-title">',
+		'after_title'   => '</h4>',
+	) );
 }
 add_action( 'widgets_init', 'gt_health_widgets_init' );
 

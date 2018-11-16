@@ -44,13 +44,6 @@
 		} );
 	} );
 
-	// Footer text.
-	wp.customize( 'gt_health_theme_options[footer_text]', function( value ) {
-		value.bind( function( to ) {
-			$( '.site-info .footer-text' ).html( to );
-		} );
-	} );
-
 	/* Primary Color Option */
 	wp.customize( 'gt_health_theme_options[primary_color]', function( value ) {
 		value.bind( function( newval ) {

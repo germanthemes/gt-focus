@@ -41,18 +41,3 @@ function gt_health_sanitize_select( $input, $setting ) {
 	// If the input is a valid key, return it; otherwise, return the default.
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
-
-/**
- *  Sanitize footer content textarea
- *
- * @param String $value / Value of the setting.
- * @return string
- */
-function gt_health_sanitize_html( $value ) {
-
-	if ( current_user_can( 'unfiltered_html' ) ) :
-		return $value;
-	else :
-		return stripslashes( wp_filter_post_kses( addslashes( $value ) ) );
-	endif;
-}

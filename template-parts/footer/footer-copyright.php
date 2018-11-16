@@ -5,12 +5,21 @@
  * @version 1.0
  * @package GT Health
  */
-?>
 
-<footer id="colophon" class="site-footer">
 
-	<div id="footer-line" class="footer-main">
-		<?php gt_health_footer_text(); ?>
-	</div><!-- .footer-main -->
+// Check if there are footer copyright widgets.
+if ( is_active_sidebar( 'footer-copyright' ) ) :
+	?>
 
-</footer><!-- #colophon -->
+	<footer id="colophon" class="site-footer">
+
+		<div id="footer-line" class="footer-main widget-area">
+
+			<?php dynamic_sidebar( 'footer-copyright' ); ?>
+
+		</div><!-- .footer-main -->
+
+	</footer><!-- #colophon -->
+
+	<?php
+endif;
