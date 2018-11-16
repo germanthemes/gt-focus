@@ -18,9 +18,10 @@
 	--title-background-color: map-get($themeColors, --title-background-color);
 	--post-title-color: map-get($themeColors, --post-title-color);
 	--post-title-hover-color: map-get($themeColors, --post-title-hover-color);
-	--footer-color: map-get($themeColors, --footer-color);
+	--footer-background-color: map-get($themeColors, --footer-background-color);
 	--footer-text-color: map-get($themeColors, --footer-text-color);
-	--footer-hover-text-color: map-get($themeColors, --footer-hover-text-color);
+	--footer-link-color: map-get($themeColors, --footer-link-color);
+	--footer-hover-color: map-get($themeColors, --footer-hover-color);
 	--footer-border-color: map-get($themeColors, --footer-border-color);
 	--text-font: map-get($themeFonts, --text-font);
 	--title-font: map-get($themeFonts, --title-font);

@@ -122,19 +122,22 @@
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
-			if( isColorDark( newval ) ) {
-				text_color = '#ffffff';
-				text_hover_color = 'rgba(255, 255, 255, 0.5)';
-				border_color = 'rgba(255, 255, 255, 0.1)';
-			} else {
+			if( isColorLight( newval ) ) {
 				text_color = '#242424';
-				text_hover_color = 'rgba(0, 0, 0, 0.5)';
+				link_color = 'rgba(0, 0, 0, 0.75)';
+				hover_color = '#ffffff';
 				border_color = 'rgba(0, 0, 0, 0.1)';
+			} else {
+				text_color = '#ffffff';
+				link_color = 'rgba(255, 255, 255, 0.75)';
+				hover_color = '#ffffff';
+				border_color = 'rgba(255, 255, 255, 0.1)';
 			}
 
-			document.documentElement.style.setProperty( '--footer-color', newval );
+			document.documentElement.style.setProperty( '--footer-background-color', newval );
 			document.documentElement.style.setProperty( '--footer-text-color', text_color );
-			document.documentElement.style.setProperty( '--footer-hover-text-color', text_hover_color );
+			document.documentElement.style.setProperty( '--footer-link-color', link_color );
+			document.documentElement.style.setProperty( '--footer-hover-color', hover_color );
 			document.documentElement.style.setProperty( '--footer-border-color', border_color );
 		} );
 	} );

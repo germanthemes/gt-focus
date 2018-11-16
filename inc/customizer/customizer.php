@@ -44,7 +44,7 @@ add_action( 'customize_register', 'gt_health_customize_register_options' );
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function gt_health_customize_preview_js() {
-	wp_enqueue_script( 'gt-health-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20181116', true );
+	wp_enqueue_script( 'gt-health-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20181117', true );
 }
 add_action( 'customize_preview_init', 'gt_health_customize_preview_js' );
 

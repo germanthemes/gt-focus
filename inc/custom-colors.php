@@ -101,13 +101,14 @@ class GT_Health_Custom_Colors {
 
 		// Set Footer Color.
 		if ( $theme_options['footer_color'] !== $default['footer_color'] ) {
-			$color_variables .= '--footer-color: ' . $theme_options['footer_color'] . ';';
+			$color_variables .= '--footer-background-color: ' . $theme_options['footer_color'] . ';';
 
 			// Check if a light background color was chosen.
-			if ( self::is_color_dark( $theme_options['footer_color'] ) ) {
-				$color_variables .= '--footer-text-color: #ffffff;';
-				$color_variables .= '--footer-hover-text-color: rgba(255, 255, 255, 0.5);';
-				$color_variables .= '--footer-border-color: rgba(255, 255, 255, 0.1);';
+			if ( self::is_color_light( $theme_options['footer_color'] ) ) {
+				$color_variables .= '--footer-text-color: #242424;';
+				$color_variables .= '--footer-link-color: rgba(0, 0, 0, 0.75);';
+				$color_variables .= '--footer-hover-color: #242424;';
+				$color_variables .= '--footer-border-color: rgba(0, 0, 0, 0.1);';
 			}
 		}
 

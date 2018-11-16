@@ -56,7 +56,7 @@ function gt_health_default_options() {
 		'header_color'     => '#ffffff',
 		'navi_color'       => '#006699',
 		'title_color'      => '#006699',
-		'footer_color'     => '#ffffff',
+		'footer_color'     => '#242424',
 		'text_font'        => 'SystemFontStack',
 		'title_font'       => 'SystemFontStack',
 		'navi_font'        => 'SystemFontStack',

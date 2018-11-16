@@ -1,25 +1,72 @@
+/* Footer Widgets */
+.footer-widgets-container {
+	padding-top: 1.5rem;
+	padding-bottom: 0.5rem;
+	@include background(--footer-background-color);
+}
+
+/* Footer Widget Styling */
+.footer-widgets .widget {
+	margin-bottom: 1.5rem;
+	@include color(--footer-text-color);
+}
+
+.footer-widgets .widget-title {
+	margin-top: 0;
+	@include color(--footer-text-color);
+}
+
+.footer-widgets .widget a:link,
+.footer-widgets .widget a:visited  {
+	@include color(--footer-link-color);
+}
+
+.footer-widgets .widget a:hover,
+.footer-widgets .widget a:active  {
+	@include color(--footer-hover-color);
+}
+
+.footer-widgets .widget input[type="text"],
+.footer-widgets .widget input[type="email"],
+.footer-widgets .widget input[type="url"],
+.footer-widgets .widget input[type="password"],
+.footer-widgets .widget input[type="search"],
+.footer-widgets .widget input[type="submit"],
+.footer-widgets .widget textarea {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--footer-border-color);
+	@include color(--footer-hover-color);
+}
+
+.footer-widgets .widget input[type="text"]:focus,
+.footer-widgets .widget input[type="email"]:focus,
+.footer-widgets .widget input[type="url"]:focus,
+.footer-widgets .widget input[type="password"]:focus,
+.footer-widgets .widget input[type="search"]:focus,
+.footer-widgets .widget textarea:focus {
+	@include color(--footer-text-color);
+}
+
+/* Footer Copyright */
 .site-footer {
 	@include font-size(15);
-	@include font-family(--navi-font);
-	@include color(--footer-hover-text-color);
-	@include background(--footer-color);
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
-	border-top: 1px solid var(--footer-border-color);
+	@include color(--footer-text-color);
+	@include background(--footer-background-color);
 }
 
 .site-footer a:link,
 .site-footer a:visited {
-	@include color(--footer-text-color);
-	text-decoration: none;
+	@include color(--footer-link-color);
 }
 
 .site-footer a:hover,
 .site-footer a:active {
-	text-decoration: underline;
+	@include color(--footer-hover-color);
 }
 
 .site-footer .footer-main {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
-	text-align: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid var(--footer-border-color);
 }

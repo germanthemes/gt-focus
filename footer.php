@@ -15,17 +15,14 @@
 		</main><!-- #main -->
 	</div><!-- #content -->
 
-	<?php do_action( 'gt_health_before_footer' ); ?>
+<?php
+	do_action( 'gt_health_before_footer' );
 
-	<footer id="colophon" class="site-footer">
+	get_template_part( 'template-parts/footer/footer', 'widgets' );
+	get_template_part( 'template-parts/footer/footer', 'copyright' );
 
-		<div id="footer-line" class="footer-main">
-			<?php gt_health_footer_text(); ?>
-		</div><!-- .footer-main -->
-
-	</footer><!-- #colophon -->
-
-	<?php do_action( 'gt_health_after_footer' ); ?>
+	do_action( 'gt_health_after_footer' );
+?>
 
 </div><!-- #page -->
 

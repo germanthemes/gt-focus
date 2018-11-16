@@ -1,0 +1,62 @@
+<?php
+/**
+ * Footer Widgets
+ *
+ * @version 1.0
+ * @package GT Health
+ */
+
+
+// Check if there are footer widgets.
+if ( is_active_sidebar( 'footer-column-1' )
+	or is_active_sidebar( 'footer-column-2' )
+	or is_active_sidebar( 'footer-column-3' )
+	or is_active_sidebar( 'footer-column-4' ) ) :
+	?>
+
+	<div class="footer-widgets-container">
+
+		<div id="footer-widgets" class="footer-widgets" role="complementary">
+
+			<div class="footer-widgets-columns">
+
+				<?php if ( is_active_sidebar( 'footer-column-1' ) ) : ?>
+
+					<div class="footer-widget-column widget-area">
+						<?php dynamic_sidebar( 'footer-column-1' ); ?>
+					</div>
+
+				<?php endif; ?>
+
+				<?php if ( is_active_sidebar( 'footer-column-2' ) ) : ?>
+
+					<div class="footer-widget-column widget-area">
+						<?php dynamic_sidebar( 'footer-column-2' ); ?>
+					</div>
+
+				<?php endif; ?>
+
+				<?php if ( is_active_sidebar( 'footer-column-3' ) ) : ?>
+
+					<div class="footer-widget-column widget-area">
+						<?php dynamic_sidebar( 'footer-column-3' ); ?>
+					</div>
+
+				<?php endif; ?>
+
+				<?php if ( is_active_sidebar( 'footer-column-4' ) ) : ?>
+
+					<div class="footer-widget-column widget-area">
+						<?php dynamic_sidebar( 'footer-column-4' ); ?>
+					</div>
+
+				<?php endif; ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<?php
+endif;
