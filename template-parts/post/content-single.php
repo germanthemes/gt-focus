@@ -11,7 +11,7 @@
 
 	<header class="post-header entry-header">
 
-		<?php gt_health_post_image_single(); ?>
+		<?php gt_health_post_image(); ?>
 
 		<?php the_title( '<h1 class="post-title entry-title">', '</h1>' ); ?>
 
