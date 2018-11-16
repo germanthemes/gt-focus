@@ -49,21 +49,18 @@ function gt_health_theme_options() {
 function gt_health_default_options() {
 
 	$default_options = array(
-		'site_title'                => true,
-		'site_description'          => true,
-		'header_color'              => '#ffffff',
-		'navi_color'                => '#006699',
-		'title_color'               => '#006699',
-		'link_color'                => '#006699',
-		'footer_color'              => '#ffffff',
-		'block_primary_color'       => '#006699',
-		'block_secondary_color'     => '#0791b6',
-		'block_accent_color'        => '#f4e08a',
-		'block_complementary_color' => '#e7393a',
-		'text_font'                 => 'Roboto',
-		'title_font'                => 'Lato',
-		'navi_font'                 => 'Roboto',
-		'footer_text'               => sprintf( '&copy; %1$s %2$s', date( 'Y' ), get_bloginfo( 'name' ) ),
+		'site_title'       => true,
+		'site_description' => true,
+		'primary_color'    => '#006699',
+		'secondary_color'  => '#0791b6',
+		'header_color'     => '#ffffff',
+		'navi_color'       => '#006699',
+		'title_color'      => '#006699',
+		'footer_color'     => '#ffffff',
+		'text_font'        => 'Roboto',
+		'title_font'       => 'Lato',
+		'navi_font'        => 'Roboto',
+		'footer_text'      => sprintf( '&copy; %1$s %2$s', date( 'Y' ), get_bloginfo( 'name' ) ),
 	);
 
 	return apply_filters( 'gt_health_default_options', $default_options );

@@ -4,6 +4,8 @@
  * @package GT Health
  */
 :root {
+	--primary-color: #006699;
+	--secondary-color: #0791b6;
 	--link-color: #006699;
 	--link-hover-color: #242424;
 	--button-color: #006699;
@@ -25,10 +27,6 @@
 	--footer-text-color: #242424;
 	--footer-hover-text-color: rgba(0, 0, 0, 0.5);
 	--footer-border-color: rgba(0, 0, 0, 0.1);
-	--block-primary-color: #006699;
-	--block-secondary-color: #0791b6;
-	--block-accent-color: #f4e08a;
-	--block-complementary-color: #e7393a;
 	--text-font: Roboto, Arial, Helvetica;
 	--title-font: Lato, Tahoma, Arial;
 	--title-font-weight: bold;
@@ -118,69 +116,41 @@ h2.is-style-gt-heading-large {
 }
 
 /* Block Text Colors */
-.has-primary-color,
-a.has-primary-color {
+.has-primary-color {
 	color: #006699;
-	color: var(--block-primary-color);
+	color: var(--primary-color);
 }
 
-.has-secondary-color,
-a.has-secondary-color {
+.has-secondary-color {
 	color: #0791b6;
-	color: var(--block-secondary-color);
+	color: var(--secondary-color);
 }
 
-.has-accent-color,
-a.has-accent-color {
-	color: #f4e08a;
-	color: var(--block-accent-color);
-}
-
-.has-complementary-color,
-a.has-complementary-color {
-	color: #e7393a;
-	color: var(--block-complementary-color);
-}
-
-.has-white-color,
-a.has-white-color {
+.has-white-color {
 	color: #ffffff;
 }
 
-.has-light-gray-color,
-a.has-light-gray-color {
+.has-light-gray-color {
 	color: #e5e5e5;
 }
 
-.has-dark-gray-color,
-a.has-dark-gray-color {
+.has-dark-gray-color {
 	color: #555555;
 }
 
-.has-black-color,
-a.has-black-color {
+.has-black-color {
 	color: #242424;
 }
 
 /* Block Background Colors */
 .has-primary-background-color {
 	background-color: #006699;
-	background-color: var(--block-primary-color);
+	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color {
 	background-color: #0791b6;
-	background-color: var(--block-secondary-color);
-}
-
-.has-accent-background-color {
-	background-color: #f4e08a;
-	background-color: var(--block-accent-color);
-}
-
-.has-complementary-background-color {
-	background-color: #e7393a;
-	background-color: var(--block-complementary-color);
+	background-color: var(--secondary-color);
 }
 
 .has-white-background-color {

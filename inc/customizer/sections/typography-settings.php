@@ -17,7 +17,7 @@ function gt_health_customize_register_typography_settings( $wp_customize ) {
 	// Add Section for Theme Fonts.
 	$wp_customize->add_section( 'gt_health_section_typography', array(
 		'title'    => esc_html__( 'Typography', 'gt-health' ),
-		'priority' => 40,
+		'priority' => 20,
 		'panel'    => 'gt_health_options_panel',
 	) );
 

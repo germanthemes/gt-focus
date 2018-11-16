@@ -17,7 +17,7 @@ function gt_health_customize_register_footer_settings( $wp_customize ) {
 	// Add Section for Theme Options.
 	$wp_customize->add_section( 'gt_health_section_footer', array(
 		'title'    => esc_html_x( 'Footer', 'Footer Settings', 'gt-health' ),
-		'priority' => 50,
+		'priority' => 30,
 		'panel'    => 'gt_health_options_panel',
 	) );
 

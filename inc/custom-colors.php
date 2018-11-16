@@ -56,6 +56,27 @@ class GT_Health_Custom_Colors {
 		// Color Variables.
 		$color_variables = '';
 
+		// Set Primary Color.
+		if ( $theme_options['primary_color'] !== $default['primary_color'] ) {
+			$color_variables .= '--primary-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--link-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--button-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--post-title-hover-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--navi-active-bg-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--header-hover-text-color: ' . $theme_options['primary_color'] . ';';
+
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['primary_color'] ) ) {
+				$color_variables .= '--button-text-color: #242424;';
+				$color_variables .= '--navi-active-text-color: #242424;';
+			}
+		}
+
+		// Set Secondary Color.
+		if ( $theme_options['secondary_color'] !== $default['secondary_color'] ) {
+			$color_variables .= '--secondary-color: ' . $theme_options['secondary_color'] . ';';
+		}
+
 		// Set Header Color.
 		if ( $theme_options['header_color'] !== $default['header_color'] ) {
 			$color_variables .= '--header-background-color: ' . $theme_options['header_color'] . ';';
@@ -65,17 +86,6 @@ class GT_Health_Custom_Colors {
 				$color_variables .= '--header-text-color: #fff;';
 				$color_variables .= '--header-border-color: rgba(255, 255, 255, 0.1);';
 				$color_variables .= '--navi-hover-bg-color: rgba(255, 255, 255, 0.1);';
-			}
-		}
-
-		// Set Navigation Color.
-		if ( $theme_options['navi_color'] !== $default['navi_color'] ) {
-			$color_variables .= '--navi-active-bg-color: ' . $theme_options['navi_color'] . ';';
-			$color_variables .= '--header-hover-text-color: ' . $theme_options['navi_color'] . ';';
-
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['navi_color'] ) ) {
-				$color_variables .= '--navi-active-text-color: #242424;';
 			}
 		}
 
@@ -89,18 +99,6 @@ class GT_Health_Custom_Colors {
 			}
 		}
 
-		// Set Link Color.
-		if ( $theme_options['link_color'] !== $default['link_color'] ) {
-			$color_variables .= '--link-color: ' . $theme_options['link_color'] . ';';
-			$color_variables .= '--button-color: ' . $theme_options['link_color'] . ';';
-			$color_variables .= '--post-title-hover-color: ' . $theme_options['link_color'] . ';';
-
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['link_color'] ) ) {
-				$color_variables .= '--button-text-color: #242424;';
-			}
-		}
-
 		// Set Footer Color.
 		if ( $theme_options['footer_color'] !== $default['footer_color'] ) {
 			$color_variables .= '--footer-color: ' . $theme_options['footer_color'] . ';';
@@ -111,26 +109,6 @@ class GT_Health_Custom_Colors {
 				$color_variables .= '--footer-hover-text-color: rgba(255, 255, 255, 0.5);';
 				$color_variables .= '--footer-border-color: rgba(255, 255, 255, 0.1);';
 			}
-		}
-
-		// Set Block Primary Color.
-		if ( $theme_options['block_primary_color'] !== $default['block_primary_color'] ) {
-			$color_variables .= '--block-primary-color: ' . $theme_options['block_primary_color'] . ';';
-		}
-
-		// Set Block Secondary Color.
-		if ( $theme_options['block_secondary_color'] !== $default['block_secondary_color'] ) {
-			$color_variables .= '--block-secondary-color: ' . $theme_options['block_secondary_color'] . ';';
-		}
-
-		// Set Block Accent Color.
-		if ( $theme_options['block_accent_color'] !== $default['block_accent_color'] ) {
-			$color_variables .= '--block-accent-color: ' . $theme_options['block_accent_color'] . ';';
-		}
-
-		// Set Block Complementary Color.
-		if ( $theme_options['block_complementary_color'] !== $default['block_complementary_color'] ) {
-			$color_variables .= '--block-complementary-color: ' . $theme_options['block_complementary_color'] . ';';
 		}
 
 		// Return if no color variables were defined.

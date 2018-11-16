@@ -8,6 +8,8 @@ $textColor: #242424;
 
 // Theme Colors.
 $themeColors: (
+	--primary-color            : #006699,
+	--secondary-color          : #0791b6,
 	--link-color               : #006699,
 	--link-hover-color         : #242424,
 	--button-color             : #006699,
@@ -29,10 +31,6 @@ $themeColors: (
 	--footer-text-color        : #242424,
 	--footer-hover-text-color  : rgba(0, 0, 0, 0.5),
 	--footer-border-color      : rgba(0, 0, 0, 0.1),
-	--block-primary-color      : #006699,
-	--block-secondary-color    : #0791b6,
-	--block-accent-color       : #f4e08a,
-	--block-complementary-color: #e7393a,
 );
 
 // Basic Block Colors.

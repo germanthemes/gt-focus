@@ -51,6 +51,36 @@
 		} );
 	} );
 
+	/* Primary Color Option */
+	wp.customize( 'gt_health_theme_options[primary_color]', function( value ) {
+		value.bind( function( newval ) {
+			var text_color;
+
+			if( isColorLight( newval ) ) {
+				text_color = '#242424';
+			} else {
+				text_color = '#ffffff';
+			}
+
+			document.documentElement.style.setProperty( '--primary-color', newval );
+			document.documentElement.style.setProperty( '--link-color', newval );
+			document.documentElement.style.setProperty( '--button-color', newval );
+			document.documentElement.style.setProperty( '--post-title-hover-color', newval );
+			document.documentElement.style.setProperty( '--navi-active-bg-color', newval );
+			document.documentElement.style.setProperty( '--header-hover-text-color', newval );
+			
+			document.documentElement.style.setProperty( '--button-text-color', text_color );
+			document.documentElement.style.setProperty( '--navi-active-text-color', text_color );
+		} );
+	} );
+
+	/* Secondary Color Option */
+	wp.customize( 'gt_health_theme_options[secondary_color]', function( value ) {
+		value.bind( function( newval ) {
+			document.documentElement.style.setProperty( '--secondary-color', newval );
+		} );
+	} );
+		
 	/* Header Color Option */
 	wp.customize( 'gt_health_theme_options[header_color]', function( value ) {
 		value.bind( function( newval ) {
@@ -71,23 +101,6 @@
 		} );
 	} );
 
-	/* Navigation Color Option */
-	wp.customize( 'gt_health_theme_options[navi_color]', function( value ) {
-		value.bind( function( newval ) {
-			var text_color;
-
-			if( isColorLight( newval ) ) {
-				text_color = '#242424';
-			} else {
-				text_color = '#ffffff';
-			}
-
-			document.documentElement.style.setProperty( '--navi-active-bg-color', newval );
-			document.documentElement.style.setProperty( '--header-hover-text-color', newval );
-			document.documentElement.style.setProperty( '--navi-active-text-color', text_color );
-		} );
-	} );
-
 	/* Title Color Option */
 	wp.customize( 'gt_health_theme_options[title_color]', function( value ) {
 		value.bind( function( newval ) {
@@ -101,24 +114,6 @@
 
 			document.documentElement.style.setProperty( '--title-background-color', newval );
 			document.documentElement.style.setProperty( '--title-text-color', text_color );
-		} );
-	} );
-
-	/* Primary Link Color Option */
-	wp.customize( 'gt_health_theme_options[link_color]', function( value ) {
-		value.bind( function( newval ) {
-			var text_color;
-
-			if( isColorLight( newval ) ) {
-				text_color = '#242424';
-			} else {
-				text_color = '#ffffff';
-			}
-
-			document.documentElement.style.setProperty( '--link-color', newval );
-			document.documentElement.style.setProperty( '--button-color', newval );
-			document.documentElement.style.setProperty( '--post-title-hover-color', newval );
-			document.documentElement.style.setProperty( '--button-text-color', text_color );
 		} );
 	} );
 
@@ -141,34 +136,6 @@
 			document.documentElement.style.setProperty( '--footer-text-color', text_color );
 			document.documentElement.style.setProperty( '--footer-hover-text-color', text_hover_color );
 			document.documentElement.style.setProperty( '--footer-border-color', border_color );
-		} );
-	} );
-
-	/* Block Primary Color Option */
-	wp.customize( 'gt_health_theme_options[block_primary_color]', function( value ) {
-		value.bind( function( newval ) {
-			document.documentElement.style.setProperty( '--block-primary-color', newval );
-		} );
-	} );
-
-	/* Block Secondary Color Option */
-	wp.customize( 'gt_health_theme_options[block_secondary_color]', function( value ) {
-		value.bind( function( newval ) {
-			document.documentElement.style.setProperty( '--block-secondary-color', newval );
-		} );
-	} );
-
-	/* Block Accent Color Option */
-	wp.customize( 'gt_health_theme_options[block_accent_color]', function( value ) {
-		value.bind( function( newval ) {
-			document.documentElement.style.setProperty( '--block-accent-color', newval );
-		} );
-	} );
-
-	/* Block Complementary Color Option */
-	wp.customize( 'gt_health_theme_options[block_complementary_color]', function( value ) {
-		value.bind( function( newval ) {
-			document.documentElement.style.setProperty( '--block-complementary-color', newval );
 		} );
 	} );
 
