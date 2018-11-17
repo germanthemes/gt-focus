@@ -173,8 +173,33 @@ add_action( 'widgets_init', 'gt_health_widgets_init' );
 
 
 /**
+ * Set up automatic theme updates.
+ *
+ * @return void
+ */
+function gt_health_theme_updater() {
+	if ( '' !== gt_health_get_option( 'license_key' ) ) :
+
+		// Setup the updater.
+		$theme_updater = new GT_Health_Plugin_Updater( 'https://themezee.com', __FILE__, array(
+			'version' => '1.2',
+			'license' => trim( gt_health_get_option( 'license_key' ) ),
+			'item_id' => 171494,
+			'author'  => 'ThemeZee',
+		) );
+
+	endif;
+}
+add_action( 'admin_init', 'gt_health_theme_updater', 0 );
+
+
+/**
  * Include Files
  */
+
+// Include Admin Classses.
+require get_template_directory() . '/inc/admin/license-key.php';
+require get_template_directory() . '/inc/admin/theme-updater.php';
 
 // Include Customizer Options.
 require get_template_directory() . '/inc/customizer/customizer.php';

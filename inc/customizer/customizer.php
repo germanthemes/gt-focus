@@ -11,11 +11,13 @@ require( get_template_directory() . '/inc/customizer/sanitize-functions.php' );
 // Load Custom Controls.
 require( get_template_directory() . '/inc/customizer/controls/font-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/headline-control.php' );
+require( get_template_directory() . '/inc/customizer/controls/license-control.php' );
 
 // Load Customizer Sections.
 require( get_template_directory() . '/inc/customizer/sections/website-settings.php' );
 require( get_template_directory() . '/inc/customizer/sections/color-settings.php' );
 require( get_template_directory() . '/inc/customizer/sections/typography-settings.php' );
+require( get_template_directory() . '/inc/customizer/sections/license-settings.php' );
 
 /**
  * Registers Theme Options panel and sets up some WordPress core settings

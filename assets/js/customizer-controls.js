@@ -7,7 +7,6 @@
  */
 
 ( function( wp, $ ) {
-
 	/**
 	 * The Customizer looks for wp.customizer.controlConstructor[type] functions
 	 * where type == the type member of a WP_Customize_Control
@@ -15,7 +14,6 @@
 	wp.customize.controlConstructor.gt_health_custom_font = wp.customize.Control.extend({
 		/**
 		 * This method is called when the control is ready to run.
-		 * Do all of your setup and event binding here.
 		 */
 		ready: function() {
 
@@ -101,5 +99,117 @@
 			var prev = selector.prev();
 			return (prev.length) ? prev : selector.nextAll().last();
 		}
+	});
+
+	/**
+	 * The Customizer looks for wp.customizer.controlConstructor[type] functions
+	 * where type == the type member of a WP_Customize_Control
+	 */
+	wp.customize.controlConstructor.gt_health_license_key = wp.customize.Control.extend({
+		/**
+		 * This method is called when the control is ready to run.
+		 */
+		ready: function() {
+
+			// Grab the bits of data from the title for specifying this control. this.container is a jQuery object of your container.
+			var data = this.container.find( '.customize-license-control' ).data();
+
+			// Use specific l10n data for this control where available.
+			this.l10n = data.l10n;
+
+			// Set License status.
+			this.status = data.status;
+
+			// Display License status.
+			this.$statusContainer = this.container.find( '.license-status' );
+			this.$statusContainer.html( '<span class="' + this.status + '">' + this.status + '</span>' );
+
+			// Set up button elements. Cache for re-use.
+			this.$buttonContainer = this.container.find( '.actions' );
+			this.$buttonActivate = $( '<button type="button" class="button activate" title="' + this.l10n.activate + '">' + this.l10n.activate + '</button>' ).prependTo( this.$buttonContainer );
+			this.$buttonDeactivate = $( '<button type="button" class="button deactivate" title="' + this.l10n.deactivate + '">' + this.l10n.deactivate + '</button>' ).prependTo( this.$buttonContainer );
+
+			// Handy shortcut so we don't have to us _.bind every time we add a callback.
+			_.bindAll( this, 'activateLicense', 'deactivateLicense' );
+
+			this.$buttonActivate.on( 'click', this.activateLicense );
+			this.$buttonDeactivate.on( 'click', this.deactivateLicense );
+		},
+		/**
+		 * Called when the "Activate License" link is clicked.
+		 *
+		 * @param  {object} event jQuery Event object from click event
+		 */
+		activateLicense: function( event ) {
+			event.preventDefault();
+			var button = this.$buttonActivate;
+			var status = this.container.find( '.license-status' );
+			var key = this.container.find( 'input' ).val();
+			console.log( key );
+
+			// Turn off button.
+			button.prop( 'disabled', true );
+
+			// Set loading message.
+			status.html( '<span class="loading">' + this.l10n.loading + '</span>' );
+
+			// Check License Key.
+			$.ajax({
+				url: ajaxurl,
+				data: {
+					'action'     : 'gt_activate_license',
+					'license_key': key
+				},
+				success: function( data ) {
+					console.log( data );
+					// Update Status.
+					status.html( '<span class="' + data + '">' + data + '</span>' );
+				},
+				error: function( errorThrown ){
+					console.log( errorThrown );
+				},
+				complete: function() {
+					button.prop( 'disabled', false );
+				}
+			});
+		},
+		/**
+		 * Called when the "Deactivate License" link is clicked.
+		 *
+		 * @param  {object} event jQuery Event object from click event
+		 */
+		deactivateLicense: function( event ) {
+			event.preventDefault();
+			var button = this.$buttonDeactivate;
+			var status = this.container.find( '.license-status' );
+			var key = this.container.find( 'input' ).val();
+			console.log( key );
+
+			// Turn off button.
+			button.prop( 'disabled', true );
+
+			// Set loading message.
+			status.html( '<span class="loading">' + this.l10n.loading + '</span>' );
+
+			// Activate License Key.
+			$.ajax({
+				url: ajaxurl,
+				data: {
+					'action'     : 'gt_deactivate_license',
+					'license_key': key
+				},
+				success: function( data ) {
+					console.log( data );
+					// Update Status.
+					status.html( '<span class="' + data + '">' + data + '</span>' );
+				},
+				error: function( errorThrown ){
+					console.log( errorThrown );
+				},
+				complete: function() {
+					button.prop( 'disabled', false );
+				}
+			});
+		},
 	});
 })( this.wp, jQuery );
