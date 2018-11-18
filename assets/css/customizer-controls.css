@@ -39,3 +39,24 @@
 .customize-control-gt_health_custom_font .actions .button:hover {
 	cursor: pointer;
 }
+
+/* License Control */
+.customize-control-gt_health_license_key .license-status span {
+	display: inline-block;
+	margin: 0 0 12px;
+	padding: 5px 10px;
+	background: #444;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.customize-control-gt_health_license_key .license-status .valid {
+	background: green;
+}
+
+.customize-control-gt_health_license_key .license-status .invalid,
+.customize-control-gt_health_license_key .license-status .expired {
+	background: red;
+}

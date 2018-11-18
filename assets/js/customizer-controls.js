@@ -121,19 +121,37 @@
 			this.status = data.status;
 
 			// Display License status.
-			this.$statusContainer = this.container.find( '.license-status' );
-			this.$statusContainer.html( '<span class="' + this.status + '">' + this.status + '</span>' );
+			this.statusContainer = this.container.find( '.license-status' );
+			this.statusContainer.html( '<span class="' + this.status + '">' + this.status + '</span>' );
 
-			// Set up button elements. Cache for re-use.
-			this.$buttonContainer = this.container.find( '.actions' );
-			this.$buttonActivate = $( '<button type="button" class="button activate" title="' + this.l10n.activate + '">' + this.l10n.activate + '</button>' ).prependTo( this.$buttonContainer );
-			this.$buttonDeactivate = $( '<button type="button" class="button deactivate" title="' + this.l10n.deactivate + '">' + this.l10n.deactivate + '</button>' ).prependTo( this.$buttonContainer );
+			// Set up buttons.
+			this.buttonContainer = this.container.find( '.actions' );
+			this.buttonActivate = $( '<button type="button" class="button button-primary activate" title="' + this.l10n.activate + '">' + this.l10n.activate + '</button>' ).prependTo( this.buttonContainer );
+			this.buttonDeactivate = $( '<button type="button" class="button deactivate" title="' + this.l10n.deactivate + '">' + this.l10n.deactivate + '</button>' ).prependTo( this.buttonContainer );
+
+			// Display buttons.
+			this.hideButtons( this.status );
 
 			// Handy shortcut so we don't have to us _.bind every time we add a callback.
-			_.bindAll( this, 'activateLicense', 'deactivateLicense' );
+			_.bindAll( this, 'activateLicense', 'deactivateLicense', 'hideButtons' );
 
-			this.$buttonActivate.on( 'click', this.activateLicense );
-			this.$buttonDeactivate.on( 'click', this.deactivateLicense );
+			this.buttonActivate.on( 'click', this.activateLicense );
+			this.buttonDeactivate.on( 'click', this.deactivateLicense );
+		},
+		/**
+		 * Display Activate or Deactivate License button.
+		 */
+		hideButtons: function( status ) {
+			var input = this.container.find( 'input' );
+			if ( 'valid' === status ) {
+				this.buttonActivate.hide();
+				this.buttonDeactivate.show();
+				input.prop( 'disabled', true );
+			} else {
+				this.buttonActivate.show();
+				this.buttonDeactivate.hide();
+				input.prop( 'disabled', false );
+			}
 		},
 		/**
 		 * Called when the "Activate License" link is clicked.
@@ -142,16 +160,16 @@
 		 */
 		activateLicense: function( event ) {
 			event.preventDefault();
-			var button = this.$buttonActivate;
-			var status = this.container.find( '.license-status' );
+			var button = this.buttonActivate;
+			var statusField = this.statusContainer;
 			var key = this.container.find( 'input' ).val();
-			console.log( key );
+			var display = this.hideButtons;
 
 			// Turn off button.
 			button.prop( 'disabled', true );
 
 			// Set loading message.
-			status.html( '<span class="loading">' + this.l10n.loading + '</span>' );
+			statusField.html( '<span class="loading">' + this.l10n.loading + '</span>' );
 
 			// Check License Key.
 			$.ajax({
@@ -161,12 +179,13 @@
 					'license_key': key
 				},
 				success: function( data ) {
-					console.log( data );
 					// Update Status.
-					status.html( '<span class="' + data + '">' + data + '</span>' );
+					statusField.html( '<span class="' + data + '">' + data + '</span>' );
+					display( data );
 				},
 				error: function( errorThrown ){
 					console.log( errorThrown );
+					statusField.html( '<span class="error">' + errorThrown.status + ': ' + errorThrown.statusText + '</span>' );
 				},
 				complete: function() {
 					button.prop( 'disabled', false );
@@ -180,16 +199,16 @@
 		 */
 		deactivateLicense: function( event ) {
 			event.preventDefault();
-			var button = this.$buttonDeactivate;
-			var status = this.container.find( '.license-status' );
+			var button = this.buttonDeactivate;
+			var statusField = this.statusContainer;
 			var key = this.container.find( 'input' ).val();
-			console.log( key );
+			var display = this.hideButtons;
 
 			// Turn off button.
 			button.prop( 'disabled', true );
 
 			// Set loading message.
-			status.html( '<span class="loading">' + this.l10n.loading + '</span>' );
+			statusField.html( '<span class="loading">' + this.l10n.loading + '</span>' );
 
 			// Activate License Key.
 			$.ajax({
@@ -199,12 +218,13 @@
 					'license_key': key
 				},
 				success: function( data ) {
-					console.log( data );
 					// Update Status.
-					status.html( '<span class="' + data + '">' + data + '</span>' );
+					statusField.html( '<span class="' + data + '">' + data + '</span>' );
+					display( data );
 				},
 				error: function( errorThrown ){
 					console.log( errorThrown );
+					statusField.html( '<span class="error">' + errorThrown.status + ': ' + errorThrown.statusText + '</span>' );
 				},
 				complete: function() {
 					button.prop( 'disabled', false );

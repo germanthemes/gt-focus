@@ -181,10 +181,10 @@ function gt_health_theme_updater() {
 	if ( '' !== gt_health_get_option( 'license_key' ) ) :
 
 		// Setup the updater.
-		$theme_updater = new GT_Health_Plugin_Updater( 'https://themezee.com', __FILE__, array(
+		$theme_updater = new GT_Health_Plugin_Updater( GT_HEALTH_STORE_API_URL, __FILE__, array(
 			'version' => '1.2',
 			'license' => trim( gt_health_get_option( 'license_key' ) ),
-			'item_id' => 171494,
+			'item_id' => GT_HEALTH_PRODUCT_ID,
 			'author'  => 'ThemeZee',
 		) );
 

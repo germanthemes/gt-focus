@@ -16,10 +16,16 @@ class GT_Health_License_Key {
 	 */
 	static function setup() {
 
+		// Define Product ID.
+		define( 'GT_HEALTH_PRODUCT_ID', 171494 );
+
+		// Define Update API URL.
+		define( 'GT_HEALTH_STORE_API_URL', 'https://themezee.com' );
+
 		// Add License API functions.
 		add_action( 'wp_ajax_gt_activate_license', array( __CLASS__, 'activate_license' ) );
 		add_action( 'wp_ajax_gt_deactivate_license', array( __CLASS__, 'deactivate_license' ) );
-		#add_action( 'admin_init', array( __CLASS__, 'check_license' ) );
+		add_action( 'admin_init', array( __CLASS__, 'check_license' ) );
 	}
 
 	/**
@@ -42,15 +48,16 @@ class GT_Health_License_Key {
 		$api_params = array(
 			'edd_action' => 'activate_license',
 			'license'    => $license,
-			'item_id'    => 171494,
+			'item_id'    => GT_HEALTH_PRODUCT_ID,
 			'url'        => home_url(),
 		);
 
 		// Call the custom API.
-		$response = wp_remote_post( 'https://themezee.com', array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
+		$response = wp_remote_post( GT_HEALTH_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
 
 		// Make sure the response came back okay.
 		if ( is_wp_error( $response ) ) {
+			echo $response;
 			die();
 		}
 
@@ -92,15 +99,16 @@ class GT_Health_License_Key {
 		$api_params = array(
 			'edd_action' => 'deactivate_license',
 			'license'    => $license,
-			'item_id'    => 171494,
+			'item_id'    => GT_HEALTH_PRODUCT_ID,
 			'url'        => home_url(),
 		);
 
 		// Call the custom API.
-		$response = wp_remote_post( 'https://themezee.com', array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
+		$response = wp_remote_post( GT_HEALTH_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
 
 		// Make sure the response came back okay.
 		if ( is_wp_error( $response ) ) {
+			echo $response;
 			die();
 		}
 
@@ -125,31 +133,32 @@ class GT_Health_License_Key {
 	 */
 	static function check_license() {
 
-		if ( ! empty( $_POST['donovan_pro_settings'] ) ) {
-			return; // Don't fire when saving settings.
+		// Don't fire in Customizer.
+		if ( is_customize_preview() ) {
+			return;
 		}
 
-		$status = get_transient( 'donovan_pro_license_check' );
+		$status = get_transient( 'gt_health_license_check' );
 
 		// Run the license check a maximum of once per day.
 		if ( false === $status ) {
 
-			$options = $this->get_all();
-			$license_key = $options['license_key'];
+			// Get theme options from database.
+			$theme_options = gt_health_theme_options();
+			$license_key   = $theme_options['license_key'];
 
-			if ( '' !== $license_key and 'inactive' !== $options['license_status'] ) {
+			if ( '' !== $license_key and 'inactive' !== $theme_options['license_status'] ) {
 
 				// Data to send in our API request.
 				$api_params = array(
 					'edd_action' => 'check_license',
-					'license' 	=> $license_key,
-					'item_name' => urlencode( DONOVAN_PRO_NAME ),
-					'item_id'   => DONOVAN_PRO_PRODUCT_ID,
-					'url'       => home_url(),
+					'license'    => $license_key,
+					'item_id'    => GT_HEALTH_PRODUCT_ID,
+					'url'        => home_url(),
 				);
 
 				// Call the custom API.
-				$response = wp_remote_post( DONOVAN_PRO_STORE_API_URL, array( 'timeout' => 25, 'sslverify' => true, 'body' => $api_params ) );
+				$response = wp_remote_post( GT_HEALTH_STORE_API_URL, array( 'timeout' => 25, 'sslverify' => true, 'body' => $api_params ) );
 
 				// Make sure the response came back okay.
 				if ( is_wp_error( $response ) ) {
@@ -166,12 +175,12 @@ class GT_Health_License_Key {
 
 			}
 
-			$options['license_status'] = $status;
+			// Update License Status.
+			$theme_options['license_status'] = $status;
+			update_option( 'gt_health_theme_options', $theme_options );
 
-			update_option( 'donovan_pro_settings', $options );
-
-			set_transient( 'donovan_pro_license_check', $status, DAY_IN_SECONDS );
-
+			// Cache license check with transient.
+			set_transient( 'gt_health_license_check', $status, DAY_IN_SECONDS );
 		}
 
 		return $status;
