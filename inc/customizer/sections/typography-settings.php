@@ -29,7 +29,7 @@ function gt_health_customize_register_typography_settings( $wp_customize ) {
 		'default'           => $default['text_font'],
 		'type'              => 'option',
 		'transport'         => 'postMessage',
-		'sanitize_callback' => 'esc_attr',
+		'sanitize_callback' => 'gt_health_sanitize_select',
 	) );
 
 	$wp_customize->add_control( new GT_Health_Customize_Font_Control(
@@ -46,7 +46,7 @@ function gt_health_customize_register_typography_settings( $wp_customize ) {
 		'default'           => $default['title_font'],
 		'type'              => 'option',
 		'transport'         => 'postMessage',
-		'sanitize_callback' => 'esc_attr',
+		'sanitize_callback' => 'gt_health_sanitize_select',
 	) );
 
 	$wp_customize->add_control( new GT_Health_Customize_Font_Control(
@@ -63,7 +63,7 @@ function gt_health_customize_register_typography_settings( $wp_customize ) {
 		'default'           => $default['navi_font'],
 		'type'              => 'option',
 		'transport'         => 'postMessage',
-		'sanitize_callback' => 'esc_attr',
+		'sanitize_callback' => 'gt_health_sanitize_select',
 	) );
 
 	$wp_customize->add_control( new GT_Health_Customize_Font_Control(

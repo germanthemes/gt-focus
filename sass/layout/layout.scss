@@ -8,7 +8,6 @@
 
 .site-header,
 .site-content,
-.footer-widgets-container,
 .site-footer {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
@@ -16,14 +15,12 @@
 
 .header-main,
 .site-main,
-.footer-widgets,
 .footer-main {
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .header-main,
-.footer-widgets,
 .footer-main {
 	max-width: $themeWidth;
 }

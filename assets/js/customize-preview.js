@@ -130,7 +130,7 @@
 			document.documentElement.style.setProperty( '--footer-background-color', newval );
 			document.documentElement.style.setProperty( '--footer-text-color', text_color );
 			document.documentElement.style.setProperty( '--footer-link-color', link_color );
-			document.documentElement.style.setProperty( '--footer-hover-color', hover_color );
+			document.documentElement.style.setProperty( '--footer-link-hover-color', hover_color );
 			document.documentElement.style.setProperty( '--footer-border-color', border_color );
 		} );
 	} );

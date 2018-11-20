@@ -1,55 +1,6 @@
-/* Footer Widgets */
-.footer-widgets-container {
+.site-footer {
 	padding-top: 1.5rem;
 	padding-bottom: 0.5rem;
-	@include background(--footer-background-color);
-}
-
-/* Footer Widget Styling */
-.footer-widgets .widget {
-	margin-bottom: 1.5rem;
-	@include color(--footer-text-color);
-}
-
-.footer-widgets .widget-title {
-	margin-top: 0;
-	@include color(--footer-text-color);
-}
-
-.footer-widgets .widget a:link,
-.footer-widgets .widget a:visited  {
-	@include color(--footer-link-color);
-}
-
-.footer-widgets .widget a:hover,
-.footer-widgets .widget a:active  {
-	@include color(--footer-hover-color);
-}
-
-.footer-widgets .widget input[type="text"],
-.footer-widgets .widget input[type="email"],
-.footer-widgets .widget input[type="url"],
-.footer-widgets .widget input[type="password"],
-.footer-widgets .widget input[type="search"],
-.footer-widgets .widget input[type="submit"],
-.footer-widgets .widget textarea {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border: 1px solid var(--footer-border-color);
-	@include color(--footer-hover-color);
-}
-
-.footer-widgets .widget input[type="text"]:focus,
-.footer-widgets .widget input[type="email"]:focus,
-.footer-widgets .widget input[type="url"]:focus,
-.footer-widgets .widget input[type="password"]:focus,
-.footer-widgets .widget input[type="search"]:focus,
-.footer-widgets .widget textarea:focus {
-	@include color(--footer-text-color);
-}
-
-/* Footer Copyright */
-.site-footer {
-	@include font-size(15);
 	@include color(--footer-text-color);
 	@include background(--footer-background-color);
 }
@@ -61,12 +12,51 @@
 
 .site-footer a:hover,
 .site-footer a:active {
-	@include color(--footer-hover-color);
+	@include color(--footer-link-hover-color);
 }
 
-.site-footer .footer-main {
+.site-footer input[type="text"],
+.site-footer input[type="email"],
+.site-footer input[type="url"],
+.site-footer input[type="password"],
+.site-footer input[type="search"],
+.site-footer input[type="submit"],
+.site-footer textarea {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--footer-border-color);
+	@include color(--footer-link-hover-color);
+}
+
+.site-footer input[type="text"]:focus,
+.site-footer input[type="email"]:focus,
+.site-footer input[type="url"]:focus,
+.site-footer input[type="password"]:focus,
+.site-footer input[type="search"]:focus,
+.site-footer textarea:focus {
+	@include color(--footer-text-color);
+}
+
+/* Footer Widgets */
+.footer-widgets .widget {
+	margin-bottom: 1.5rem;
+}
+
+.footer-widgets .widget-title {
+	margin-top: 0;
+}
+
+/* Footer Copyright */
+.footer-copyright {
+	@include font-size(15);
 	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 	border-top: 1px solid var(--footer-border-color);
+}
+
+.footer-copyright .widget {
+	margin: 0;
+}
+
+.footer-copyright .widget-title {
+	margin-top: 0;
 }

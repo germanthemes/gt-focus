@@ -14,49 +14,45 @@ if ( is_active_sidebar( 'footer-column-1' )
 	or is_active_sidebar( 'footer-column-4' ) ) :
 	?>
 
-	<div class="footer-widgets-container">
+	<div id="footer-widgets" class="footer-widgets footer-main widget-area">
 
-		<div id="footer-widgets" class="footer-widgets" role="complementary">
+		<div class="footer-widgets-columns">
 
-			<div class="footer-widgets-columns">
+			<?php if ( is_active_sidebar( 'footer-column-1' ) ) : ?>
 
-				<?php if ( is_active_sidebar( 'footer-column-1' ) ) : ?>
+				<div class="footer-widget-column widget-area">
+					<?php dynamic_sidebar( 'footer-column-1' ); ?>
+				</div>
 
-					<div class="footer-widget-column widget-area">
-						<?php dynamic_sidebar( 'footer-column-1' ); ?>
-					</div>
+			<?php endif; ?>
 
-				<?php endif; ?>
+			<?php if ( is_active_sidebar( 'footer-column-2' ) ) : ?>
 
-				<?php if ( is_active_sidebar( 'footer-column-2' ) ) : ?>
+				<div class="footer-widget-column widget-area">
+					<?php dynamic_sidebar( 'footer-column-2' ); ?>
+				</div>
 
-					<div class="footer-widget-column widget-area">
-						<?php dynamic_sidebar( 'footer-column-2' ); ?>
-					</div>
+			<?php endif; ?>
 
-				<?php endif; ?>
+			<?php if ( is_active_sidebar( 'footer-column-3' ) ) : ?>
 
-				<?php if ( is_active_sidebar( 'footer-column-3' ) ) : ?>
+				<div class="footer-widget-column widget-area">
+					<?php dynamic_sidebar( 'footer-column-3' ); ?>
+				</div>
 
-					<div class="footer-widget-column widget-area">
-						<?php dynamic_sidebar( 'footer-column-3' ); ?>
-					</div>
+			<?php endif; ?>
 
-				<?php endif; ?>
+			<?php if ( is_active_sidebar( 'footer-column-4' ) ) : ?>
 
-				<?php if ( is_active_sidebar( 'footer-column-4' ) ) : ?>
+				<div class="footer-widget-column widget-area">
+					<?php dynamic_sidebar( 'footer-column-4' ); ?>
+				</div>
 
-					<div class="footer-widget-column widget-area">
-						<?php dynamic_sidebar( 'footer-column-4' ); ?>
-					</div>
-
-				<?php endif; ?>
-
-			</div>
+			<?php endif; ?>
 
 		</div>
 
-	</div>
+	</div><!-- .footer-widgets -->
 
 	<?php
 endif;

@@ -11,15 +11,11 @@
 if ( is_active_sidebar( 'footer-copyright' ) ) :
 	?>
 
-	<footer id="colophon" class="site-footer">
+	<div id="footer-copyright" class="footer-copyright footer-main widget-area">
 
-		<div id="footer-line" class="footer-main widget-area">
+		<?php dynamic_sidebar( 'footer-copyright' ); ?>
 
-			<?php dynamic_sidebar( 'footer-copyright' ); ?>
-
-		</div><!-- .footer-main -->
-
-	</footer><!-- #colophon -->
+	</div><!-- .footer-copyright -->
 
 	<?php
 endif;
