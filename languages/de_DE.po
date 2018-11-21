@@ -1,25 +1,20 @@
-#, fuzzy
+# Translation of Themes + Pro Versions + Add-ons in German
+# This file is distributed under the same license as the Themes + Pro Versions + Add-ons package.
 msgid ""
 msgstr ""
 "Project-Id-Version: GT Health\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2018-11-21 10:39+0100\n"
-"PO-Revision-Date: 2016-09-15 21:02+0100\n"
+"PO-Revision-Date: 2018-11-21 10:45+0100\n"
 "Last-Translator: \n"
-"Language-Team: ThemeZee <support@themezee.com>\n"
-"Language: en_US\n"
+"Language-Team: GermanThemes <kontakt@germanthemes.de>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 2.2\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ..\n"
-"X-Textdomain-Support: yes\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:17
 msgid "404: Page not found"
@@ -33,7 +28,7 @@ msgstr ""
 
 #: functions.php:34
 msgid "Main Navigation"
-msgstr ""
+msgstr "Hauptnavigation"
 
 #: functions.php:97
 msgid "Expand child menu"
@@ -45,48 +40,48 @@ msgstr ""
 
 #: functions.php:119
 msgid "Footer Column 1"
-msgstr ""
+msgstr "Footer Spalte 1"
 
 #: functions.php:121
 msgctxt "widget area description"
 msgid "Appears in the first column in footer."
-msgstr ""
+msgstr "Erscheint in der ersten Spalte im Footer."
 
 #: functions.php:130
 msgid "Footer Column 2"
-msgstr ""
+msgstr "Footer Spalte 2"
 
 #: functions.php:132
 msgctxt "widget area description"
 msgid "Appears in the second column in footer."
-msgstr ""
+msgstr "Erscheint in der zweiten Spalte im Footer."
 
 #: functions.php:141
 msgid "Footer Column 3"
-msgstr ""
+msgstr "Footer Spalte 3"
 
 #: functions.php:143
 msgctxt "widget area description"
 msgid "Appears in the third column in footer."
-msgstr ""
+msgstr "Erscheint in der dritten Spalte im Footer."
 
 #: functions.php:152
 msgid "Footer Column 4"
-msgstr ""
+msgstr "Footer Spalte 4"
 
 #: functions.php:154
 msgctxt "widget area description"
 msgid "Appears in the fourth column in footer."
-msgstr ""
+msgstr "Erscheint in der vierten Spalte im Footer."
 
 #: functions.php:163
 msgid "Footer Copyright"
-msgstr ""
+msgstr "Footer Copyright"
 
 #: functions.php:165
 msgctxt "widget area description"
 msgid "Appears in the bottom footer line."
-msgstr ""
+msgstr "Erscheint in der unteren Fußzeile."
 
 #: header.php:25
 msgid "Skip to content"
@@ -105,6 +100,8 @@ msgstr ""
 msgid ""
 "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
 msgstr ""
+"Es ist eine neue Version von %1$s verfügbar. %2$sDetails zu Version %3$s "
+"ansehen%4$s."
 
 #: inc/admin/theme-updater.php:211
 #, php-format
@@ -112,74 +109,80 @@ msgid ""
 "There is a new version of %1$s available. %2$sView version %3$s details%4$s "
 "or %5$supdate now%6$s."
 msgstr ""
+"Es ist eine neue Version von %1$s verfügbar. %2$sDetails zu Version %3$s "
+"ansehen%4$s oder %5$sjetzt aktualisieren%6$s."
 
 #: inc/admin/theme-updater.php:397
 msgid "You do not have permission to install plugin updates"
-msgstr ""
+msgstr "Du hast keine Berechtigung zur Installation von Plugin Updates"
 
 #: inc/admin/theme-updater.php:397
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 #: inc/customizer/controls/font-control.php:51
 msgid "Previous Font"
-msgstr ""
+msgstr "Vorherige Schriftart"
 
 #: inc/customizer/controls/font-control.php:52
 msgid "Next Font"
-msgstr ""
+msgstr "Nächste Schriftart"
 
 #: inc/customizer/controls/font-control.php:53
 msgctxt "default font button"
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: inc/customizer/controls/license-control.php:51
 msgid "Activate License"
-msgstr ""
+msgstr "Lizenz aktivieren"
 
 #: inc/customizer/controls/license-control.php:52
 msgid "Deactivate License"
-msgstr ""
+msgstr "Lizenz deaktivieren"
 
 #: inc/customizer/controls/license-control.php:53
 msgid "Loading..."
-msgstr ""
+msgstr "Wird geladen..."
 
 #: inc/customizer/controls/license-control.php:54
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #: inc/customizer/controls/license-control.php:55
 msgid "Invalid"
-msgstr ""
+msgstr "Ungültig"
 
 #: inc/customizer/controls/license-control.php:56
 msgid "Expired"
-msgstr ""
+msgstr "Abgelaufen"
 
 #: inc/customizer/controls/license-control.php:57
 msgid "Inactive"
-msgstr ""
+msgstr "Inaktiv"
 
 #: inc/customizer/controls/license-control.php:58
 msgid "You are receiving updates."
-msgstr ""
+msgstr "Du erhältst Updates."
 
 #: inc/customizer/controls/license-control.php:59
 msgid ""
 "Please make sure you have not reached site limits and/or expiration date."
 msgstr ""
+"Bitte stelle sicher, dass du nicht das Seiten-Limit und/oder Ablaufdatum "
+"erreicht hast."
 
 #: inc/customizer/controls/license-control.php:60
 msgid ""
 "Your license has expired, renew today to continue getting updates and "
 "support!"
 msgstr ""
+"Deine Lizenz ist abgelaufen. Bitte erneuere sie, um weiterhin Updates und "
+"Support zu erhalten!"
 
 #: inc/customizer/controls/license-control.php:81
 msgid "License Status"
-msgstr ""
+msgstr "Lizenzstatus"
 
 #: inc/customizer/customizer.php:34
 msgid "Theme Options"
@@ -192,64 +195,66 @@ msgstr ""
 #: inc/customizer/sections/color-settings.php:17
 msgctxt "Color Settings"
 msgid "Colors"
-msgstr ""
+msgstr "Farben"
 
 #: inc/customizer/sections/color-settings.php:34 inc/gutenberg.php:25
 msgctxt "block color"
 msgid "Primary"
-msgstr ""
+msgstr "Primär"
 
 #: inc/customizer/sections/color-settings.php:50 inc/gutenberg.php:30
 msgctxt "block color"
 msgid "Secondary"
-msgstr ""
+msgstr "Sekundär"
 
 #: inc/customizer/sections/color-settings.php:66
 msgctxt "theme colors"
 msgid "Header"
-msgstr ""
+msgstr "Header"
 
 #: inc/customizer/sections/color-settings.php:82
 msgctxt "theme colors"
 msgid "Page Titles"
-msgstr ""
+msgstr "Seitentitel"
 
 #: inc/customizer/sections/color-settings.php:98
 msgctxt "theme colors"
 msgid "Footer"
-msgstr ""
+msgstr "Footer"
 
 #: inc/customizer/sections/license-settings.php:19
 msgid "License"
-msgstr ""
+msgstr "Lizenz"
 
 #: inc/customizer/sections/license-settings.php:20
 msgid ""
 "Please enter your license key. An active license key is necessary for "
 "automatic theme updates and support."
 msgstr ""
+"Bitte trage deinen Lizenzschlüssel ein. Eine aktive Lizenz ist notwendig, um "
+"automatische Updates und Support zu erhalten."
 
 #: inc/customizer/sections/license-settings.php:35
 msgid "License Key"
-msgstr ""
+msgstr "Lizenzschlüssel"
 
 #: inc/customizer/sections/typography-settings.php:19
 msgid "Typography"
-msgstr ""
+msgstr "Typografie"
 
 #: inc/customizer/sections/typography-settings.php:37
 msgid "Body Font"
-msgstr ""
+msgstr "Basis Schriftart"
 
 #: inc/customizer/sections/typography-settings.php:54
 msgctxt "Font Setting"
 msgid "Headings"
-msgstr ""
+msgstr "Überschriften"
 
 #: inc/customizer/sections/typography-settings.php:71
 msgctxt "Font Setting"
 msgid "Navigation"
-msgstr ""
+msgstr "Navigation"
 
 #: inc/customizer/sections/website-settings.php:40
 msgid "Display Site Title"
@@ -374,7 +379,7 @@ msgstr ""
 
 #: template-parts/header/site-navigation.php:17
 msgid "Menu"
-msgstr ""
+msgstr "Menü"
 
 #: template-parts/header/site-navigation.php:22
 msgid "Primary Menu"

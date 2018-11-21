@@ -48,9 +48,16 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			// Make Buttons translateable.
 			$this->l10n = array(
-				'activate'   => esc_html__( 'Activate License', 'gt-health' ),
-				'deactivate' => esc_html__( 'Deactivate License', 'gt-health' ),
-				'loading'    => esc_html__( 'Loading...', 'gt-health' ),
+				'activate'     => esc_html__( 'Activate License', 'gt-health' ),
+				'deactivate'   => esc_html__( 'Deactivate License', 'gt-health' ),
+				'loading'      => esc_html__( 'Loading...', 'gt-health' ),
+				'valid'        => esc_html__( 'Active', 'gt-health' ),
+				'invalid'      => esc_html__( 'Invalid', 'gt-health' ),
+				'expired'      => esc_html__( 'Expired', 'gt-health' ),
+				'inactive'     => esc_html__( 'Inactive', 'gt-health' ),
+				'valid_desc'   => esc_html__( 'You are receiving updates.', 'gt-health' ),
+				'invalid_desc' => esc_html__( 'Please make sure you have not reached site limits and/or expiration date.', 'gt-health' ),
+				'expired_desc' => esc_html__( 'Your license has expired, renew today to continue getting updates and support!', 'gt-health' ),
 			);
 
 			// Set License status.
@@ -73,6 +80,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 				<span class="customize-control-title"><?php echo esc_html__( 'License Status', 'gt-health' ); ?></span>
 				<div class="license-status"></div>
+				<div class="license-description description"></div>
 
 				<label class="customize-control-title">
 					<?php echo esc_html( $this->label ); ?>

@@ -121,8 +121,7 @@
 			this.status = data.status;
 
 			// Display License status.
-			this.statusContainer = this.container.find( '.license-status' );
-			this.statusContainer.html( '<span class="' + this.status + '">' + this.status + '</span>' );
+			this.displayStatus( this.status );
 
 			// Set up buttons.
 			this.buttonContainer = this.container.find( '.actions' );
@@ -130,19 +129,41 @@
 			this.buttonDeactivate = $( '<button type="button" class="button deactivate" title="' + this.l10n.deactivate + '">' + this.l10n.deactivate + '</button>' ).prependTo( this.buttonContainer );
 
 			// Display buttons.
-			this.hideButtons( this.status );
+			this.displayButtons( this.status );
 
 			// Handy shortcut so we don't have to us _.bind every time we add a callback.
-			_.bindAll( this, 'activateLicense', 'deactivateLicense', 'hideButtons' );
+			_.bindAll( this, 'activateLicense', 'deactivateLicense', 'displayStatus', 'displayButtons' );
 
 			this.buttonActivate.on( 'click', this.activateLicense );
 			this.buttonDeactivate.on( 'click', this.deactivateLicense );
 		},
 		/**
+		 * Display License Status
+		 */
+		displayStatus: function( status ) {
+			var statusField = this.container.find( '.license-status' );
+			var descField = this.container.find( '.license-description' );
+
+			if ( 'valid' === status ) {
+				statusField.html( '<span class="valid">' + this.l10n.valid + '</span>' );
+				descField.html( this.l10n.valid_desc );
+			} else if ( 'expired' === status ) {
+				statusField.html( '<span class="expired">' + this.l10n.expired + '</span>' );
+				descField.html( this.l10n.expired_desc );
+			} else if ( 'invalid' === status ) {
+				statusField.html( '<span class="invalid">' + this.l10n.invalid + '</span>' );
+				descField.html( this.l10n.invalid_desc );
+			} else {
+				statusField.html( '<span class="inactive">' + this.l10n.inactive + '</span>' );
+				descField.html( '' );
+			}
+		},
+		/**
 		 * Display Activate or Deactivate License button.
 		 */
-		hideButtons: function( status ) {
+		displayButtons: function( status ) {
 			var input = this.container.find( 'input' );
+
 			if ( 'valid' === status ) {
 				this.buttonActivate.hide();
 				this.buttonDeactivate.show();
@@ -161,9 +182,10 @@
 		activateLicense: function( event ) {
 			event.preventDefault();
 			var button = this.buttonActivate;
-			var statusField = this.statusContainer;
+			var statusField = this.container.find( '.license-status' );
 			var key = this.container.find( 'input' ).val();
-			var display = this.hideButtons;
+			var displayStatus = this.displayStatus;
+			var displayButtons = this.displayButtons;
 
 			// Turn off button.
 			button.prop( 'disabled', true );
@@ -180,8 +202,8 @@
 				},
 				success: function( data ) {
 					// Update Status.
-					statusField.html( '<span class="' + data + '">' + data + '</span>' );
-					display( data );
+					displayStatus( data );
+					displayButtons( data );
 				},
 				error: function( errorThrown ){
 					console.log( errorThrown );
@@ -200,9 +222,10 @@
 		deactivateLicense: function( event ) {
 			event.preventDefault();
 			var button = this.buttonDeactivate;
-			var statusField = this.statusContainer;
+			var statusField = this.container.find( '.license-status' );
 			var key = this.container.find( 'input' ).val();
-			var display = this.hideButtons;
+			var displayStatus = this.displayStatus;
+			var displayButtons = this.displayButtons;
 
 			// Turn off button.
 			button.prop( 'disabled', true );
@@ -219,8 +242,8 @@
 				},
 				success: function( data ) {
 					// Update Status.
-					statusField.html( '<span class="' + data + '">' + data + '</span>' );
-					display( data );
+					displayStatus( data );
+					displayButtons( data );
 				},
 				error: function( errorThrown ){
 					console.log( errorThrown );
