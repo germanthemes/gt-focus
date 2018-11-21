@@ -1,17 +1,10 @@
-/* Wide Page Layout */
-body.wide-page-layout .site-content .site-main,
-body.wide-page-layout .page-header-container .page-header {
-	max-width: $wideWidth;
-}
-
 /* Fullwidth Page Layout */
 body.fullwidth-page-layout .site-content .site-main,
 body.fullwidth-page-layout .page-header-container .page-header {
 	max-width: $themeWidth;
 }
 
-/* Disable Wide Blocks on Page Layouts */
-body.wide-page-layout .entry-content > .alignwide,
+/* Disable Wide Blocks on Fullwidth Page Layouts */
 body.fullwidth-page-layout .entry-content > .alignwide {
 	margin: 0;
 	max-width: 100%;

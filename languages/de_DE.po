@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GT Health\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-11-21 10:39+0100\n"
-"PO-Revision-Date: 2018-11-21 10:45+0100\n"
+"POT-Creation-Date: 2018-11-21 14:53+0100\n"
+"PO-Revision-Date: 2018-11-21 14:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: GermanThemes <kontakt@germanthemes.de>\n"
 "Language: de_DE\n"
@@ -284,45 +284,69 @@ msgctxt "block color"
 msgid "Black"
 msgstr ""
 
-#: inc/gutenberg.php:65
+#: inc/gutenberg.php:59
 msgctxt "block font size"
 msgid "Small"
 msgstr ""
 
-#: inc/gutenberg.php:66
+#: inc/gutenberg.php:60
 msgctxt "block font size"
 msgid "S"
 msgstr ""
 
-#: inc/gutenberg.php:71
+#: inc/gutenberg.php:65
 msgctxt "block font size"
 msgid "Medium"
 msgstr ""
 
-#: inc/gutenberg.php:72
+#: inc/gutenberg.php:66
 msgctxt "block font size"
 msgid "M"
 msgstr ""
 
-#: inc/gutenberg.php:77
+#: inc/gutenberg.php:71
 msgctxt "block font size"
 msgid "Large"
 msgstr ""
 
-#: inc/gutenberg.php:78
+#: inc/gutenberg.php:72
 msgctxt "block font size"
 msgid "L"
 msgstr ""
 
-#: inc/gutenberg.php:83
+#: inc/gutenberg.php:77
 msgctxt "block font size"
 msgid "Extra Large"
 msgstr ""
 
-#: inc/gutenberg.php:84
+#: inc/gutenberg.php:78
 msgctxt "block font size"
 msgid "XL"
 msgstr ""
+
+#: inc/gutenberg.php:102
+msgid "Theme Settings"
+msgstr "Theme Einstellungen"
+
+#: inc/gutenberg.php:103
+msgid "Page Options"
+msgstr "Seiten-Optionen"
+
+#: inc/gutenberg.php:104
+msgid "Page Layout"
+msgstr "Seiten-Layout"
+
+#: inc/gutenberg.php:105
+msgid "Default"
+msgstr "Standard"
+
+#: inc/gutenberg.php:106
+msgid "Full-width"
+msgstr "Volle Breite"
+
+#: inc/gutenberg.php:107
+msgid "Hide Title"
+msgstr "Titel ausblenden"
 
 #: inc/template-tags.php:128
 #, php-format

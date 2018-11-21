@@ -53,12 +53,6 @@ function gt_health_gutenberg_support() {
 		),
 	) );
 
-	// Disable theme support for custom colors.
-	#add_theme_support( 'disable-custom-colors' );
-
-	// Disable theme support for custom font sizes.
-	add_theme_support( 'disable-custom-font-sizes' );
-
 	// Add theme support for font sizes.
 	add_theme_support( 'editor-font-sizes', array(
 		array(
@@ -100,6 +94,19 @@ add_action( 'after_setup_theme', 'gt_health_gutenberg_support' );
 function gt_health_block_editor_assets() {
 	wp_enqueue_script( 'gt-health-block-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-editor' ), '20180529' );
 	wp_enqueue_style( 'gt-health-block-editor', get_theme_file_uri( '/assets/css/editor.css' ), array(), '20180529', 'all' );
+
+	// Enqueue Theme Settings Sidebar plugin.
+	wp_enqueue_script( 'gt-health-editor-theme-settings', get_theme_file_uri( '/assets/js/editor-theme-settings.js' ), array( 'wp-blocks', 'wp-element', 'wp-edit-post' ), '20181121' );
+
+	$theme_settings_l10n = array(
+		'plugin_title'   => esc_html__( 'Theme Settings', 'gt-health' ),
+		'page_options'   => esc_html__( 'Page Options', 'gt-health' ),
+		'page_layout'    => esc_html__( 'Page Layout', 'gt-health' ),
+		'default_layout' => esc_html__( 'Default', 'gt-health' ),
+		'full_layout'    => esc_html__( 'Full-width', 'gt-health' ),
+		'hide_title'     => esc_html__( 'Hide Title', 'gt-health' ),
+	);
+	wp_localize_script( 'gt-health-editor-theme-settings', 'gtThemeSettingsL10n', $theme_settings_l10n );
 }
 add_action( 'enqueue_block_editor_assets', 'gt_health_block_editor_assets' );
 
@@ -120,20 +127,6 @@ function gt_health_register_post_meta() {
 		'show_in_rest'      => true,
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
-
-	register_post_meta( 'page', 'gt_page_background_color', array(
-		'type'              => 'string',
-		'single'            => true,
-		'show_in_rest'      => true,
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
-
-	register_post_meta( 'page', 'gt_page_text_color', array(
-		'type'              => 'string',
-		'single'            => true,
-		'show_in_rest'      => true,
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
 }
 add_action( 'init', 'gt_health_register_post_meta' );
 
@@ -152,11 +145,6 @@ function gt_health_gutenberg_add_admin_body_class( $classes ) {
 	// Return early if we are not in the Gutenberg Editor.
 	if ( ! is_gutenberg_page() ) {
 		return $classes;
-	}
-
-	// Wide Page Layout?
-	if ( get_post_type( $post->ID ) && 'wide' === get_post_meta( $post->ID, 'gt_page_layout', true ) ) {
-		$classes .= ' gt-wide-page-layout ';
 	}
 
 	// Fullwidth Page Layout?
