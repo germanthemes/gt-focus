@@ -182,10 +182,10 @@ function gt_health_theme_updater() {
 
 		// Setup the updater.
 		$theme_updater = new GT_Health_Plugin_Updater( GT_HEALTH_STORE_API_URL, __FILE__, array(
-			'version' => '1.2',
+			'version' => '1.0',
 			'license' => trim( gt_health_get_option( 'license_key' ) ),
 			'item_id' => GT_HEALTH_PRODUCT_ID,
-			'author'  => 'ThemeZee',
+			'author'  => 'GermanThemes',
 		) );
 
 	endif;
@@ -197,7 +197,7 @@ add_action( 'admin_init', 'gt_health_theme_updater', 0 );
  * Include Files
  */
 
-// Include Admin Classses.
+// Include Admin Classes.
 require get_template_directory() . '/inc/admin/license-key.php';
 require get_template_directory() . '/inc/admin/theme-updater.php';
 
