@@ -40,7 +40,7 @@ gulp.task( 'wprtl', function () {
 		.pipe( gulp.dest( './' ) );
 });
 
-// Gutenberg Setup Sass Bundler
+// Editor Styles Sass Bundler
 gulp.task( 'editor', function() {
     return gulp.src( 'sass/editor-styles.scss' )
         .pipe( sass( { outputStyle: 'expanded' } ).on( 'error', sass.logError ) )

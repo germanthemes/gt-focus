@@ -89,7 +89,7 @@ add_action( 'after_setup_theme', 'gt_health_gutenberg_support' );
  */
 function gt_health_block_editor_assets() {
 
-	// Enqueue styling for Gutenberg.
+	// Enqueue Editor Styling.
 	wp_enqueue_style( 'gt-health-editor-styles', get_theme_file_uri( '/assets/css/editor-styles.css' ), array(), '20181122', 'all' );
 
 	// Enqueue Theme Settings Sidebar plugin.
