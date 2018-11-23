@@ -1,6 +1,13 @@
 .editor-styles-wrapper .wp-block {
-	width: calc( #{$contentWidth} + 30px );
-	max-width: 100%;
+	max-width: calc( #{$contentWidth} + 30px );
+}
+
+.editor-styles-wrapper .wp-block[data-align=wide] {
+    max-width: 960px;
+}
+
+.editor-styles-wrapper .wp-block[data-align=full] {
+	max-width: none;
 }
 
 /* Fullwidth Template */
