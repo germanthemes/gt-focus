@@ -98,13 +98,18 @@
 }
 
 /* Lists */
-.editor-styles-wrapper ol,
-.editor-styles-wrapper ul,
 .block-library-list .editor-rich-text__tinymce,
 .block-library-list .editor-rich-text__tinymce ol,
 .block-library-list .editor-rich-text__tinymce ul {
 	margin: 0 0 1.5em;
 	padding: 0 0 0 1.25em;
+}
+
+.block-library-list .editor-rich-text__tinymce li > ul,
+.block-library-list .editor-rich-text__tinymce li > ol {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 1.5em;
 }
 
 .editor-styles-wrapper ul {
@@ -118,13 +123,6 @@
 .editor-styles-wrapper ul ul,
 .editor-styles-wrapper ol ul {
 	list-style-type: circle;
-}
-
-.editor-styles-wrapper li > ul,
-.editor-styles-wrapper li > ol {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	margin-left: 1.5em;
 }
 
 /* Tables */
