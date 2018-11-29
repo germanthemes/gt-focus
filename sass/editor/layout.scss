@@ -23,13 +23,91 @@
 	max-width: none;
 }
 
-/* Post and Page Title */
+/* Post Title */
 body.block-editor-page .editor-post-title__block .editor-post-title__input {
-    @include font-size(40);
+    @include font-size(24);
     @include font-family(--title-font);
     @include font-weight(--title-font-weight);
     @include text-transform(--title-text-transform);
     line-height: 1.4;
+}
+
+@media only screen and (min-width: 480px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(28);
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(32);
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(36);
+	}
+}
+
+/* Page Title */
+body.block-editor-page.post-type-page .editor-post-title {
+	@include background(--title-background-color);
+	margin-bottom: 1.5rem;
+}
+
+body.block-editor-page.post-type-page .editor-post-title__block {
+	padding: 0;
+}
+
+body.block-editor-page.post-type-page .editor-post-title__block .editor-post-title__input {
+	@include font-size(28);
+	@include color(--title-text-color);
+}
+
+@media only screen and (min-width: 480px) {
+	body.block-editor-page.post-type-page .editor-post-title {
+		@include background(--title-background-color);
+		margin-bottom: 2rem;
+	}
+	
+	body.block-editor-page.post-type-page .editor-post-title__block {
+		padding: 0.5rem 0;
+	}
+
+	body.block-editor-page.post-type-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(32);
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	body.block-editor-page.post-type-page .editor-post-title {
+		@include background(--title-background-color);
+		margin-bottom: 2.5rem;
+	}
+	
+	body.block-editor-page.post-type-page .editor-post-title__block {
+		padding: 1rem 0;
+	}
+	
+	body.block-editor-page.post-type-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(36);
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	body.block-editor-page.post-type-page .editor-post-title {
+		@include background(--title-background-color);
+		margin-bottom: 3rem;
+	}
+	
+	body.block-editor-page.post-type-page .editor-post-title__block {
+		padding: 1.5rem 0;
+	}
+
+	body.block-editor-page.post-type-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(40);
+	}
 }
 
 /* Hidden Page Title */
@@ -39,4 +117,8 @@ body.gt-page-title-hidden.block-editor-page .edit-post-visual-editor .editor-pos
 	                  linear-gradient( 45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd );
 	background-size: 20px 20px;
 	background-position: 0 0, 10px 10px;
+}
+
+body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-post-title__input {
+	color: #242424;
 }
