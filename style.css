@@ -63,11 +63,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--title-background-color: #006699;
 	--post-title-color: #242424;
 	--post-title-hover-color: #006699;
-	--footer-background-color: #242424;
-	--footer-text-color: #fff;
-	--footer-link-color: rgba(255, 255, 255, 0.75);
-	--footer-link-hover-color: #fff;
-	--footer-border-color: rgba(255, 255, 255, 0.1);
+	--footer-background-color: #e7e7e7;
+	--footer-text-color: #242424;
+	--footer-link-color: rgba(0, 0, 0, 0.5);
+	--footer-link-hover-color: #242424;
+	--footer-border-color: rgba(0, 0, 0, 0.1);
 	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font-weight: bold;
@@ -577,7 +577,7 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid rgba(0, 0, 0, 0.01);
 	background: none;
 	color: #666;
 }
@@ -590,6 +590,7 @@ input[type="search"]:focus,
 textarea:focus {
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	color: #242424;
+	outline: none;
 }
 
 textarea {
@@ -1245,22 +1246,22 @@ body.fullwidth-page-layout .page-header-container .page-header {
 --------------------------------------------------------------*/
 .site-footer {
 	padding-top: 1.5rem;
-	padding-bottom: 0.5rem;
-	color: #fff;
+	padding-bottom: 1px;
+	color: #242424;
 	color: var(--footer-text-color);
-	background-color: #242424;
+	background-color: #e7e7e7;
 	background-color: var(--footer-background-color);
 }
 
 .site-footer a:link,
 .site-footer a:visited {
-	color: rgba(255, 255, 255, 0.75);
+	color: rgba(0, 0, 0, 0.5);
 	color: var(--footer-link-color);
 }
 
 .site-footer a:hover,
 .site-footer a:active {
-	color: #fff;
+	color: #242424;
 	color: var(--footer-link-hover-color);
 }
 
@@ -1273,7 +1274,7 @@ body.fullwidth-page-layout .page-header-container .page-header {
 .site-footer textarea {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	border: 1px solid var(--footer-border-color);
-	color: #fff;
+	color: #242424;
 	color: var(--footer-link-hover-color);
 }
 
@@ -1283,7 +1284,7 @@ body.fullwidth-page-layout .page-header-container .page-header {
 .site-footer input[type="password"]:focus,
 .site-footer input[type="search"]:focus,
 .site-footer textarea:focus {
-	color: #fff;
+	color: #242424;
 	color: var(--footer-text-color);
 }
 
@@ -1294,15 +1295,23 @@ body.fullwidth-page-layout .page-header-container .page-header {
 
 .footer-widgets .widget-title {
 	margin-top: 0;
+	margin-bottom: 1em;
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.footer-widgets .widget ul li a {
+	text-decoration: none;
 }
 
 /* Footer Copyright */
 .footer-copyright {
-	font-size: 15px;
-	font-size: 0.9375rem;
-	padding-top: 1.5rem;
+	margin-bottom: 1.25rem;
+	padding-top: 1.25rem;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 	border-top: 1px solid var(--footer-border-color);
+	font-size: 15px;
+	font-size: 0.9375rem;
 }
 
 .footer-copyright .widget {
@@ -1576,11 +1585,11 @@ object {
 }
 
 .has-light-gray-color {
-	color: #e5e5e5;
+	color: #e7e7e7;
 }
 
 .has-dark-gray-color {
-	color: #555555;
+	color: #575757;
 }
 
 .has-black-color {
@@ -1603,11 +1612,11 @@ object {
 }
 
 .has-light-gray-background-color {
-	background-color: #e5e5e5;
+	background-color: #e7e7e7;
 }
 
 .has-dark-gray-background-color {
-	background-color: #555555;
+	background-color: #575757;
 }
 
 .has-black-background-color {
@@ -1677,14 +1686,6 @@ object {
 		font-size: 16px;
 		font-size: 1rem;
 	}
-
-	.widget-title,
-	.archive-title,
-	.comments-title,
-	.comment-reply-title {
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
 }
 
 @media only screen and (min-width: 960px) {
@@ -1746,10 +1747,6 @@ object {
 		flex-direction: column;
 	}
 
-	.footer-widget-column .widget:last-child {
-		flex-grow: 1;
-	}
-
 	/* Three Column Footer Widgets */
 	.footer-widget-column:nth-child(1):nth-last-child(3),
 	.footer-widget-column:nth-child(2):nth-last-child(2),
@@ -1759,6 +1756,13 @@ object {
 }
 
 @media only screen and (min-width: 800px) {
+	.site-header,
+	.site-footer,
+	.site-content {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
 	.post-header {
 		margin: 2rem 0 1.5rem;
 	}
@@ -1775,6 +1779,28 @@ object {
 
 	.pagination {
 		margin: 2rem 0;
+	}
+
+	/* Footer Widgets */
+	.site-footer {
+		padding-top: 2rem;
+	}
+
+	.footer-widgets-columns {
+		margin-right: -2rem;
+	}
+
+	.footer-widget-column {
+		padding-right: 2rem;
+	}
+
+	.footer-widgets .widget {
+		margin-bottom: 2rem;
+	}
+
+	.footer-copyright {
+		padding-top: 1.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	/* Three Column Footer Widgets */
@@ -1816,6 +1842,28 @@ object {
 
 	.pagination {
 		margin: 2.5rem 0;
+	}
+
+	/* Footer Widgets */
+	.site-footer {
+		padding-top: 3rem;
+	}
+
+	.footer-widgets-columns {
+		margin-right: -3rem;
+	}
+
+	.footer-widget-column {
+		padding-right: 3rem;
+	}
+
+	.footer-widgets .widget {
+		margin-bottom: 3rem;
+	}
+
+	.footer-copyright {
+		padding-top: 1.75rem;
+		margin-bottom: 1.75rem;
 	}
 }
 

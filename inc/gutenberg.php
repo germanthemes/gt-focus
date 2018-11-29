@@ -39,12 +39,12 @@ function gt_health_gutenberg_support() {
 		array(
 			'name'  => esc_html_x( 'Light Gray', 'block color', 'gt-health' ),
 			'slug'  => 'light-gray',
-			'color' => '#e5e5e5',
+			'color' => '#e7e7e7',
 		),
 		array(
 			'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-health' ),
 			'slug'  => 'dark-gray',
-			'color' => '#555555',
+			'color' => '#575757',
 		),
 		array(
 			'name'  => esc_html_x( 'Black', 'block color', 'gt-health' ),

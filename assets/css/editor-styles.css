@@ -27,11 +27,11 @@
 	--title-background-color: #006699;
 	--post-title-color: #242424;
 	--post-title-hover-color: #006699;
-	--footer-background-color: #242424;
-	--footer-text-color: #fff;
-	--footer-link-color: rgba(255, 255, 255, 0.75);
-	--footer-link-hover-color: #fff;
-	--footer-border-color: rgba(255, 255, 255, 0.1);
+	--footer-background-color: #e7e7e7;
+	--footer-text-color: #242424;
+	--footer-link-color: rgba(0, 0, 0, 0.5);
+	--footer-link-hover-color: #242424;
+	--footer-border-color: rgba(0, 0, 0, 0.1);
 	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font-weight: bold;
@@ -112,6 +112,11 @@ body.gt-page-title-hidden.block-editor-page .edit-post-visual-editor .editor-pos
 
 .editor-styles-wrapper .mce-content-body {
 	line-height: 1.75;
+}
+
+.editor-styles-wrapper a {
+	color: #006699;
+	color: var(--link-color);
 }
 
 .editor-styles-wrapper hr {
@@ -443,11 +448,11 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 }
 
 .has-light-gray-color {
-	color: #e5e5e5;
+	color: #e7e7e7;
 }
 
 .has-dark-gray-color {
-	color: #555555;
+	color: #575757;
 }
 
 .has-black-color {
@@ -470,11 +475,11 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 }
 
 .has-light-gray-background-color {
-	background-color: #e5e5e5;
+	background-color: #e7e7e7;
 }
 
 .has-dark-gray-background-color {
-	background-color: #555555;
+	background-color: #575757;
 }
 
 .has-black-background-color {
