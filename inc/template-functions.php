@@ -16,11 +16,6 @@ function gt_health_body_classes( $classes ) {
 	// Get theme options from database.
 	$theme_options = gt_health_theme_options();
 
-	// Header Image added?
-	if ( has_header_image() ) {
-		$classes[] = 'header-image-added';
-	}
-
 	// Fullwidth Page Layout?
 	if ( is_page() && 'fullwidth' === get_post_meta( get_the_ID(), 'gt_page_layout', true ) ) {
 		$classes[] = 'fullwidth-page-layout';

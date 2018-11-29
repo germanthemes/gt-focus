@@ -824,7 +824,6 @@ textarea {
 /* Custom Header Image */
 .header-image {
 	margin: -1px 0 0;
-	box-shadow: inset 10px 10px 10px #000;
 }
 
 .header-image img,
@@ -1091,7 +1090,6 @@ textarea {
 	padding: 1.5rem 1.25rem;
 	background-color: #006699;
 	background-color: var(--title-background-color);
-	box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .page-header-container .page-header {

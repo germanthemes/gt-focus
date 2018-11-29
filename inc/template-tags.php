@@ -53,7 +53,18 @@ if ( ! function_exists( 'gt_health_header_image' ) ) :
 	 */
 	function gt_health_header_image() {
 
-		if ( has_header_image() ) :
+		// Display featured image as header image on single pages.
+		if ( is_page() && has_post_thumbnail() ) :
+			?>
+
+			<div id="headimg" class="header-image featured-header-image">
+
+				<?php the_post_thumbnail( 'gt-health-header-image' ); ?>
+
+			</div>
+
+			<?php
+		elseif ( has_header_image() ) : // Display header image.
 			?>
 
 			<div id="headimg" class="header-image default-header-image">

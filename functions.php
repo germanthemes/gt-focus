@@ -29,6 +29,9 @@ function gt_health_setup() {
 	// Set default Post Thumbnail size.
 	set_post_thumbnail_size( 720, 9999 );
 
+	// Add image size for header image on single posts and pages.
+	add_image_size( 'gt-health-header-image', 1920, 480, true );
+
 	// Register Navigation Menus.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Main Navigation', 'gt-health' ),
@@ -51,7 +54,7 @@ function gt_health_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'gt_health_custom_header_args', array(
 		'header-text' => false,
-		'width'       => 2560,
+		'width'       => 1920,
 		'height'      => 480,
 		'flex-height' => true,
 	) ) );
