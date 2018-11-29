@@ -51,7 +51,14 @@
     	padding-right: 2rem;
 	}
 
-	.post-header {
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination {
+		margin-bottom: 2rem;
+	}
+
+	.entry-header {
         margin: 2rem 0 1.5rem;
     }
 
@@ -62,11 +69,7 @@
     }
 
     .wp-post-image {
-    	margin-bottom: 1.5rem;
-    }
-
-    .pagination {
-    	margin: 2rem 0;
+    	margin-bottom: 1.25rem;
 	}
 
 	/* Footer Widgets */
@@ -119,18 +122,25 @@
 }
 
 @media only screen and (min-width: 1120px) {
-    .post-header {
-        margin: 2.5rem 0 2rem;
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination {
+		margin-bottom: 2.5rem;
+	}
+	
+	.entry-header {
+        margin: 2.5rem 0 1.5rem;
     }
 
     .page-header-container {
 		margin-bottom: 2.5rem;
 		padding-top: 2.5rem;
 		padding-bottom: 2.5rem;
-    }
-
-    .pagination {
-        margin: 2.5rem 0;
+	}
+	
+	.wp-post-image {
+    	margin-bottom: 1.5rem;
 	}
 
 	/* Footer Widgets */

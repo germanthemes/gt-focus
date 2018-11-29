@@ -8,6 +8,10 @@
 	}
 
 	.entry-title {
+		@include font-size(28);
+	}
+
+	.page-header-container .page-header .entry-title {
 		@include font-size(32);
 	}
 }
@@ -22,6 +26,10 @@
 	}
 
 	.entry-title {
+		@include font-size(32);
+	}
+
+	.page-header-container .page-header .entry-title {
 		@include font-size(36);
 	}
 
@@ -38,6 +46,10 @@
 	}
 
 	.entry-title {
+		@include font-size(36);
+	}
+	
+	.page-header-container .page-header .entry-title {
 		@include font-size(40);
 	}
 

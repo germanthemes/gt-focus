@@ -14,6 +14,8 @@ if ( have_posts() ) :
 
 	gt_health_search_header();
 
+	get_search_form();
+
 	while ( have_posts() ) :
 		the_post();
 

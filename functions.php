@@ -27,7 +27,7 @@ function gt_health_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Set default Post Thumbnail size.
-	set_post_thumbnail_size( 720, 360, true );
+	set_post_thumbnail_size( 720, 9999 );
 
 	// Register Navigation Menus.
 	register_nav_menus( array(

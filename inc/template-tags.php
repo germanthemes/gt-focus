@@ -123,12 +123,13 @@ if ( ! function_exists( 'gt_health_search_header' ) ) :
 	function gt_health_search_header() {
 		?>
 
-		<header class="search-header entry-header">
+		<div class="search-header-container page-header-container entry-header-container">
+			<header class="search-header page-header entry-header">
 
-			<h1 class="search-title entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'gt-health' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			<?php get_search_form(); ?>
+				<h1 class="search-title page-title entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'gt-health' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
-		</header><!-- .search-header -->
+			</header><!-- .search-header -->
+		</div>
 
 		<?php
 	}

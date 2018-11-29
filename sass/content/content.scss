@@ -1,18 +1,26 @@
 .type-post,
 .type-page,
 .type-attachment {
-	margin: 0;
+	margin: 0 0 1.5rem;
 	padding: 0;
 }
 
+.search .site-main .search-form {
+	margin-bottom: 1.5em;
+}
+
 /* Entry Header */
+.entry-header {
+	margin: 1.5rem 0 1rem;
+}
+
 .entry-title {
 	margin: 0;
 	padding: 0;
 	@include color(--post-title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	@include font-size(28);
+	@include font-size(24);
 	@include font-family(--title-font);
 	@include font-weight(--title-font-weight);
 	@include text-transform(--title-text-transform);
@@ -28,11 +36,6 @@
 .entry-title a:hover,
 .entry-title a:active {
 	@include color(--post-title-hover-color);
-}
-
-/* Post Header */
-.post-header {
-	margin: 1.5rem 0 1rem;
 }
 
 /* Page Header */
@@ -60,6 +63,10 @@
 	@include color(--title-text-color);
 }
 
+.page-header-container .page-header .entry-title {
+	@include font-size(28);
+}
+
 /* Entry Content */
 .entry-content {
 	@include font-size(18);
@@ -76,32 +83,4 @@
 .wp-post-image {
 	vertical-align: top;
 	margin-bottom: 1rem;
-}
-
-/* Read More Button */
-.more-link {
-	display: inline-block;
-	padding: 0.4rem 1rem;
-	@include color(--button-text-color);
-	@include background(--button-color);
-	@include font-size(15);
-	border-radius: 0.5rem;
-}
-
-.more-link:link,
-.more-link:visited  {
-	@include color(--button-text-color);
-	text-decoration: none;
-}
-
-.more-link:hover,
-.more-link:active {
-	@include color(--button-hover-text-color);
-	@include background(--button-hover-color);
-	text-decoration: none;
-}
-
-/* Search & Archive Header */
-.search-header .search-form {
-	margin-top: 1rem;
 }

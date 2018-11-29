@@ -17,8 +17,6 @@
 		</header><!-- .entry-header -->
 	</div>
 
-	<?php gt_health_post_image(); ?>
-
 	<div class="entry-content">
 
 		<?php the_content(); ?>
