@@ -118,11 +118,11 @@ class GT_Health_Custom_Colors {
 		}
 
 		// Sanitize CSS Code.
-		$custom_css .= ':root {' . $color_variables . '}';
-		$custom_css  = wp_kses( $custom_css, array( '\'', '\"' ) );
-		$custom_css  = str_replace( '&gt;', '>', $custom_css );
-		$custom_css  = preg_replace( '/\n/', '', $custom_css );
-		$custom_css  = preg_replace( '/\t/', '', $custom_css );
+		$custom_css = ':root {' . $color_variables . '}';
+		$custom_css = wp_kses( $custom_css, array( '\'', '\"' ) );
+		$custom_css = str_replace( '&gt;', '>', $custom_css );
+		$custom_css = preg_replace( '/\n/', '', $custom_css );
+		$custom_css = preg_replace( '/\t/', '', $custom_css );
 
 		return $custom_css;
 	}
