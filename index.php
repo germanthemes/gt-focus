@@ -10,7 +10,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @version 1.0
- * @package GT Health
+ * @package GT Focus
  */
 
 get_header();
@@ -24,7 +24,7 @@ if ( have_posts() ) :
 
 	endwhile;
 
-	gt_health_pagination();
+	gt_focus_pagination();
 
 else :
 

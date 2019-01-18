@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package GT Health
+ * @package GT Focus
  */
 
 /**
@@ -11,10 +11,10 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function gt_health_body_classes( $classes ) {
+function gt_focus_body_classes( $classes ) {
 
 	// Get theme options from database.
-	$theme_options = gt_health_theme_options();
+	$theme_options = gt_focus_theme_options();
 
 	// Fullwidth Page Layout?
 	if ( is_page() && 'fullwidth' === get_post_meta( get_the_ID(), 'gt_page_layout', true ) ) {
@@ -28,7 +28,7 @@ function gt_health_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'gt_health_body_classes' );
+add_filter( 'body_class', 'gt_focus_body_classes' );
 
 
 /**
@@ -36,10 +36,10 @@ add_filter( 'body_class', 'gt_health_body_classes' );
  *
  * @return void
  */
-function gt_health_hide_elements() {
+function gt_focus_hide_elements() {
 
 	// Get theme options from database.
-	$theme_options = gt_health_theme_options();
+	$theme_options = gt_focus_theme_options();
 
 	$elements = array();
 
@@ -59,7 +59,7 @@ function gt_health_hide_elements() {
 	}
 
 	// Allow plugins to add own elements.
-	$elements = apply_filters( 'gt_health_hide_elements', $elements );
+	$elements = apply_filters( 'gt_focus_hide_elements', $elements );
 
 	// Return early if no elements are hidden.
 	if ( empty( $elements ) ) {
@@ -71,6 +71,6 @@ function gt_health_hide_elements() {
 	$custom_css = $classes . ' { position: absolute; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; overflow: hidden; }';
 
 	// Add Custom CSS.
-	wp_add_inline_style( 'gt-health-stylesheet', $custom_css );
+	wp_add_inline_style( 'gt-focus-stylesheet', $custom_css );
 }
-add_filter( 'wp_enqueue_scripts', 'gt_health_hide_elements', 11 );
+add_filter( 'wp_enqueue_scripts', 'gt_focus_hide_elements', 11 );

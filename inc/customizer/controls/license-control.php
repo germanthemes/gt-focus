@@ -2,7 +2,7 @@
 /**
  * License Control for the Customizer
  *
- * @package GT Health
+ * @package GT Focus
  */
 
 /**
@@ -13,14 +13,14 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays a custom License control. Allows to switch fonts for particular elements on the theme.
 	 */
-	class GT_Health_Customize_License_Control extends WP_Customize_Control {
+	class GT_Focus_Customize_License_Control extends WP_Customize_Control {
 
 		/**
 		 * Declare the control type. Critical for JS constructor.
 		 *
 		 * @var string
 		 */
-		public $type = 'gt_health_license_key';
+		public $type = 'gt_focus_license_key';
 
 		/**
 		 * Localization Strings.
@@ -48,20 +48,20 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			// Make Buttons translateable.
 			$this->l10n = array(
-				'activate'     => esc_html__( 'Activate License', 'gt-health' ),
-				'deactivate'   => esc_html__( 'Deactivate License', 'gt-health' ),
-				'loading'      => esc_html__( 'Loading...', 'gt-health' ),
-				'valid'        => esc_html__( 'Active', 'gt-health' ),
-				'invalid'      => esc_html__( 'Invalid', 'gt-health' ),
-				'expired'      => esc_html__( 'Expired', 'gt-health' ),
-				'inactive'     => esc_html__( 'Inactive', 'gt-health' ),
-				'valid_desc'   => esc_html__( 'You are receiving updates.', 'gt-health' ),
-				'invalid_desc' => esc_html__( 'Please make sure you have not reached site limits and/or expiration date.', 'gt-health' ),
-				'expired_desc' => esc_html__( 'Your license has expired, renew today to continue getting updates and support!', 'gt-health' ),
+				'activate'     => esc_html__( 'Activate License', 'gt-focus' ),
+				'deactivate'   => esc_html__( 'Deactivate License', 'gt-focus' ),
+				'loading'      => esc_html__( 'Loading...', 'gt-focus' ),
+				'valid'        => esc_html__( 'Active', 'gt-focus' ),
+				'invalid'      => esc_html__( 'Invalid', 'gt-focus' ),
+				'expired'      => esc_html__( 'Expired', 'gt-focus' ),
+				'inactive'     => esc_html__( 'Inactive', 'gt-focus' ),
+				'valid_desc'   => esc_html__( 'You are receiving updates.', 'gt-focus' ),
+				'invalid_desc' => esc_html__( 'Please make sure you have not reached site limits and/or expiration date.', 'gt-focus' ),
+				'expired_desc' => esc_html__( 'Your license has expired, renew today to continue getting updates and support!', 'gt-focus' ),
 			);
 
 			// Set License status.
-			$this->status = gt_health_get_option( 'license_status' );
+			$this->status = gt_focus_get_option( 'license_status' );
 
 			parent::__construct( $manager, $id, $args );
 		}
@@ -78,7 +78,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="customize-license-control" data-l10n="<?php echo esc_attr( $l10n ); ?>" data-status="<?php echo esc_attr( $this->status ); ?>">
 
-				<span class="customize-control-title"><?php echo esc_html__( 'License Status', 'gt-health' ); ?></span>
+				<span class="customize-control-title"><?php echo esc_html__( 'License Status', 'gt-focus' ); ?></span>
 				<div class="license-status"></div>
 				<div class="license-description description"></div>
 

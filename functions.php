@@ -1,8 +1,8 @@
 <?php
 /**
- * GT Health functions and definitions
+ * GT Focus functions and definitions
  *
- * @package GT Health
+ * @package GT Focus
  */
 
 /**
@@ -12,10 +12,10 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function gt_health_setup() {
+function gt_focus_setup() {
 
 	// Make theme available for translation.
-	load_theme_textdomain( 'gt-health', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'gt-focus', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -30,11 +30,11 @@ function gt_health_setup() {
 	set_post_thumbnail_size( 720, 9999 );
 
 	// Add image size for header image on single posts and pages.
-	add_image_size( 'gt-health-header-image', 1920, 480, true );
+	add_image_size( 'gt-focus-header-image', 1920, 480, true );
 
 	// Register Navigation Menus.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Main Navigation', 'gt-health' ),
+		'primary' => esc_html__( 'Main Navigation', 'gt-focus' ),
 	) );
 
 	// Switch default core markup for galleries and captions to output valid HTML5.
@@ -44,7 +44,7 @@ function gt_health_setup() {
 	) );
 
 	// Set up the WordPress core custom logo feature.
-	add_theme_support( 'custom-logo', apply_filters( 'gt_health_custom_logo_args', array(
+	add_theme_support( 'custom-logo', apply_filters( 'gt_focus_custom_logo_args', array(
 		'height'      => 60,
 		'width'       => 300,
 		'flex-height' => true,
@@ -52,7 +52,7 @@ function gt_health_setup() {
 	) ) );
 
 	// Set up the WordPress core custom header feature.
-	add_theme_support( 'custom-header', apply_filters( 'gt_health_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'gt_focus_custom_header_args', array(
 		'header-text' => false,
 		'width'       => 1920,
 		'height'      => 480,
@@ -60,14 +60,14 @@ function gt_health_setup() {
 	) ) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'gt_health_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'gt_focus_custom_background_args', array(
 		'default-color' => 'ffffff',
 	) ) );
 
 	// Add Theme Support for Selective Refresh in Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
-add_action( 'after_setup_theme', 'gt_health_setup' );
+add_action( 'after_setup_theme', 'gt_focus_setup' );
 
 
 /**
@@ -76,38 +76,38 @@ add_action( 'after_setup_theme', 'gt_health_setup' );
  *
  * @global int $content_width
  */
-function gt_health_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gt_health_content_width', 1040 );
+function gt_focus_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'gt_focus_content_width', 1040 );
 }
-add_action( 'after_setup_theme', 'gt_health_content_width', 0 );
+add_action( 'after_setup_theme', 'gt_focus_content_width', 0 );
 
 
 /**
  * Enqueue scripts and styles.
  */
-function gt_health_scripts() {
+function gt_focus_scripts() {
 
 	// Get Theme Version.
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	// Register and Enqueue Stylesheet.
-	wp_enqueue_style( 'gt-health-stylesheet', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'gt-focus-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.js.
 	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script( 'gt-health-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
-		$gt_health_l10n = array(
-			'expand'   => esc_html__( 'Expand child menu', 'gt-health' ),
-			'collapse' => esc_html__( 'Collapse child menu', 'gt-health' ),
-			'icon'     => gt_health_get_svg( 'expand' ),
+		wp_enqueue_script( 'gt-focus-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
+		$gt_focus_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'gt-focus' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'gt-focus' ),
+			'icon'     => gt_focus_get_svg( 'expand' ),
 		);
-		wp_localize_script( 'gt-health-navigation', 'gtHealthScreenReaderText', $gt_health_l10n );
+		wp_localize_script( 'gt-focus-navigation', 'gtFocusScreenReaderText', $gt_focus_l10n );
 	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
 	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.4' );
 }
-add_action( 'wp_enqueue_scripts', 'gt_health_scripts' );
+add_action( 'wp_enqueue_scripts', 'gt_focus_scripts' );
 
 
 /**
@@ -115,13 +115,13 @@ add_action( 'wp_enqueue_scripts', 'gt_health_scripts' );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function gt_health_widgets_init() {
+function gt_focus_widgets_init() {
 
 	// Register Footer Column 1 widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Column 1', 'gt-health' ),
+		'name'          => esc_html__( 'Footer Column 1', 'gt-focus' ),
 		'id'            => 'footer-column-1',
-		'description'   => esc_html_x( 'Appears in the first column in footer.', 'widget area description', 'gt-health' ),
+		'description'   => esc_html_x( 'Appears in the first column in footer.', 'widget area description', 'gt-focus' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
@@ -130,9 +130,9 @@ function gt_health_widgets_init() {
 
 	// Register Footer Column 2 widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Column 2', 'gt-health' ),
+		'name'          => esc_html__( 'Footer Column 2', 'gt-focus' ),
 		'id'            => 'footer-column-2',
-		'description'   => esc_html_x( 'Appears in the second column in footer.', 'widget area description', 'gt-health' ),
+		'description'   => esc_html_x( 'Appears in the second column in footer.', 'widget area description', 'gt-focus' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
@@ -141,9 +141,9 @@ function gt_health_widgets_init() {
 
 	// Register Footer Column 3 widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Column 3', 'gt-health' ),
+		'name'          => esc_html__( 'Footer Column 3', 'gt-focus' ),
 		'id'            => 'footer-column-3',
-		'description'   => esc_html_x( 'Appears in the third column in footer.', 'widget area description', 'gt-health' ),
+		'description'   => esc_html_x( 'Appears in the third column in footer.', 'widget area description', 'gt-focus' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
@@ -152,9 +152,9 @@ function gt_health_widgets_init() {
 
 	// Register Footer Column 4 widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Column 4', 'gt-health' ),
+		'name'          => esc_html__( 'Footer Column 4', 'gt-focus' ),
 		'id'            => 'footer-column-4',
-		'description'   => esc_html_x( 'Appears in the fourth column in footer.', 'widget area description', 'gt-health' ),
+		'description'   => esc_html_x( 'Appears in the fourth column in footer.', 'widget area description', 'gt-focus' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
@@ -163,16 +163,16 @@ function gt_health_widgets_init() {
 
 	// Register Footer Copyright widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Copyright', 'gt-health' ),
+		'name'          => esc_html__( 'Footer Copyright', 'gt-focus' ),
 		'id'            => 'footer-copyright',
-		'description'   => esc_html_x( 'Appears in the bottom footer line.', 'widget area description', 'gt-health' ),
+		'description'   => esc_html_x( 'Appears in the bottom footer line.', 'widget area description', 'gt-focus' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
 		'after_title'   => '</h4>',
 	) );
 }
-add_action( 'widgets_init', 'gt_health_widgets_init' );
+add_action( 'widgets_init', 'gt_focus_widgets_init' );
 
 
 /**
@@ -180,20 +180,20 @@ add_action( 'widgets_init', 'gt_health_widgets_init' );
  *
  * @return void
  */
-function gt_health_theme_updater() {
-	if ( '' !== gt_health_get_option( 'license_key' ) ) :
+function gt_focus_theme_updater() {
+	if ( '' !== gt_focus_get_option( 'license_key' ) ) :
 
 		// Setup the updater.
-		$theme_updater = new GT_Health_Plugin_Updater( GT_HEALTH_STORE_API_URL, __FILE__, array(
+		$theme_updater = new GT_Focus_Plugin_Updater( GT_FOCUS_STORE_API_URL, __FILE__, array(
 			'version' => '1.0',
-			'license' => trim( gt_health_get_option( 'license_key' ) ),
-			'item_id' => GT_HEALTH_PRODUCT_ID,
+			'license' => trim( gt_focus_get_option( 'license_key' ) ),
+			'item_id' => GT_FOCUS_PRODUCT_ID,
 			'author'  => 'GermanThemes',
 		) );
 
 	endif;
 }
-add_action( 'admin_init', 'gt_health_theme_updater', 0 );
+add_action( 'admin_init', 'gt_focus_theme_updater', 0 );
 
 
 /**

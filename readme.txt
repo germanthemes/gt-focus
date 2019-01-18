@@ -1,6 +1,6 @@
-=== GT Health ===
+=== GT Focus ===
 Author URI: https://themezee.com
-Theme URI: https://themezee.com/themes/gt-health/
+Theme URI: https://themezee.com/themes/gt-focus/
 Contributors: themezee
 Tags: two-columns, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.7
@@ -8,20 +8,20 @@ Tested up to: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-GT Health is a flexible yet easy to use blogging theme with a clean and modern design.
+GT Focus is a flexible yet easy to use blogging theme with a clean and modern design.
 
 == Description ==
 
-GT Health is a flexible yet easy to use blogging theme with a clean and modern design. It features an elegant mobile first design, three different blog layouts and extensive post settings. GT Health is perfect for your personal blog or any content focused website.
+GT Focus is a flexible yet easy to use blogging theme with a clean and modern design. It features an elegant mobile first design, three different blog layouts and extensive post settings. GT Focus is perfect for your personal blog or any content focused website.
 
-For more information about GT Health please go to https://themezee.com/themes/gt-health/
+For more information about GT Focus please go to https://themezee.com/themes/gt-focus/
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in GT Health in the search form and press the 'Enter' key on your keyboard.
+2. Type in GT Focus in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://themezee.com/docs/gt-health-documentation/ for a guide on how to customize this theme.
+4. Go to https://themezee.com/docs/gt-focus-documentation/ for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
@@ -31,8 +31,8 @@ Initial Release
 
 == Copyright ==
 
-GT Health WordPress Theme, Copyright 2018 ThemeZee.com
-GT Health is distributed under the terms of the GNU GPL
+GT Focus WordPress Theme, Copyright 2018 ThemeZee.com
+GT Focus is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -46,7 +46,7 @@ GNU General Public License for more details.
 
 == Ressources ==
 
-GT Health bundles the following third-party resources:
+GT Focus bundles the following third-party resources:
 
 1. Genericons Neue - https://github.com/Automattic/genericons-neue
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)

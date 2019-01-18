@@ -2,13 +2,13 @@
 /**
  * License Key
  *
- * @package GT Health
+ * @package GT Focus
  */
 
 /**
  * License Key Class
  */
-class GT_Health_License_Key {
+class GT_Focus_License_Key {
 	/**
 	 * Actions Setup
 	 *
@@ -17,10 +17,10 @@ class GT_Health_License_Key {
 	static function setup() {
 
 		// Define Product ID.
-		define( 'GT_HEALTH_PRODUCT_ID', 171494 );
+		define( 'GT_FOCUS_PRODUCT_ID', 171494 );
 
 		// Define Update API URL.
-		define( 'GT_HEALTH_STORE_API_URL', 'https://themezee.com' );
+		define( 'GT_FOCUS_STORE_API_URL', 'https://themezee.com' );
 
 		// Add License API functions.
 		add_action( 'wp_ajax_gt_activate_license', array( __CLASS__, 'activate_license' ) );
@@ -48,12 +48,12 @@ class GT_Health_License_Key {
 		$api_params = array(
 			'edd_action' => 'activate_license',
 			'license'    => $license,
-			'item_id'    => GT_HEALTH_PRODUCT_ID,
+			'item_id'    => GT_FOCUS_PRODUCT_ID,
 			'url'        => home_url(),
 		);
 
 		// Call the custom API.
-		$response = wp_remote_post( GT_HEALTH_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
+		$response = wp_remote_post( GT_FOCUS_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
 
 		// Make sure the response came back okay.
 		if ( is_wp_error( $response ) ) {
@@ -65,14 +65,14 @@ class GT_Health_License_Key {
 		$license_data = json_decode( wp_remote_retrieve_body( $response ) );
 
 		// Get theme options from database.
-		$theme_options = gt_health_theme_options();
+		$theme_options = gt_focus_theme_options();
 
 		// Update License Key and Status.
 		$theme_options['license_status'] = $license_data->license;
 		$theme_options['license_key']    = $license;
-		update_option( 'gt_health_theme_options', $theme_options );
+		update_option( 'gt_focus_theme_options', $theme_options );
 
-		delete_transient( 'gt_health_license_check' );
+		delete_transient( 'gt_focus_license_check' );
 
 		echo $license_data->license;
 
@@ -99,12 +99,12 @@ class GT_Health_License_Key {
 		$api_params = array(
 			'edd_action' => 'deactivate_license',
 			'license'    => $license,
-			'item_id'    => GT_HEALTH_PRODUCT_ID,
+			'item_id'    => GT_FOCUS_PRODUCT_ID,
 			'url'        => home_url(),
 		);
 
 		// Call the custom API.
-		$response = wp_remote_post( GT_HEALTH_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
+		$response = wp_remote_post( GT_FOCUS_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
 
 		// Make sure the response came back okay.
 		if ( is_wp_error( $response ) ) {
@@ -113,13 +113,13 @@ class GT_Health_License_Key {
 		}
 
 		// Get theme options from database.
-		$theme_options = gt_health_theme_options();
+		$theme_options = gt_focus_theme_options();
 
 		// Update License Status.
 		$theme_options['license_status'] = 'inactive';
-		update_option( 'gt_health_theme_options', $theme_options );
+		update_option( 'gt_focus_theme_options', $theme_options );
 
-		delete_transient( 'gt_health_license_check' );
+		delete_transient( 'gt_focus_license_check' );
 
 		echo 'inactive';
 
@@ -138,13 +138,13 @@ class GT_Health_License_Key {
 			return;
 		}
 
-		$status = get_transient( 'gt_health_license_check' );
+		$status = get_transient( 'gt_focus_license_check' );
 
 		// Run the license check a maximum of once per day.
 		if ( false === $status ) {
 
 			// Get theme options from database.
-			$theme_options = gt_health_theme_options();
+			$theme_options = gt_focus_theme_options();
 			$license_key   = $theme_options['license_key'];
 
 			if ( '' !== $license_key and 'inactive' !== $theme_options['license_status'] ) {
@@ -153,12 +153,12 @@ class GT_Health_License_Key {
 				$api_params = array(
 					'edd_action' => 'check_license',
 					'license'    => $license_key,
-					'item_id'    => GT_HEALTH_PRODUCT_ID,
+					'item_id'    => GT_FOCUS_PRODUCT_ID,
 					'url'        => home_url(),
 				);
 
 				// Call the custom API.
-				$response = wp_remote_post( GT_HEALTH_STORE_API_URL, array( 'timeout' => 25, 'sslverify' => true, 'body' => $api_params ) );
+				$response = wp_remote_post( GT_FOCUS_STORE_API_URL, array( 'timeout' => 25, 'sslverify' => true, 'body' => $api_params ) );
 
 				// Make sure the response came back okay.
 				if ( is_wp_error( $response ) ) {
@@ -177,10 +177,10 @@ class GT_Health_License_Key {
 
 			// Update License Status.
 			$theme_options['license_status'] = $status;
-			update_option( 'gt_health_theme_options', $theme_options );
+			update_option( 'gt_focus_theme_options', $theme_options );
 
 			// Cache license check with transient.
-			set_transient( 'gt_health_license_check', $status, DAY_IN_SECONDS );
+			set_transient( 'gt_focus_license_check', $status, DAY_IN_SECONDS );
 		}
 
 		return $status;
@@ -188,4 +188,4 @@ class GT_Health_License_Key {
 }
 
 // Run Class.
-GT_Health_License_Key::setup();
+GT_Focus_License_Key::setup();

@@ -4,13 +4,13 @@
  *
  * Generates Custom CSS code for Color Settings
  *
- * @package GT Health
+ * @package GT Focus
  */
 
 /**
  * Custom Colors Class
  */
-class GT_Health_Custom_Colors {
+class GT_Focus_Custom_Colors {
 
 	/**
 	 * Actions Setup
@@ -30,14 +30,14 @@ class GT_Health_Custom_Colors {
 	 * Add Font Family CSS styles in the head area of the theme.
 	 */
 	static function add_custom_colors_in_frontend() {
-		wp_add_inline_style( 'gt-health-stylesheet', self::get_custom_colors_css() );
+		wp_add_inline_style( 'gt-focus-stylesheet', self::get_custom_colors_css() );
 	}
 
 	/**
 	 * Add Font Family CSS styles in the head area of the Gutenberg editor.
 	 */
 	static function add_custom_colors_in_editor() {
-		wp_add_inline_style( 'gt-health-editor-styles', self::get_custom_colors_css() );
+		wp_add_inline_style( 'gt-focus-editor-styles', self::get_custom_colors_css() );
 	}
 
 	/**
@@ -48,10 +48,10 @@ class GT_Health_Custom_Colors {
 	static function get_custom_colors_css() {
 
 		// Get theme options from database.
-		$theme_options = gt_health_theme_options();
+		$theme_options = gt_focus_theme_options();
 
 		// Get default colors.
-		$default = gt_health_default_options();
+		$default = gt_focus_default_options();
 
 		// Color Variables.
 		$color_variables = '';
@@ -165,4 +165,4 @@ class GT_Health_Custom_Colors {
 }
 
 // Run Class.
-GT_Health_Custom_Colors::setup();
+GT_Focus_Custom_Colors::setup();

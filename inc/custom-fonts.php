@@ -4,13 +4,13 @@
  *
  * Generates Custom Fonts CSS code and loads Google Fonts from Google Font API
  *
- * @package GT Health
+ * @package GT Focus
  */
 
 /**
 * Custom Fonts Class
 */
-class GT_Health_Custom_Fonts {
+class GT_Focus_Custom_Fonts {
 
 	/**
 	 * Actions Setup
@@ -33,14 +33,14 @@ class GT_Health_Custom_Fonts {
 	 * Add Font Family CSS styles in the head area of the theme.
 	 */
 	static function add_custom_fonts_in_frontend() {
-		wp_add_inline_style( 'gt-health-stylesheet', self::get_custom_fonts_css() );
+		wp_add_inline_style( 'gt-focus-stylesheet', self::get_custom_fonts_css() );
 	}
 
 	/**
 	 * Add Font Family CSS styles in the head area of the Gutenberg editor.
 	 */
 	static function add_custom_fonts_in_editor() {
-		wp_add_inline_style( 'gt-health-editor-styles', self::get_custom_fonts_css() );
+		wp_add_inline_style( 'gt-focus-editor-styles', self::get_custom_fonts_css() );
 	}
 
 	/**
@@ -51,10 +51,10 @@ class GT_Health_Custom_Fonts {
 	static function get_custom_fonts_css() {
 
 		// Get Theme Options from Database.
-		$theme_options = gt_health_theme_options();
+		$theme_options = gt_focus_theme_options();
 
 		// Get Default Fonts from settings.
-		$default_options = gt_health_default_options();
+		$default_options = gt_focus_default_options();
 
 		// Font Variables.
 		$font_variables = '';
@@ -110,7 +110,7 @@ class GT_Health_Custom_Fonts {
 	static function add_typography_theme_support() {
 
 		// Get theme options from database.
-		$theme_options = gt_health_theme_options();
+		$theme_options = gt_focus_theme_options();
 
 		// Get selected fonts.
 		$selected_fonts = array(
@@ -157,4 +157,4 @@ class GT_Health_Custom_Fonts {
 }
 
 // Run Class.
-GT_Health_Custom_Fonts::setup();
+GT_Focus_Custom_Fonts::setup();

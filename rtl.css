@@ -76,7 +76,7 @@ li > ol {
 	transform: rotate(-180deg);
 }
 
-.gt-health-social-menu .social-icons-menu li a {
+.gt-focus-social-menu .social-icons-menu li a {
 	margin: 0 0 3px 3px;
 }
 
@@ -427,8 +427,8 @@ li > ol {
 	}
 }
 
-.customize-partial-edit-shortcut-gt_health_theme_options-blog_description,
-.customize-partial-edit-shortcut-gt_health_blog_content_partial {
+.customize-partial-edit-shortcut-gt_focus_theme_options-blog_description,
+.customize-partial-edit-shortcut-gt_focus_blog_content_partial {
 	left: auto;
 	right: -9999px;
 }

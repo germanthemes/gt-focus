@@ -2,7 +2,7 @@
 /**
  * Headline Control for the Customizer
  *
- * @package GT Health
+ * @package GT Focus
  */
 
 /**
@@ -13,7 +13,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays a bold label text. Used to create headlines for radio buttons and description sections.
 	 */
-	class GT_Health_Customize_Header_Control extends WP_Customize_Control {
+	class GT_Focus_Customize_Header_Control extends WP_Customize_Control {
 		/**
 		 * Render Control
 		 */

@@ -3,7 +3,7 @@
  * Footer Widgets
  *
  * @version 1.0
- * @package GT Health
+ * @package GT Focus
  */
 
 
