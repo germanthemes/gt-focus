@@ -77,7 +77,17 @@ add_action( 'after_setup_theme', 'gt_focus_setup' );
  * @global int $content_width
  */
 function gt_focus_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gt_focus_content_width', 1040 );
+
+	// Default content width.
+	$content_width = 720;
+
+	// Fullwidth content width.
+	if ( is_page() && 'fullwidth' === get_post_meta( get_the_ID(), 'gt_page_layout', true ) ) {
+		$content_width = 1200;
+	}
+
+	// Set global variable for content width.
+	$GLOBALS['content_width'] = apply_filters( 'gt_focus_content_width', $content_width );
 }
 add_action( 'after_setup_theme', 'gt_focus_content_width', 0 );
 
