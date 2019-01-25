@@ -53,6 +53,7 @@ function gt_focus_default_options() {
 		'site_description' => true,
 		'primary_color'    => '#006699',
 		'secondary_color'  => '#0791b6',
+		'accent_color'     => '#99001a',
 		'header_color'     => '#ffffff',
 		'navi_color'       => '#006699',
 		'title_color'      => '#006699',

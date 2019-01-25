@@ -10,6 +10,7 @@
 :root {
 	--primary-color: #006699;
 	--secondary-color: #0791b6;
+	--accent-color: #99001a;
 	--link-color: #006699;
 	--link-hover-color: #242424;
 	--button-color: #006699;
@@ -572,6 +573,11 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 	color: var(--secondary-color);
 }
 
+.has-accent-color {
+	color: #99001a;
+	color: var(--accent-color);
+}
+
 .has-white-color {
 	color: #ffffff;
 }
@@ -597,6 +603,11 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 .has-secondary-background-color {
 	background-color: #0791b6;
 	background-color: var(--secondary-color);
+}
+
+.has-accent-background-color {
+	background-color: #99001a;
+	background-color: var(--accent-color);
 }
 
 .has-white-background-color {
