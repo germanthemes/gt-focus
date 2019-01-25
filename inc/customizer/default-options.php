@@ -49,20 +49,24 @@ function gt_focus_theme_options() {
 function gt_focus_default_options() {
 
 	$default_options = array(
-		'site_title'       => true,
-		'site_description' => true,
-		'primary_color'    => '#006699',
-		'secondary_color'  => '#0791b6',
-		'accent_color'     => '#99001a',
-		'header_color'     => '#ffffff',
-		'navi_color'       => '#006699',
-		'title_color'      => '#006699',
-		'footer_color'     => '#e7e7e7',
-		'text_font'        => 'SystemFontStack',
-		'title_font'       => 'SystemFontStack',
-		'navi_font'        => 'SystemFontStack',
-		'license_key'      => '',
-		'license_status'   => 'inactive',
+		'site_title'         => true,
+		'site_description'   => true,
+		'primary_color'      => '#006699',
+		'secondary_color'    => '#0791b6',
+		'accent_color'       => '#99001a',
+		'header_color'       => '#ffffff',
+		'navi_color'         => '#006699',
+		'title_color'        => '#006699',
+		'footer_color'       => '#e7e7e7',
+		'text_font'          => 'SystemFontStack',
+		'title_font'         => 'SystemFontStack',
+		'title_is_bold'      => true,
+		'title_is_uppercase' => false,
+		'navi_font'          => 'SystemFontStack',
+		'navi_is_bold'       => false,
+		'navi_is_uppercase'  => false,
+		'license_key'        => '',
+		'license_status'     => 'inactive',
 	);
 
 	return apply_filters( 'gt_focus_default_options', $default_options );
