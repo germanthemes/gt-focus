@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GT Focus\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-11-21 14:53+0100\n"
-"PO-Revision-Date: 2018-11-21 14:54+0100\n"
+"POT-Creation-Date: 2019-01-28 10:05+0100\n"
+"PO-Revision-Date: 2019-01-28 10:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: GermanThemes <kontakt@germanthemes.de>\n"
 "Language: de_DE\n"
@@ -13,79 +13,81 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: 404.php:17
 msgid "404: Page not found"
-msgstr ""
+msgstr "404: Seite nicht gefunden"
 
 #: 404.php:22
 msgid ""
 "It looks like nothing was found at this location. Maybe try a search or one "
 "of the links below?"
 msgstr ""
+"Wie es aussieht, wurde an dieser Stelle nichts gefunden. Möchtest du eine "
+"Suche starten?"
 
-#: functions.php:34
+#: functions.php:37
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:97
+#: functions.php:110
 msgid "Expand child menu"
-msgstr ""
+msgstr "Untermenü öffnen"
 
-#: functions.php:98
+#: functions.php:111
 msgid "Collapse child menu"
-msgstr ""
+msgstr "Untermenü schließen"
 
-#: functions.php:119
+#: functions.php:132
 msgid "Footer Column 1"
 msgstr "Footer Spalte 1"
 
-#: functions.php:121
+#: functions.php:134
 msgctxt "widget area description"
 msgid "Appears in the first column in footer."
 msgstr "Erscheint in der ersten Spalte im Footer."
 
-#: functions.php:130
+#: functions.php:143
 msgid "Footer Column 2"
 msgstr "Footer Spalte 2"
 
-#: functions.php:132
+#: functions.php:145
 msgctxt "widget area description"
 msgid "Appears in the second column in footer."
 msgstr "Erscheint in der zweiten Spalte im Footer."
 
-#: functions.php:141
+#: functions.php:154
 msgid "Footer Column 3"
 msgstr "Footer Spalte 3"
 
-#: functions.php:143
+#: functions.php:156
 msgctxt "widget area description"
 msgid "Appears in the third column in footer."
 msgstr "Erscheint in der dritten Spalte im Footer."
 
-#: functions.php:152
+#: functions.php:165
 msgid "Footer Column 4"
 msgstr "Footer Spalte 4"
 
-#: functions.php:154
+#: functions.php:167
 msgctxt "widget area description"
 msgid "Appears in the fourth column in footer."
 msgstr "Erscheint in der vierten Spalte im Footer."
 
-#: functions.php:163
+#: functions.php:176
 msgid "Footer Copyright"
 msgstr "Footer Copyright"
 
-#: functions.php:165
+#: functions.php:178
 msgctxt "widget area description"
 msgid "Appears in the bottom footer line."
 msgstr "Erscheint in der unteren Fußzeile."
 
 #: header.php:25
 msgid "Skip to content"
-msgstr ""
+msgstr "Zum Inhalt springen"
 
 #: inc/admin/back-compat.php:42 inc/admin/back-compat.php:52
 #: inc/admin/back-compat.php:65
@@ -94,6 +96,8 @@ msgid ""
 "%1$s requires at least WordPress version %2$s. You are running version %3$s. "
 "Please upgrade and try again."
 msgstr ""
+"%1$s benötigt mindestens WordPress Version %2$s. Sie verwenden Version %3$s. "
+"Bitte aktualisieren und versuchen Sie es erneut."
 
 #: inc/admin/theme-updater.php:203
 #, php-format
@@ -186,11 +190,11 @@ msgstr "Lizenzstatus"
 
 #: inc/customizer/customizer.php:34
 msgid "Theme Options"
-msgstr ""
+msgstr "Theme Optionen"
 
 #: inc/customizer/customizer.php:39
 msgid "Background"
-msgstr ""
+msgstr "Hintergrund"
 
 #: inc/customizer/sections/color-settings.php:17
 msgctxt "Color Settings"
@@ -207,17 +211,22 @@ msgctxt "block color"
 msgid "Secondary"
 msgstr "Sekundär"
 
-#: inc/customizer/sections/color-settings.php:66
+#: inc/customizer/sections/color-settings.php:66 inc/gutenberg.php:35
+msgctxt "block color"
+msgid "Accent"
+msgstr "Akzent"
+
+#: inc/customizer/sections/color-settings.php:82
 msgctxt "theme colors"
 msgid "Header"
 msgstr "Header"
 
-#: inc/customizer/sections/color-settings.php:82
+#: inc/customizer/sections/color-settings.php:98
 msgctxt "theme colors"
 msgid "Page Titles"
-msgstr "Seitentitel"
+msgstr "Titel"
 
-#: inc/customizer/sections/color-settings.php:98
+#: inc/customizer/sections/color-settings.php:114
 msgctxt "theme colors"
 msgid "Footer"
 msgstr "Footer"
@@ -251,155 +260,147 @@ msgctxt "Font Setting"
 msgid "Headings"
 msgstr "Überschriften"
 
-#: inc/customizer/sections/typography-settings.php:71
+#: inc/customizer/sections/typography-settings.php:70
+#: inc/customizer/sections/typography-settings.php:119
+msgctxt "Font Setting"
+msgid "Bold"
+msgstr "Fett"
+
+#: inc/customizer/sections/typography-settings.php:86
+#: inc/customizer/sections/typography-settings.php:135
+msgctxt "Font Setting"
+msgid "Uppercase"
+msgstr "Großbuchstaben"
+
+#: inc/customizer/sections/typography-settings.php:103
 msgctxt "Font Setting"
 msgid "Navigation"
 msgstr "Navigation"
 
 #: inc/customizer/sections/website-settings.php:40
 msgid "Display Site Title"
-msgstr ""
+msgstr "Titel der Website anzeigen"
 
 #: inc/customizer/sections/website-settings.php:56
 msgid "Display Tagline"
-msgstr ""
-
-#: inc/gutenberg.php:35
-msgctxt "block color"
-msgid "White"
-msgstr ""
+msgstr "Untertitel anzeigen"
 
 #: inc/gutenberg.php:40
 msgctxt "block color"
-msgid "Light Gray"
-msgstr ""
+msgid "White"
+msgstr "Weiß"
 
 #: inc/gutenberg.php:45
 msgctxt "block color"
-msgid "Dark Gray"
-msgstr ""
+msgid "Light Gray"
+msgstr "Hellgrau"
 
 #: inc/gutenberg.php:50
 msgctxt "block color"
-msgid "Black"
-msgstr ""
+msgid "Dark Gray"
+msgstr "Dunkelgrau"
 
-#: inc/gutenberg.php:59
+#: inc/gutenberg.php:55
+msgctxt "block color"
+msgid "Black"
+msgstr "Schwarz"
+
+#: inc/gutenberg.php:64
 msgctxt "block font size"
 msgid "Small"
-msgstr ""
+msgstr "Klein"
 
-#: inc/gutenberg.php:60
-msgctxt "block font size"
-msgid "S"
-msgstr ""
-
-#: inc/gutenberg.php:65
+#: inc/gutenberg.php:69
 msgctxt "block font size"
 msgid "Medium"
-msgstr ""
+msgstr "Mittel"
 
-#: inc/gutenberg.php:66
-msgctxt "block font size"
-msgid "M"
-msgstr ""
-
-#: inc/gutenberg.php:71
+#: inc/gutenberg.php:74
 msgctxt "block font size"
 msgid "Large"
-msgstr ""
+msgstr "Groß"
 
-#: inc/gutenberg.php:72
-msgctxt "block font size"
-msgid "L"
-msgstr ""
-
-#: inc/gutenberg.php:77
+#: inc/gutenberg.php:79
 msgctxt "block font size"
 msgid "Extra Large"
-msgstr ""
+msgstr "Sehr groß"
 
-#: inc/gutenberg.php:78
-msgctxt "block font size"
-msgid "XL"
-msgstr ""
-
-#: inc/gutenberg.php:102
+#: inc/gutenberg.php:103
 msgid "Theme Settings"
 msgstr "Theme Einstellungen"
 
-#: inc/gutenberg.php:103
+#: inc/gutenberg.php:104
 msgid "Page Options"
 msgstr "Seiten-Optionen"
 
-#: inc/gutenberg.php:104
+#: inc/gutenberg.php:105
 msgid "Page Layout"
 msgstr "Seiten-Layout"
 
-#: inc/gutenberg.php:105
+#: inc/gutenberg.php:106
 msgid "Default"
 msgstr "Standard"
 
-#: inc/gutenberg.php:106
+#: inc/gutenberg.php:107
 msgid "Full-width"
 msgstr "Volle Breite"
 
-#: inc/gutenberg.php:107
+#: inc/gutenberg.php:108
 msgid "Hide Title"
 msgstr "Titel ausblenden"
 
-#: inc/template-tags.php:128
+#: inc/template-tags.php:140
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Suchergebnisse für: %s"
 
-#: inc/template-tags.php:205
+#: inc/template-tags.php:217
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "Veröffentlicht am %s"
 
-#: inc/template-tags.php:222
+#: inc/template-tags.php:234
 #, php-format
 msgid "View all posts by %s"
-msgstr ""
+msgstr "Zeige alle Beiträge von %s"
 
-#: inc/template-tags.php:228
+#: inc/template-tags.php:240
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "von %s"
 
-#: inc/template-tags.php:250
+#: inc/template-tags.php:262
 #, php-format
 msgctxt "post category"
 msgid "in %s"
-msgstr ""
+msgstr "in %s"
 
-#: inc/template-tags.php:267
+#: inc/template-tags.php:279
 msgctxt "pagination"
 msgid "Previous Posts"
-msgstr ""
+msgstr "Vorherige Beiträge"
 
-#: inc/template-tags.php:268
+#: inc/template-tags.php:280
 msgctxt "pagination"
 msgid "Next Posts"
-msgstr ""
+msgstr "Nächste Beiträge"
 
 #: searchform.php:13 searchform.php:17
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "Suchen nach:"
 
 #: searchform.php:15
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
+msgstr "Suchen &hellip;"
 
 #: searchform.php:21
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
+msgstr "Suchen"
 
 #: template-parts/header/site-navigation.php:17
 msgid "Menu"
@@ -407,30 +408,36 @@ msgstr "Menü"
 
 #: template-parts/header/site-navigation.php:22
 msgid "Primary Menu"
-msgstr ""
+msgstr "Hauptmenü"
 
 #: template-parts/page/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nichts gefunden"
 
 #: template-parts/page/content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Bereit, deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starte "
+"hier</a>."
 
 #: template-parts/page/content-none.php:27
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Es gibt keine passenden Suchergebnisse. Bitte versuche es mit anderen "
+"Suchbegriffen."
 
 #: template-parts/page/content-none.php:32
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht "
+"hast. Möglicherweise hilft eine Suche."
 
 #: template-parts/post/content.php:24
 msgid "Continue reading"
-msgstr ""
+msgstr "Weiterlesen"
