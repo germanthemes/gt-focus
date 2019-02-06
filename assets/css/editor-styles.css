@@ -379,6 +379,11 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 	vertical-align: top;
 }
 
+/* Media Text Block */
+.wp-block-media-text {
+	margin-bottom: 1.5em;
+}
+
 /* Cover Block */
 .wp-block-cover {
 	display: flex;
