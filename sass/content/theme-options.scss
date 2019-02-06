@@ -29,3 +29,9 @@ body.fullwidth-page-layout .page-header-container .page-header {
 .page-title-hidden .type-page .page-header-container {
 	display: none;
 }
+
+/* Remove Bottom Margin */
+.page-bottom-margin-removed .type-page,
+.page-bottom-margin-removed .type-page .entry-content > *:last-child {
+	margin-bottom: 0;
+}
