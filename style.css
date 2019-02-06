@@ -1216,33 +1216,6 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# - Page Layouts
---------------------------------------------------------------*/
-
-/* Fullwidth Page Layout */
-body.fullwidth-page-layout .site-content .site-main,
-body.fullwidth-page-layout .page-header-container .page-header {
-	max-width: 1200px;
-}
-
-/* Adjust Wide Blocks */
-@media only screen and (min-width: 960px) {
-	body.fullwidth-page-layout .entry-content > .alignwide {
-		margin-left: calc( -100vw / 2 + 100% / 2 + 8px);
-		margin-right: calc( -100vw / 2 + 100% / 2 + 8px);
-		max-width: 100vw;
-	}
-}
-
-@media only screen and (min-width: 1440px) {
-	body.fullwidth-page-layout .entry-content > .alignwide {
-		margin-left: -120px;
-		margin-right: -120px;
-		max-width: 1440px;
-	}
-}
-
-/*--------------------------------------------------------------
 # - Footer
 --------------------------------------------------------------*/
 .site-footer {
@@ -1471,6 +1444,15 @@ object {
 .wp-block-button__link:hover,
 .wp-block-button__link:active {
 	text-decoration: underline;
+}
+
+/* Image Block */
+.wp-block-image {
+	margin-bottom: 1.5em;
+}
+
+.wp-block-image img {
+	vertical-align: top;
 }
 
 /* Cover Block */
@@ -2110,4 +2092,40 @@ object {
 	.gallery-columns-9 {
 		grid-template-columns: repeat(9, 1fr);
 	}
+}
+
+/*--------------------------------------------------------------
+# - Theme Options
+--------------------------------------------------------------*/
+
+/* Fullwidth Page Layout */
+body.fullwidth-page-layout .site-content .site-main,
+body.fullwidth-page-layout .page-header-container .page-header {
+	max-width: 1200px;
+}
+
+/* Adjust Wide Blocks */
+@media only screen and (min-width: 960px) {
+	body.fullwidth-page-layout .entry-content > .alignwide {
+		margin-left: calc( -100vw / 2 + 100% / 2 + 8px);
+		margin-right: calc( -100vw / 2 + 100% / 2 + 8px);
+		max-width: 100vw;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	body.fullwidth-page-layout .entry-content > .alignwide {
+		margin-left: -120px;
+		margin-right: -120px;
+		max-width: 1440px;
+	}
+}
+
+/* Hide Page Title */
+.page-title-hidden .site-content {
+	margin-top: -1px;
+}
+
+.page-title-hidden .type-page .page-header-container {
+	display: none;
 }

@@ -101,11 +101,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import 'content/pagination';
 
 /*--------------------------------------------------------------
-# - Page Layouts
---------------------------------------------------------------*/
-@import 'content/templates';
-
-/*--------------------------------------------------------------
 # - Footer
 --------------------------------------------------------------*/
 @import 'layout/footer';
@@ -146,3 +141,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ## - Media Queries for Media
 --------------------------------------------------------------*/
 @import 'media-queries/mq-media';
+
+/*--------------------------------------------------------------
+# - Theme Options
+--------------------------------------------------------------*/
+@import 'content/theme-options';

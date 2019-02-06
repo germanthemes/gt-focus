@@ -13,12 +13,14 @@
  */
 function gt_focus_body_classes( $classes ) {
 
-	// Get theme options from database.
-	$theme_options = gt_focus_theme_options();
-
 	// Fullwidth Page Layout?
 	if ( is_page() && 'fullwidth' === get_post_meta( get_the_ID(), 'gt_page_layout', true ) ) {
 		$classes[] = 'fullwidth-page-layout';
+	}
+
+	// Hide Page Title?
+	if ( is_page() && get_post_meta( get_the_ID(), 'gt_hide_page_title', true ) ) {
+		$classes[] = 'page-title-hidden';
 	}
 
 	// Adds a class of hfeed to non-singular pages.
@@ -51,11 +53,6 @@ function gt_focus_hide_elements() {
 	// Hide Site Description?
 	if ( false === $theme_options['site_description'] ) {
 		$elements[] = '.site-description';
-	}
-
-	// Hide Page Title?
-	if ( is_page() && get_post_meta( get_the_ID(), 'gt_hide_page_title', true ) ) {
-		$elements[] = '.type-page .page-header-container';
 	}
 
 	// Allow plugins to add own elements.

@@ -370,6 +370,15 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 	text-decoration: underline;
 }
 
+/* Image Block */
+.wp-block-image {
+	margin-bottom: 1.5em;
+}
+
+.wp-block-image img {
+	vertical-align: top;
+}
+
 /* Cover Block */
 .wp-block-cover {
 	display: flex;

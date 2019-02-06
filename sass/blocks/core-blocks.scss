@@ -9,6 +9,15 @@
 	text-decoration: underline;
 }
 
+/* Image Block */
+.wp-block-image {
+	margin-bottom: 1.5em;
+
+	img {
+		vertical-align: top;
+	}
+}
+
 /* Cover Block */
 .wp-block-cover {
 	display: flex;

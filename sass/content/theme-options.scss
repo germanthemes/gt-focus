@@ -20,3 +20,12 @@ body.fullwidth-page-layout .page-header-container .page-header {
 		max-width: $wideBlockFullwidth;
 	}
 }
+
+/* Hide Page Title */
+.page-title-hidden .site-content {
+	margin-top: -1px;
+}
+
+.page-title-hidden .type-page .page-header-container {
+	display: none;
+}
