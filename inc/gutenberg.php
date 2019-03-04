@@ -117,7 +117,6 @@ add_action( 'enqueue_block_editor_assets', 'gt_focus_block_editor_assets' );
  * Register Post Meta
  */
 function gt_focus_register_post_meta() {
-
 	register_post_meta( 'page', 'gt_page_layout', array(
 		'type'              => 'string',
 		'single'            => true,
