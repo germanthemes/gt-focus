@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GT Focus\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2019-01-28 10:05+0100\n"
+"POT-Creation-Date: 2019-03-05 11:14+0100\n"
 "PO-Revision-Date: 2016-09-15 21:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: GermanThemes <support@germanthemes.de>\n"
@@ -88,6 +88,20 @@ msgctxt "widget area description"
 msgid "Appears in the bottom footer line."
 msgstr ""
 
+#: functions.php:208
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+
+#: functions.php:209
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4$s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
+"a>."
+msgstr ""
+
 #: header.php:25
 msgid "Skip to content"
 msgstr ""
@@ -98,27 +112,6 @@ msgstr ""
 msgid ""
 "%1$s requires at least WordPress version %2$s. You are running version %3$s. "
 "Please upgrade and try again."
-msgstr ""
-
-#: inc/admin/theme-updater.php:203
-#, php-format
-msgid ""
-"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
-msgstr ""
-
-#: inc/admin/theme-updater.php:211
-#, php-format
-msgid ""
-"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
-"or %5$supdate now%6$s."
-msgstr ""
-
-#: inc/admin/theme-updater.php:397
-msgid "You do not have permission to install plugin updates"
-msgstr ""
-
-#: inc/admin/theme-updater.php:397
-msgid "Error"
 msgstr ""
 
 #: inc/customizer/controls/font-control.php:51
@@ -337,7 +330,11 @@ msgid "Full-width"
 msgstr ""
 
 #: inc/gutenberg.php:108
-msgid "Hide Title"
+msgid "Hide title?"
+msgstr ""
+
+#: inc/gutenberg.php:109
+msgid "Remove bottom margin?"
 msgstr ""
 
 #: inc/template-tags.php:140
