@@ -138,5 +138,18 @@ function gt_focus_customize_register_typography_settings( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 70,
 	) );
+
+	// Add GT Local Fonts control.
+	if ( ! class_exists( 'GermanThemes_Local_Fonts' ) ) {
+		$wp_customize->add_control( new GT_Focus_Customize_Plugin_Control(
+			$wp_customize, 'gt_local_fonts_plugin', array(
+				'label'       => esc_html__( 'More Fonts', 'gt-focus' ),
+				'description' => esc_html__( 'You can install the GT Local Fonts plugin to extend the typography options with additional local GDPR-compatible fonts.', 'gt-focus' ),
+				'section'     => 'gt_focus_section_typography',
+				'settings'    => array(),
+				'priority'    => 80,
+			)
+		) );
+	}
 }
 add_action( 'customize_register', 'gt_focus_customize_register_typography_settings' );
