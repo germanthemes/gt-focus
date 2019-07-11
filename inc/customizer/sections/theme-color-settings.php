@@ -14,61 +14,13 @@ function gt_focus_customize_register_theme_color_settings( $wp_customize ) {
 
 	// Add Section for Theme Colors.
 	$wp_customize->add_section( 'gt_focus_section_colors', array(
-		'title'    => esc_html_x( 'Colors', 'Color Settings', 'gt-focus' ),
-		'priority' => 10,
+		'title'    => esc_html__( 'Theme Colors', 'gt-focus' ),
+		'priority' => 20,
 		'panel'    => 'gt_focus_options_panel',
 	) );
 
 	// Get Default Colors from settings.
 	$default = gt_focus_default_options();
-
-	// Add Primary Color setting.
-	$wp_customize->add_setting( 'gt_focus_theme_options[primary_color]', array(
-		'default'           => $default['primary_color'],
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_focus_theme_options[primary_color]', array(
-			'label'    => esc_html_x( 'Primary', 'block color', 'gt-focus' ),
-			'section'  => 'gt_focus_section_colors',
-			'settings' => 'gt_focus_theme_options[primary_color]',
-			'priority' => 10,
-		)
-	) );
-
-	// Add Secondary Color setting.
-	$wp_customize->add_setting( 'gt_focus_theme_options[secondary_color]', array(
-		'default'           => $default['secondary_color'],
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_focus_theme_options[secondary_color]', array(
-			'label'    => esc_html_x( 'Secondary', 'block color', 'gt-focus' ),
-			'section'  => 'gt_focus_section_colors',
-			'settings' => 'gt_focus_theme_options[secondary_color]',
-			'priority' => 20,
-		)
-	) );
-
-	// Add Accent Color setting.
-	$wp_customize->add_setting( 'gt_focus_theme_options[accent_color]', array(
-		'default'           => $default['accent_color'],
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_focus_theme_options[accent_color]', array(
-			'label'    => esc_html_x( 'Accent', 'block color', 'gt-focus' ),
-			'section'  => 'gt_focus_section_colors',
-			'settings' => 'gt_focus_theme_options[accent_color]',
-			'priority' => 30,
-		)
-	) );
 
 	// Add Header Color setting.
 	$wp_customize->add_setting( 'gt_focus_theme_options[header_color]', array(
@@ -79,7 +31,7 @@ function gt_focus_customize_register_theme_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_focus_theme_options[header_color]', array(
-			'label'    => esc_html_x( 'Header', 'theme colors', 'gt-focus' ),
+			'label'    => esc_html_x( 'Header', 'Color Option', 'gt-focus' ),
 			'section'  => 'gt_focus_section_colors',
 			'settings' => 'gt_focus_theme_options[header_color]',
 			'priority' => 40,
@@ -95,7 +47,7 @@ function gt_focus_customize_register_theme_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_focus_theme_options[title_color]', array(
-			'label'    => esc_html_x( 'Page Titles', 'theme colors', 'gt-focus' ),
+			'label'    => esc_html_x( 'Page Titles', 'Color Option', 'gt-focus' ),
 			'section'  => 'gt_focus_section_colors',
 			'settings' => 'gt_focus_theme_options[title_color]',
 			'priority' => 50,
@@ -111,7 +63,7 @@ function gt_focus_customize_register_theme_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_focus_theme_options[footer_color]', array(
-			'label'    => esc_html_x( 'Footer', 'theme colors', 'gt-focus' ),
+			'label'    => esc_html_x( 'Footer', 'Color Option', 'gt-focus' ),
 			'section'  => 'gt_focus_section_colors',
 			'settings' => 'gt_focus_theme_options[footer_color]',
 			'priority' => 60,
