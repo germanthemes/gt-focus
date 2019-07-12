@@ -37,6 +37,11 @@ function gt_focus_gutenberg_support() {
 			'color' => esc_html( $theme_options['accent_color'] ),
 		),
 		array(
+			'name'  => esc_html_x( 'Highlight', 'block color', 'gt-focus' ),
+			'slug'  => 'highlight',
+			'color' => esc_html( $theme_options['highlight_color'] ),
+		),
+		array(
 			'name'  => esc_html_x( 'White', 'block color', 'gt-focus' ),
 			'slug'  => 'white',
 			'color' => '#ffffff',
@@ -44,17 +49,22 @@ function gt_focus_gutenberg_support() {
 		array(
 			'name'  => esc_html_x( 'Light Gray', 'block color', 'gt-focus' ),
 			'slug'  => 'light-gray',
-			'color' => '#e7e7e7',
+			'color' => esc_html( $theme_options['light_gray_color'] ),
+		),
+		array(
+			'name'  => esc_html_x( 'Gray', 'block color', 'gt-focus' ),
+			'slug'  => 'gray',
+			'color' => esc_html( $theme_options['gray_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-focus' ),
 			'slug'  => 'dark-gray',
-			'color' => '#575757',
+			'color' => esc_html( $theme_options['dark_gray_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Black', 'block color', 'gt-focus' ),
 			'slug'  => 'black',
-			'color' => '#242424',
+			'color' => '#000000',
 		),
 	) ) );
 

@@ -47,6 +47,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--primary-color: #006699;
 	--secondary-color: #0791b6;
 	--accent-color: #99001a;
+	--highlight-color: #00601a;
+	--light-gray-color: #e4e4e4;
+	--gray-color: #848484;
+	--dark-gray-color: #242424;
 	--link-color: #006699;
 	--link-hover-color: #242424;
 	--button-color: #006699;
@@ -1586,20 +1590,32 @@ object {
 	color: var(--accent-color);
 }
 
+.has-highlight-color {
+	color: #00601a;
+	color: var(--highlight-color);
+}
+
 .has-white-color {
 	color: #ffffff;
 }
 
 .has-light-gray-color {
-	color: #e7e7e7;
+	color: #e4e4e4;
+	color: var(--light-gray-color);
+}
+
+.has-gray-color {
+	color: #848484;
+	color: var(--gray-color);
 }
 
 .has-dark-gray-color {
-	color: #575757;
+	color: #242424;
+	color: var(--dark-gray-color);
 }
 
 .has-black-color {
-	color: #242424;
+	color: #000000;
 }
 
 /* Block Background Colors */
@@ -1618,20 +1634,32 @@ object {
 	background-color: var(--accent-color);
 }
 
+.has-highlight-background-color {
+	background-color: #00601a;
+	background-color: var(--highlight-color);
+}
+
 .has-white-background-color {
 	background-color: #ffffff;
 }
 
 .has-light-gray-background-color {
-	background-color: #e7e7e7;
+	background-color: #e4e4e4;
+	background-color: var(--light-gray-color);
+}
+
+.has-gray-background-color {
+	background-color: #848484;
+	background-color: var(--gray-color);
 }
 
 .has-dark-gray-background-color {
-	background-color: #575757;
+	background-color: #242424;
+	background-color: var(--dark-gray-color);
 }
 
 .has-black-background-color {
-	background-color: #242424;
+	background-color: #000000;
 }
 
 /* Block Font Sizes */
