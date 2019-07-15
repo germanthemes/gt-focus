@@ -197,7 +197,7 @@ function gt_focus_theme_updater() {
 		$theme_updater = new GT_Focus_Theme_Updater(
 			array(
 				'remote_api_url' => GT_FOCUS_STORE_API_URL,
-				'version'        => '1.0',
+				'version'        => '1.1',
 				'license'        => trim( gt_focus_get_option( 'license_key' ) ),
 				'item_id'        => GT_FOCUS_PRODUCT_ID,
 				'item_name'      => 'GT Focus',

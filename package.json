@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"export": "git archive HEAD -9 --prefix gt-focus/ --format=zip > ../gt-focus.zip"
+	"export": "git archive HEAD -9 --prefix gt-focus/ --format=zip > ../../gt-focus.zip"
   },
   "repository": {
     "type": "git",
