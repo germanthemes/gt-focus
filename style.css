@@ -833,12 +833,14 @@ textarea {
 /* Custom Header Image */
 .header-image {
 	margin: -1px 0 0;
+	text-align: center;
 }
 
 .header-image img,
 .header-image .wp-post-image {
 	margin: 0;
 	width: 100%;
+	max-width: 1920px;
 	height: auto;
 	vertical-align: top;
 }
