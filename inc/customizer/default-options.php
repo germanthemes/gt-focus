@@ -51,6 +51,10 @@ function gt_focus_default_options() {
 	$default_options = array(
 		'site_title'             => true,
 		'site_description'       => true,
+		'meta_date'              => true,
+		'meta_author'            => true,
+		'meta_categories'        => true,
+		'meta_tags'              => false,
 		'primary_color'          => '#006699',
 		'secondary_color'        => '#0791b6',
 		'accent_color'           => '#99001a',
