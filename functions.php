@@ -105,7 +105,7 @@ function gt_focus_scripts() {
 
 	// Register and enqueue navigation.js.
 	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script( 'gt-focus-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
+		wp_enqueue_script( 'gt-focus-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array( 'jquery' ), '1.0', true );
 		$gt_focus_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'gt-focus' ),
 			'collapse' => esc_html__( 'Collapse child menu', 'gt-focus' ),
