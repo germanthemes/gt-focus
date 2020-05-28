@@ -4,7 +4,7 @@ Theme URI: https://germanthemes.de/themes/gt-focus/
 Author: germanthemes
 Author URI: https://germanthemes.de
 Description: GT Focus is a modern Business WordPress Theme.
-Version: 1.2
+Version: 1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gt-focus
@@ -1585,11 +1585,57 @@ object {
 	color: inherit;
 }
 
-/* Button Block */
-.wp-block-button {
+/* Layout Blocks Spacing */
+.wp-block-columns,
+.wp-block-group,
+.wp-block-button,
+.wp-block-buttons {
 	margin-bottom: 1.5em;
 }
 
+/* Group Block */
+.wp-block-group.has-background {
+	padding: 1.5rem;
+}
+
+.wp-block-group.alignwide,
+.wp-block-group.alignfull {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.wp-block-group.has-background a:link,
+.wp-block-group.has-background a:visited {
+	color: inherit;
+}
+
+.wp-block-group.has-background a:hover,
+.wp-block-group.has-background a:active {
+	text-decoration: none;
+}
+
+.wp-block-group.has-background > .wp-block-group__inner-container > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-group.has-background > .wp-block-group__inner-container > *:last-child {
+	margin-bottom: 0;
+}
+
+/* GT Section Block */
+.gt-background-section .gt-section-content.gt-default-width {
+	max-width: 720px;
+}
+
+.gt-background-section .gt-section-content.gt-wide-width {
+	max-width: 960px;
+}
+
+.gt-background-section .gt-section-content.gt-full-width {
+	max-width: 1200px;
+}
+
+/* Button Block */
 .wp-block-button.aligncenter {
 	text-align: center;
 }
@@ -1690,82 +1736,41 @@ object {
 	fill: currentColor;
 }
 
-/* Image Block */
-.wp-block-image {
-	margin-bottom: 1.5em;
-}
-
-.wp-block-image img {
-	vertical-align: top;
-}
-
-/* Media Text Block */
+/* Media Blocks Spacing */
+.wp-block-audio,
+.wp-block-embed,
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-cover,
 .wp-block-media-text {
 	margin-bottom: 1.5em;
 }
 
+/* Image Block */
+.wp-block-image img {
+	vertical-align: top;
+}
+
 /* Cover Block */
-.wp-block-cover {
-	display: flex;
-}
-
-.wp-block-cover-text {
-	margin-top: 0;
-	margin-bottom: 0;
-	font-size: 32px;
-	font-size: 2rem;
-}
-
-.wp-block-cover.alignwide,
-.wp-block-cover.alignfull {
+.wp-block-cover,
+.wp-block-cover-image {
 	width: auto;
+	padding: 1.5rem;
+}
+
+.wp-block-cover > .wp-block-cover__inner-container > *:first-child,
+.wp-block-cover-image > .wp-block-cover__inner-container > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-cover > .wp-block-cover__inner-container > *:last-child,
+.wp-block-cover-image > .wp-block-cover__inner-container > *:last-child {
+	margin-bottom: 0;
 }
 
 /* Video Embed Block */
 .wp-block-embed-vimeo.alignfull iframe {
 	width: 100%;
-}
-
-/* Group Block */
-.wp-block-group.has-background {
-	padding: 1.5rem;
-}
-
-.wp-block-group.alignwide,
-.wp-block-group.alignfull {
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-}
-
-.wp-block-group.has-background a:link,
-.wp-block-group.has-background a:visited {
-	color: inherit;
-}
-
-.wp-block-group.has-background a:hover,
-.wp-block-group.has-background a:active {
-	text-decoration: none;
-}
-
-.wp-block-group.has-background > .wp-block-group__inner-container > *:first-child {
-	margin-top: 0;
-}
-
-.wp-block-group.has-background > .wp-block-group__inner-container > *:last-child {
-	margin-bottom: 0;
-}
-
-/* GT Section Block */
-.gt-background-section .gt-section-content.gt-default-width {
-	max-width: 720px;
-}
-
-.gt-background-section .gt-section-content.gt-wide-width {
-	max-width: 960px;
-}
-
-.gt-background-section .gt-section-content.gt-full-width {
-	max-width: 1200px;
 }
 
 /* Block Text Colors */
