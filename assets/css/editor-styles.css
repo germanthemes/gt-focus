@@ -438,6 +438,14 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 	color: inherit;
 }
 
+/* Layout Blocks Spacing */
+.wp-block-columns,
+.wp-block-group,
+.wp-block-button,
+.wp-block-buttons {
+	margin-bottom: 1.5em;
+}
+
 /* Group Block */
 .wp-block-group.has-background {
 	padding: 1.5rem;
@@ -695,6 +703,44 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 
 .gt-background-section .gt-section-content.gt-full-width .editor-inner-blocks > .editor-block-list__layout > .editor-block-list__block {
 	max-width: calc(1200px + 30px);
+}
+
+/* Group Block */
+@media only screen and (min-width: 800px) {
+	.wp-block-group.has-background {
+		padding: 2rem;
+		padding-bottom: calc(2rem - 10px);
+	}
+
+	.wp-block-group[data-align="wide"],
+	.wp-block-group[data-align="full"] {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 1120px) {
+	.wp-block-group.has-background {
+		padding: 2.5rem;
+		padding-bottom: calc(2.5rem - 10px);
+	}
+
+	.wp-block-group[data-align="wide"],
+	.wp-block-group[data-align="full"] {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+}
+
+/* Use always the same spacing for nested group blocks */
+.block-editor-block-list__block .block-editor-block-list__block .wp-block-group.has-background {
+	padding: 1.5rem;
+}
+
+.block-editor-block-list__block .block-editor-block-list__block .wp-block-group[data-align="wide"],
+.block-editor-block-list__block .block-editor-block-list__block .wp-block-group[data-align="full"] {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 
 /*--------------------------------------------------------------
