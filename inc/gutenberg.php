@@ -99,6 +99,13 @@ function gt_focus_gutenberg_support() {
 		'style_handle' => 'gt-focus-stylesheet',
 	) );
 
+	// Register Medium Buttons Block style.
+	register_block_style( 'core/buttons', array(
+		'name'         => 'gt-medium',
+		'label'        => esc_html__( 'GT Medium', 'gt-focus' ),
+		'style_handle' => 'gt-focus-stylesheet',
+	) );
+
 	// Register Large Buttons Block style.
 	register_block_style( 'core/buttons', array(
 		'name'         => 'gt-large',
