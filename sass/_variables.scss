@@ -46,12 +46,13 @@ $themeColors: (
 );
 
 // Theme Fonts
-$baseFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-$titleFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$baseFont: "Lato", arial, helvetica, sans-serif;
+$titleFont: "Lato", arial, helvetica, sans-serif;
+$naviFont: "Lato", arial, helvetica, sans-serif;
 $themeFonts: (
 	--text-font  : $baseFont,
 	--title-font : $titleFont,
-	--navi-font  : $baseFont,
+	--navi-font  : $naviFont,
 );
 
 // Font Weight.

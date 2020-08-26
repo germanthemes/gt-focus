@@ -37,11 +37,11 @@
 	--footer-link-color: rgba(0, 0, 0, 0.5);
 	--footer-link-hover-color: #242424;
 	--footer-border-color: rgba(0, 0, 0, 0.1);
-	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--text-font: "Lato", arial, helvetica, sans-serif;
+	--title-font: "Lato", arial, helvetica, sans-serif;
 	--title-font-weight: bold;
 	--title-text-transform: none;
-	--navi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--navi-font: "Lato", arial, helvetica, sans-serif;
 	--navi-font-weight: normal;
 	--navi-text-transform: none;
 }
@@ -78,7 +78,7 @@
 body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Lato", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -195,7 +195,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 
 /* Typography */
 .editor-styles-wrapper {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Lato", arial, helvetica, sans-serif;
 	font-family: var(--text-font);
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -247,7 +247,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 .editor-styles-wrapper h6 {
 	margin-top: 1em;
 	margin-bottom: 0.75em;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Lato", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	line-height: 1.4;
 }
@@ -390,7 +390,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 
 .wp-block-quote.is-style-large cite {
 	text-align: inherit;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Lato", arial, helvetica, sans-serif;
 	font-family: var(--text-font);
 }
 
@@ -419,7 +419,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 
 .wp-block-pullquote blockquote cite {
 	color: #242424;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Lato", arial, helvetica, sans-serif;
 	font-family: var(--text-font);
 	font-style: normal;
 }
