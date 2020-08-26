@@ -127,7 +127,7 @@ body.block-editor-page.post-type-page .editor-post-title__block .editor-post-tit
 }
 
 @media only screen and (min-width: 480px) {
-	body.block-editor-page.post-type-page .editor-post-title {
+	body.block-editor-page.post-type-page .edit-post-visual-editor__post-title-wrapper {
 		background-color: #006699;
 		background-color: var(--title-background-color);
 		margin-bottom: 2rem;
