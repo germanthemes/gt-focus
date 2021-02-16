@@ -40,6 +40,10 @@ GNU General Public License for more details.
 
 == Changelog ==
 
+= 1.6 - 2021-02-16 =
+* added prefix for CSS variables
+* removed license key settings
+
 = 1.5.2 - 2021-01-08 =
 * added WPTT Webfont loader to embed default theme fonts
 * updated typography options to use WPTT Webfont loader
