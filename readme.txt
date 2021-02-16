@@ -112,7 +112,12 @@ Copyright: Łukasz Dziedzic
 License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
 Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
 
-Images used in screenshot.jpg
+7. Images used in screenshot.jpg are all licensed under CC0
 
-Image 1: https://pixabay.com/photos/dentist-space-treat-teeth-3069416/
-Image 2: https://pixabay.com/photos/smile-mouth-teeth-laugh-nose-191626/
+Image 1:
+https://stocksnap.io/photo/chair-dentist-3J10QN5PTS
+Copyright: Daniel Frank (https://stocksnap.io/author/43541)
+
+Image 2:
+https://stocksnap.io/photo/chair-dentist-N79O15BH30
+Copyright: Daniel Frank (https://stocksnap.io/author/43541)
