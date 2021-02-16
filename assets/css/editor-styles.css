@@ -8,42 +8,42 @@
 # - Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #006699;
-	--secondary-color: #0791b6;
-	--accent-color: #99001a;
-	--highlight-color: #00601a;
-	--light-gray-color: #e4e4e4;
-	--gray-color: #848484;
-	--dark-gray-color: #242424;
-	--link-color: #006699;
-	--link-hover-color: #242424;
-	--button-color: #006699;
-	--button-text-color: #fff;
-	--button-hover-color: #242424;
-	--button-hover-text-color: #fff;
-	--header-background-color: #fff;
-	--header-text-color: #242424;
-	--header-hover-text-color: #006699;
-	--header-border-color: rgba(0, 0, 0, 0.1);
-	--navi-active-text-color: #fff;
-	--navi-active-bg-color: #006699;
-	--navi-hover-bg-color: rgba(0, 0, 0, 0.1);
-	--title-text-color: #fff;
-	--title-background-color: #006699;
-	--post-title-color: #242424;
-	--post-title-hover-color: #006699;
-	--footer-background-color: #e7e7e7;
-	--footer-text-color: #242424;
-	--footer-link-color: rgba(0, 0, 0, 0.5);
-	--footer-link-hover-color: #242424;
-	--footer-border-color: rgba(0, 0, 0, 0.1);
-	--text-font: "Lato", arial, helvetica, sans-serif;
-	--title-font: "Lato", arial, helvetica, sans-serif;
-	--title-font-weight: bold;
-	--title-text-transform: none;
-	--navi-font: "Lato", arial, helvetica, sans-serif;
-	--navi-font-weight: normal;
-	--navi-text-transform: none;
+	--gt-focus--primary-color: #006699;
+	--gt-focus--secondary-color: #0791b6;
+	--gt-focus--accent-color: #99001a;
+	--gt-focus--highlight-color: #00601a;
+	--gt-focus--light-gray-color: #e4e4e4;
+	--gt-focus--gray-color: #848484;
+	--gt-focus--dark-gray-color: #242424;
+	--gt-focus--link-color: #006699;
+	--gt-focus--link-hover-color: #242424;
+	--gt-focus--button-color: #006699;
+	--gt-focus--button-text-color: #fff;
+	--gt-focus--button-hover-color: #242424;
+	--gt-focus--button-hover-text-color: #fff;
+	--gt-focus--header-background-color: #fff;
+	--gt-focus--header-text-color: #242424;
+	--gt-focus--header-hover-text-color: #006699;
+	--gt-focus--header-border-color: rgba(0, 0, 0, 0.1);
+	--gt-focus--navi-active-text-color: #fff;
+	--gt-focus--navi-active-bg-color: #006699;
+	--gt-focus--navi-hover-bg-color: rgba(0, 0, 0, 0.1);
+	--gt-focus--title-text-color: #fff;
+	--gt-focus--title-background-color: #006699;
+	--gt-focus--post-title-color: #242424;
+	--gt-focus--post-title-hover-color: #006699;
+	--gt-focus--footer-background-color: #e7e7e7;
+	--gt-focus--footer-text-color: #242424;
+	--gt-focus--footer-link-color: rgba(0, 0, 0, 0.5);
+	--gt-focus--footer-link-hover-color: #242424;
+	--gt-focus--footer-border-color: rgba(0, 0, 0, 0.1);
+	--gt-focus--text-font: "Lato", arial, helvetica, sans-serif;
+	--gt-focus--title-font: "Lato", arial, helvetica, sans-serif;
+	--gt-focus--title-font-weight: bold;
+	--gt-focus--title-text-transform: none;
+	--gt-focus--navi-font: "Lato", arial, helvetica, sans-serif;
+	--gt-focus--navi-font-weight: normal;
+	--gt-focus--navi-text-transform: none;
 }
 
 /*--------------------------------------------------------------
@@ -79,11 +79,11 @@ body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	font-size: 24px;
 	font-size: 1.5rem;
 	font-family: "Lato", arial, helvetica, sans-serif;
-	font-family: var(--title-font);
+	font-family: var(--gt-focus--title-font);
 	font-weight: bold;
-	font-weight: var(--title-font-weight);
+	font-weight: var(--gt-focus--title-font-weight);
 	text-transform: none;
-	text-transform: var(--title-text-transform);
+	text-transform: var(--gt-focus--title-text-transform);
 	line-height: 1.4;
 }
 
@@ -111,7 +111,7 @@ body.block-editor-page .editor-post-title__block .editor-post-title__input {
 /* Page Title */
 body.block-editor-page.post-type-page .editor-post-title {
 	background-color: #006699;
-	background-color: var(--title-background-color);
+	background-color: var(--gt-focus--title-background-color);
 	margin-bottom: 1.5rem;
 }
 
@@ -123,13 +123,13 @@ body.block-editor-page.post-type-page .editor-post-title__block .editor-post-tit
 	font-size: 28px;
 	font-size: 1.75rem;
 	color: #fff;
-	color: var(--title-text-color);
+	color: var(--gt-focus--title-text-color);
 }
 
 @media only screen and (min-width: 480px) {
 	body.block-editor-page.post-type-page .edit-post-visual-editor__post-title-wrapper {
 		background-color: #006699;
-		background-color: var(--title-background-color);
+		background-color: var(--gt-focus--title-background-color);
 		margin-bottom: 2rem;
 	}
 
@@ -146,7 +146,7 @@ body.block-editor-page.post-type-page .editor-post-title__block .editor-post-tit
 @media only screen and (min-width: 640px) {
 	body.block-editor-page.post-type-page .editor-post-title {
 		background-color: #006699;
-		background-color: var(--title-background-color);
+		background-color: var(--gt-focus--title-background-color);
 		margin-bottom: 2.5rem;
 	}
 
@@ -163,7 +163,7 @@ body.block-editor-page.post-type-page .editor-post-title__block .editor-post-tit
 @media only screen and (min-width: 960px) {
 	body.block-editor-page.post-type-page .editor-post-title {
 		background-color: #006699;
-		background-color: var(--title-background-color);
+		background-color: var(--gt-focus--title-background-color);
 		margin-bottom: 3rem;
 	}
 
@@ -196,7 +196,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 /* Typography */
 .editor-styles-wrapper {
 	font-family: "Lato", arial, helvetica, sans-serif;
-	font-family: var(--text-font);
+	font-family: var(--gt-focus--text-font);
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.75;
@@ -215,7 +215,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 
 .editor-styles-wrapper a {
 	color: #006699;
-	color: var(--link-color);
+	color: var(--gt-focus--link-color);
 }
 
 .editor-styles-wrapper hr {
@@ -248,7 +248,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 	margin-top: 1em;
 	margin-bottom: 0.75em;
 	font-family: "Lato", arial, helvetica, sans-serif;
-	font-family: var(--title-font);
+	font-family: var(--gt-focus--title-font);
 	line-height: 1.4;
 }
 
@@ -391,7 +391,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 .wp-block-quote.is-style-large cite {
 	text-align: inherit;
 	font-family: "Lato", arial, helvetica, sans-serif;
-	font-family: var(--text-font);
+	font-family: var(--gt-focus--text-font);
 }
 
 /* Pullquote Block */
@@ -420,7 +420,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 .wp-block-pullquote blockquote cite {
 	color: #242424;
 	font-family: "Lato", arial, helvetica, sans-serif;
-	font-family: var(--text-font);
+	font-family: var(--gt-focus--text-font);
 	font-style: normal;
 }
 
@@ -519,18 +519,18 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):link,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):visited {
 	color: #fff;
-	color: var(--button-text-color);
+	color: var(--gt-focus--button-text-color);
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
 	background-color: #006699;
-	background-color: var(--button-color);
+	background-color: var(--gt-focus--button-color);
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):not(.has-background):hover,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):not(.has-background):active {
 	background-color: #242424;
-	background-color: var(--button-hover-color);
+	background-color: var(--gt-focus--button-hover-color);
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link.has-text-color:hover,
@@ -543,7 +543,7 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color).has-background:hover,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color).has-background:active {
 	color: #fff;
-	color: var(--button-hover-text-color);
+	color: var(--gt-focus--button-hover-text-color);
 	background-color: var(--button-hover-color) !important;
 	text-decoration: none;
 }
@@ -784,22 +784,22 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 /* Block Text Colors */
 .has-primary-color {
 	color: #006699;
-	color: var(--primary-color);
+	color: var(--gt-focus--primary-color);
 }
 
 .has-secondary-color {
 	color: #0791b6;
-	color: var(--secondary-color);
+	color: var(--gt-focus--secondary-color);
 }
 
 .has-accent-color {
 	color: #99001a;
-	color: var(--accent-color);
+	color: var(--gt-focus--accent-color);
 }
 
 .has-highlight-color {
 	color: #00601a;
-	color: var(--highlight-color);
+	color: var(--gt-focus--highlight-color);
 }
 
 .has-white-color {
@@ -808,17 +808,17 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 
 .has-light-gray-color {
 	color: #e4e4e4;
-	color: var(--light-gray-color);
+	color: var(--gt-focus--light-gray-color);
 }
 
 .has-gray-color {
 	color: #848484;
-	color: var(--gray-color);
+	color: var(--gt-focus--gray-color);
 }
 
 .has-dark-gray-color {
 	color: #242424;
-	color: var(--dark-gray-color);
+	color: var(--gt-focus--dark-gray-color);
 }
 
 .has-black-color {
@@ -828,22 +828,22 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 /* Block Background Colors */
 .has-primary-background-color {
 	background-color: #006699;
-	background-color: var(--primary-color);
+	background-color: var(--gt-focus--primary-color);
 }
 
 .has-secondary-background-color {
 	background-color: #0791b6;
-	background-color: var(--secondary-color);
+	background-color: var(--gt-focus--secondary-color);
 }
 
 .has-accent-background-color {
 	background-color: #99001a;
-	background-color: var(--accent-color);
+	background-color: var(--gt-focus--accent-color);
 }
 
 .has-highlight-background-color {
 	background-color: #00601a;
-	background-color: var(--highlight-color);
+	background-color: var(--gt-focus--highlight-color);
 }
 
 .has-white-background-color {
@@ -852,17 +852,17 @@ body.gt-page-title-hidden.block-editor-page .editor-post-title__block .editor-po
 
 .has-light-gray-background-color {
 	background-color: #e4e4e4;
-	background-color: var(--light-gray-color);
+	background-color: var(--gt-focus--light-gray-color);
 }
 
 .has-gray-background-color {
 	background-color: #848484;
-	background-color: var(--gray-color);
+	background-color: var(--gt-focus--gray-color);
 }
 
 .has-dark-gray-background-color {
 	background-color: #242424;
-	background-color: var(--dark-gray-color);
+	background-color: var(--gt-focus--dark-gray-color);
 }
 
 .has-black-background-color {
