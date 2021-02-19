@@ -1170,6 +1170,10 @@ textarea {
 	margin-bottom: 1rem;
 }
 
+.sticky {
+	margin-top: 1px;
+}
+
 .entry-meta {
 	margin: 0.5rem 0 0;
 	color: rgba(0, 0, 0, 0.5);
