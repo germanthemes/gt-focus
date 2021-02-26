@@ -40,6 +40,9 @@ GNU General Public License for more details.
 
 == Changelog ==
 
+= 1.6.1 - 2021-02-26 =
+* fixed color settings for prefixed CSS variables
+
 = 1.6 - 2021-02-16 =
 * added prefix for CSS variables
 * removed license key settings
