@@ -110,8 +110,6 @@ body.block-editor-page .editor-post-title__block .editor-post-title__input {
 
 /* Page Title */
 body.block-editor-page.post-type-page .editor-post-title {
-	background-color: #006699;
-	background-color: var(--gt-focus--title-background-color);
 	margin-bottom: 1.5rem;
 }
 
@@ -145,8 +143,6 @@ body.block-editor-page.post-type-page .editor-post-title__block .editor-post-tit
 
 @media only screen and (min-width: 640px) {
 	body.block-editor-page.post-type-page .editor-post-title {
-		background-color: #006699;
-		background-color: var(--gt-focus--title-background-color);
 		margin-bottom: 2.5rem;
 	}
 
@@ -162,8 +158,6 @@ body.block-editor-page.post-type-page .editor-post-title__block .editor-post-tit
 
 @media only screen and (min-width: 960px) {
 	body.block-editor-page.post-type-page .editor-post-title {
-		background-color: #006699;
-		background-color: var(--gt-focus--title-background-color);
 		margin-bottom: 3rem;
 	}
 
